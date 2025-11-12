@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { Button, Heading, Text } from "@/components/ui"
 import { Waveform, AudioPlayer } from "@/components/voicecraft"
 import { Footer } from "@/components/marketing/layout/footer"
@@ -26,10 +27,28 @@ import {
 
 export default function Home() {
   const [isVisible, setIsVisible] = React.useState(false)
+  const [currentPropvideo, setCurrentPropvideo] = React.useState(0)
 
   React.useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  // propvideo examples carousel
+  const examples = [
+    { title: "Modern Bedroom", image: "/images/examples/modern-bedroom-1762954221814.png" },
+    { title: "Infinity Pool", image: "/images/examples/pool-backyard-1762954241002.png" },
+    { title: "Penthouse View", image: "/images/examples/penthouse-view-1762954258462.png" },
+    { title: "Chef Kitchen", image: "/images/examples/chef-kitchen-1762954274778.png" },
+    { title: "Home Theater", image: "/images/examples/home-theater-1762954307039.png" },
+  ]
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPropvideo((prev) => (prev + 1) % examples.length)
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
+
 
   // Features data
   const features = [
@@ -204,46 +223,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Microphone Lineup */}
-      <section className="relative bg-gradient-to-br from-white via-blue-50 to-white pb-20 -mb-8">
+            {/* Examples Carousel */}
+      <section className="relative bg-white py-20 border-b-8 border-black">
         <div className="max-w-7xl mx-auto px-6">
-          <div className={`flex justify-center items-end gap-4 md:gap-8 lg:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <img
-              src="/images/test-mic-vintage-square-nobg.png"
-              alt="Vintage Square Microphone"
-              className="w-24 md:w-32 lg:w-40 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
-            <img
-              src="/images/mic-modern-condenser-nobg.png"
-              alt="Modern Condenser Microphone"
-              className="w-20 md:w-28 lg:w-36 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
-            <img
-              src="/images/mic-futuristic-cube-nobg.png"
-              alt="Futuristic Cube Microphone"
-              className="w-28 md:w-36 lg:w-44 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
-            <img
-              src="/images/mic-classic-broadcast-nobg.png"
-              alt="Classic Broadcast Microphone"
-              className="w-22 md:w-30 lg:w-38 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
-            <img
-              src="/images/mic-hexagonal-geometric-nobg.png"
-              alt="Hexagonal Geometric Microphone"
-              className="w-24 md:w-32 lg:w-40 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
-            <img
-              src="/images/mic-triangular-prism-nobg.png"
-              alt="Triangular Prism Microphone"
-              className="w-22 md:w-30 lg:w-38 h-auto transition-all duration-300 hover:scale-110"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(250, 204, 21, 0.4))' }}
-            />
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black uppercase mb-4">
+              See What's Possible
+            </h2>
+            <p className="text-gray-700 text-lg font-medium">Real examples created with our platform</p>
+          </div>
+
+          <div className="relative h-96 rounded-2xl overflow-hidden border-4 border-black brutalist-shadow">
+            {examples.map((example, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentPropvideo ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <Image
+                  src={example.image}
+                  alt={example.title}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center">
+                  <div className="text-center text-white space-y-4">
+                    <h3 className="text-5xl font-black uppercase">{example.title}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Carousel indicators */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+              {examples.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentPropvideo(index)}
+                  className={`w-3 h-3 border-2 border-black transition-all ${
+                    index === currentPropvideo ? 'w-8 bg-yellow-300' : 'bg-white'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
