@@ -59,7 +59,7 @@ const STATUS_CONFIG: Record<ProjectStatus, StatusConfig> = {
     variant: "warning",
     icon: RiTimeLine,
     description: "Estimate is ready. Review and accept to proceed.",
-    color: "bg-yellow-100 text-yellow-900 border-yellow-500",
+    color: "bg-blue-100 text-blue-900 border-blue-500",
   },
   waiting_for_assignment: {
     label: "AWAITING EXPERT",

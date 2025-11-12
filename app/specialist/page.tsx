@@ -145,18 +145,18 @@ export default function SpecialistDashboard() {
         </Card>
 
         {/* Total Earnings */}
-        <Card variant="outlined" className="border-4 border-yellow-500 bg-yellow-50">
+        <Card variant="outlined" className="border-4 border-blue-500 bg-blue-50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-bold uppercase text-yellow-900">
+            <CardTitle className="text-sm font-bold uppercase text-blue-900">
               TOTAL EARNINGS
             </CardTitle>
-            <RiMoneyDollarCircleLine className="h-6 w-6 text-yellow-600" />
+            <RiMoneyDollarCircleLine className="h-6 w-6 text-blue-600" />
           </CardHeader>
           <CardContent>
-            <Heading as="h2" className="text-3xl font-bold text-yellow-900">
+            <Heading as="h2" className="text-3xl font-bold text-blue-900">
               ${stats.totalEarnings.toLocaleString()}
             </Heading>
-            <Text variant="caption" className="mt-2 text-xs text-yellow-800">
+            <Text variant="caption" className="mt-2 text-xs text-blue-800">
               Lifetime earnings
             </Text>
           </CardContent>

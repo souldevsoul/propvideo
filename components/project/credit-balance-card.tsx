@@ -40,8 +40,8 @@ export function CreditBalanceCard({
         <CardContent className="p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className={`rounded-md border-4 border-black p-2 ${isCritical ? "bg-red-100" : isLow ? "bg-orange-100" : "bg-yellow-100"}`}>
-                <RiCoinsLine className={`h-5 w-5 ${isCritical ? "text-red-600" : isLow ? "text-orange-600" : "text-yellow-600"}`} />
+              <div className={`rounded-md border-4 border-black p-2 ${isCritical ? "bg-red-100" : isLow ? "bg-orange-100" : "bg-blue-100"}`}>
+                <RiCoinsLine className={`h-5 w-5 ${isCritical ? "text-red-600" : isLow ? "text-orange-600" : "text-blue-600"}`} />
               </div>
               <div>
                 <Text variant="caption" className="text-xs font-bold uppercase text-slate-600">

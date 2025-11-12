@@ -82,14 +82,14 @@ export function ReEstimateDialog({
 
         <div className="space-y-6 py-4">
           {/* Info */}
-          <div className="rounded-md border-4 border-yellow-500 bg-yellow-50 p-4">
+          <div className="rounded-md border-4 border-blue-500 bg-blue-50 p-4">
             <div className="flex items-start gap-3">
-              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-yellow-600" />
+              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-blue-600" />
               <div>
-                <Text variant="body" className="font-bold text-yellow-900">
+                <Text variant="body" className="font-bold text-blue-900">
                   This will generate a new estimate
                 </Text>
-                <Text variant="caption" className="mt-1 text-xs text-yellow-800">
+                <Text variant="caption" className="mt-1 text-xs text-blue-800">
                   The project will return to "waiting_for_estimate_accept" status. If credits were reserved,
                   they will be refunded first, and the client will need to accept the new estimate.
                 </Text>

@@ -57,7 +57,7 @@ export const columns: ColumnDef<Audio>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="hover:bg-yellow-100"
+          className="hover:bg-blue-100"
         >
           Filename
           <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -88,7 +88,7 @@ export const columns: ColumnDef<Audio>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="hover:bg-yellow-100"
+          className="hover:bg-blue-100"
         >
           Duration
           <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -140,7 +140,7 @@ export const columns: ColumnDef<Audio>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="hover:bg-yellow-100"
+          className="hover:bg-blue-100"
         >
           Created
           <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -161,7 +161,7 @@ export const columns: ColumnDef<Audio>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-yellow-100">
+            <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-blue-100">
               <span className="sr-only">Open menu</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>

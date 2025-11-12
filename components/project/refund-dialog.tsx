@@ -81,14 +81,14 @@ export function RefundDialog({
 
         <div className="space-y-6 py-4">
           {/* Warning */}
-          <div className="rounded-md border-4 border-yellow-500 bg-yellow-50 p-4">
+          <div className="rounded-md border-4 border-blue-500 bg-blue-50 p-4">
             <div className="flex items-start gap-3">
-              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-yellow-600" />
+              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-blue-600" />
               <div>
-                <Text variant="body" className="font-bold text-yellow-900">
+                <Text variant="body" className="font-bold text-blue-900">
                   WARNING: This action cannot be undone
                 </Text>
-                <Text variant="caption" className="mt-1 text-xs text-yellow-800">
+                <Text variant="caption" className="mt-1 text-xs text-blue-800">
                   The project will be marked as refunded and credits will be returned to the client immediately.
                 </Text>
               </div>
