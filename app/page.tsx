@@ -3,160 +3,173 @@
 import * as React from "react"
 import Image from "next/image"
 import { Button, Heading, Text } from "@/components/ui"
-import { Waveform, AudioPlayer } from "@/components/voicecraft"
 import { Footer } from "@/components/marketing/layout/footer"
 import { NewsletterPopup } from "@/components/marketing/NewsletterPopup"
 import {
   RiSparklingLine,
-  RiMicLine,
-  RiMic2Fill,
+  RiHomeSmileLine,
+  RiVideoLine,
   RiFlashlightLine,
   RiShieldCheckLine,
   RiGlobalLine,
-  RiHeadphoneLine,
   RiArrowRightLine,
   RiPlayCircleLine,
   RiCheckLine,
   RiCloseLine,
   RiStarFill,
   RiLineChartLine,
-  RiUserLine,
-  RiAwardLine,
-  RiTimerLine,
+  RiCameraLine,
+  RiBuildingLine,
+  RiMapPinLine,
 } from "react-icons/ri"
 
 export default function Home() {
   const [isVisible, setIsVisible] = React.useState(false)
-  const [currentPropvideo, setCurrentPropvideo] = React.useState(0)
+  const [currentProperty, setCurrentProperty] = React.useState(0)
 
   React.useEffect(() => {
     setIsVisible(true)
   }, [])
 
-  // propvideo examples carousel
-  const examples = [
-    { title: "Modern Bedroom", image: "/images/examples/modern-bedroom-1762954221814.png" },
-    { title: "Infinity Pool", image: "/images/examples/pool-backyard-1762954241002.png" },
-    { title: "Penthouse View", image: "/images/examples/penthouse-view-1762954258462.png" },
-    { title: "Chef Kitchen", image: "/images/examples/chef-kitchen-1762954274778.png" },
-    { title: "Home Theater", image: "/images/examples/home-theater-1762954307039.png" },
+  // Property examples carousel
+  const propertyExamples = [
+    { title: "Modern Bedroom", type: "Luxury Condo", image: "/images/examples/modern-bedroom-1762954221814.png" },
+    { title: "Infinity Pool", type: "Estate Home", image: "/images/examples/pool-backyard-1762954241002.png" },
+    { title: "Penthouse View", type: "Urban Living", image: "/images/examples/penthouse-view-1762954258462.png" },
+    { title: "Chef Kitchen", type: "Family Home", image: "/images/examples/chef-kitchen-1762954274778.png" },
+    { title: "Home Theater", type: "Entertainment", image: "/images/examples/home-theater-1762954307039.png" },
   ]
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPropvideo((prev) => (prev + 1) % examples.length)
+      setCurrentProperty((prev) => (prev + 1) % propertyExamples.length)
     }, 4000)
     return () => clearInterval(interval)
   }, [])
-
 
   // Features data
   const features = [
     {
       icon: RiSparklingLine,
-      title: "POWERED BY KOKORO-82M",
-      description: "Most popular voice model with 56M+ runs. Battle-tested AI technology delivering natural-sounding speech at massive scale.",
+      title: "AI Video Generation",
+      description: "Turn property photos into cinematic video tours automatically. Advanced AI creates smooth transitions and professional pacing.",
     },
     {
-      icon: RiMicLine,
-      title: "VOICE CLONING",
-      description: "Clone voices with Minimax technology. Quick training from 10 seconds to 5 minutes of audio. 300+ preset voices available.",
+      icon: RiCameraLine,
+      title: "Professional Voiceover",
+      description: "AI-generated professional narration tailored to your property. Multiple voice styles from luxury to friendly neighborhood tours.",
     },
     {
       icon: RiFlashlightLine,
-      title: "LIGHTNING FAST",
-      description: "Real-time voice synthesis in seconds. Minimax 2.6 Turbo optimized for low latency. Generate hours of content instantly.",
+      title: "60-Second Creation",
+      description: "Upload photos, generate stunning video tours in under 60 seconds. No video editing skills required.",
     },
     {
       icon: RiShieldCheckLine,
-      title: "SECURE & PRIVATE",
-      description: "Your voice data is encrypted end-to-end and never shared. Full GDPR compliance. Enterprise-grade security.",
+      title: "Agent Branding",
+      description: "Add your logo, contact info, and brokerage details. Watermark protection and custom branding on every video.",
     },
     {
       icon: RiGlobalLine,
-      title: "50+ LANGUAGES",
-      description: "Multilingual support powered by Minimax and XTTS-v2. Native accents, natural intonation, cross-language voice transfer.",
+      title: "Multi-Platform Export",
+      description: "Export for Instagram Stories, TikTok, YouTube, Zillow, and more. Perfect aspect ratios for every platform.",
     },
     {
-      icon: RiHeadphoneLine,
-      title: "STUDIO QUALITY",
-      description: "Professional 48kHz audio output. Emotion control, pitch adjustment, speed control. MP3, WAV, FLAC formats supported.",
+      icon: RiBuildingLine,
+      title: "Property Analytics",
+      description: "Track views, engagement, and shares. See which properties get the most attention from potential buyers.",
     },
   ]
 
   // Pricing data
   const pricingPlans = [
     {
-      name: "STARTER",
-      price: "$0",
-      description: "Perfect for trying out VoiceCraft",
+      name: "Agent",
+      price: "$49",
+      period: "/month",
+      description: "Perfect for individual real estate agents",
       features: [
-        { text: "10,000 characters/month", included: true },
-        { text: "5 preset voices", included: true },
-        { text: "MP3 downloads", included: true },
-        { text: "Voice cloning", included: false },
-        { text: "Commercial use", included: false },
-        { text: "Priority support", included: false },
+        { text: "5 property videos/month", included: true },
+        { text: "HD video quality (1080p)", included: true },
+        { text: "AI professional voiceover", included: true },
+        { text: "Agent branding & logo", included: true },
+        { text: "All social media formats", included: true },
+        { text: "Basic analytics", included: true },
+        { text: "Priority processing", included: false },
+        { text: "4K video quality", included: false },
       ],
-      ctaText: "GET STARTED FREE",
+      ctaText: "Start Free Trial",
       popular: false,
     },
     {
-      name: "PRO",
-      price: "$29",
-      description: "For professionals and content creators",
+      name: "Team",
+      price: "$149",
+      period: "/month",
+      description: "For real estate teams and small brokerages",
       features: [
-        { text: "100,000 characters/month", included: true },
-        { text: "50+ preset voices", included: true },
-        { text: "WAV & MP3 downloads", included: true },
-        { text: "3 voice clones", included: true },
-        { text: "Commercial use", included: true },
-        { text: "Priority support", included: true },
-        { text: "API access", included: false },
+        { text: "20 property videos/month", included: true },
+        { text: "4K video quality", included: true },
+        { text: "Premium AI voiceovers", included: true },
+        { text: "Team branding options", included: true },
+        { text: "All social media formats", included: true },
+        { text: "Advanced analytics", included: true },
+        { text: "Priority processing", included: true },
+        { text: "Multiple user accounts", included: true },
+        { text: "Custom music library", included: true },
       ],
-      ctaText: "START FREE TRIAL",
+      ctaText: "Start Free Trial",
       popular: true,
     },
     {
-      name: "ENTERPRISE",
-      price: "CUSTOM",
-      description: "For teams and organizations",
+      name: "Brokerage",
+      price: "$499",
+      period: "/month",
+      description: "For large brokerages and enterprises",
       features: [
-        { text: "Unlimited characters", included: true },
-        { text: "All preset voices", included: true },
-        { text: "All audio formats", included: true },
-        { text: "Unlimited voice clones", included: true },
-        { text: "Commercial use", included: true },
-        { text: "Dedicated support", included: true },
-        { text: "Full API access", included: true },
+        { text: "100 property videos/month", included: true },
+        { text: "8K video quality", included: true },
+        { text: "Custom voice cloning", included: true },
+        { text: "White-label branding", included: true },
+        { text: "All formats + API access", included: true },
+        { text: "Enterprise analytics", included: true },
+        { text: "Instant processing", included: true },
+        { text: "Unlimited team members", included: true },
         { text: "Custom integrations", included: true },
-        { text: "SLA guarantee", included: true },
+        { text: "Dedicated support", included: true },
       ],
-      ctaText: "CONTACT SALES",
+      ctaText: "Contact Sales",
       popular: false,
     },
   ]
 
+  // Tour styles
+  const tourStyles = [
+    { name: "Luxury", description: "Elegant, sophisticated, high-end properties", gradient: "from-amber-400 to-yellow-600" },
+    { name: "Modern", description: "Clean, contemporary, tech-forward homes", gradient: "from-sky-400 to-blue-600" },
+    { name: "Cozy", description: "Warm, inviting, family-friendly properties", gradient: "from-orange-400 to-red-500" },
+    { name: "Dramatic", description: "Bold, striking, statement properties", gradient: "from-purple-500 to-pink-600" },
+  ]
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-sky-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b-4 border-black bg-white">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center brutalist-shadow-yellow">
-              <RiMic2Fill className="w-7 h-7 text-blue-400" />
+            <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <RiHomeSmileLine className="w-7 h-7 text-white" />
             </div>
-            <span className="text-xl font-bold uppercase tracking-tight">VOICECRAFT</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">PropVideo</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-bold uppercase tracking-wider hover:text-blue-400 transition-colors">Features</a>
-            <a href="#pricing" className="text-sm font-bold uppercase tracking-wider hover:text-blue-400 transition-colors">Pricing</a>
-            <a href="/about" className="text-sm font-bold uppercase tracking-wider hover:text-blue-400 transition-colors">About</a>
-            <a href="/contact" className="text-sm font-bold uppercase tracking-wider hover:text-blue-400 transition-colors">Contact</a>
+            <a href="#features" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Features</a>
+            <a href="#styles" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Tour Styles</a>
+            <a href="#pricing" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Pricing</a>
+            <a href="/about" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">About</a>
           </nav>
           <Button
             size="md"
-            className="bg-blue-400 text-black hover:bg-blue-300 border-4 border-black font-bold uppercase"
+            className="bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all font-semibold"
             onClick={() => window.location.href = '/dashboard'}
           >
             Get Started
@@ -165,37 +178,40 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-white border-b-8 border-black min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 -left-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
           <div className="text-center space-y-12">
             {/* Badge */}
-            <div className={`inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black brutalist-shadow transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-              <RiSparklingLine className="w-6 h-6" />
-              <Text variant="body-sm" className="font-bold uppercase tracking-wider">AI-POWERED VOICE SYNTHESIS</Text>
+            <div className={`inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-sky-200 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+              <RiSparklingLine className="w-5 h-5 text-sky-600" />
+              <Text variant="body-sm" className="font-semibold text-slate-700">AI-Powered Property Tour Videos</Text>
             </div>
 
-            {/* Big Revealing Text */}
+            {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                 <span className={`block transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-black">YOUR</span>{" "}
-                  <span className="text-blue-400 [-webkit-text-stroke:3px_black] [text-stroke:3px_black]">VOICE</span>
+                  <span className="text-slate-900">Create Stunning</span>
                 </span>
                 <span className={`block transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-black">YOUR</span>{" "}
-                  <span className="text-blue-400 [-webkit-text-stroke:3px_black] [text-stroke:3px_black]">STYLE</span>
+                  <span className="bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">Property Videos</span>
                 </span>
                 <span className={`block transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-black">IN</span>{" "}
-                  <span className="text-blue-400 [-webkit-text-stroke:3px_black] [text-stroke:3px_black]">SECONDS</span>
+                  <span className="text-slate-900">In Minutes</span>
                 </span>
               </h1>
             </div>
 
             {/* Subtitle */}
             <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Text variant="lead" className="text-gray-900 max-w-3xl mx-auto text-xl md:text-2xl font-medium">
-                Clone voices, generate speech, create content. Professional AI voice synthesis powered by cutting-edge machine learning.
+              <Text variant="lead" className="text-slate-600 max-w-3xl mx-auto text-xl md:text-2xl">
+                Transform property photos into cinematic video tours with AI-generated voiceovers. Perfect for real estate agents, brokerages, and property managers.
               </Text>
             </div>
 
@@ -203,42 +219,57 @@ export default function Home() {
             <div className={`flex flex-wrap justify-center gap-6 pt-4 transition-all duration-700 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Button
                 size="xl"
-                className="gap-3 bg-black text-blue-400 hover:bg-gray-900 border-4 border-black font-bold uppercase brutalist-shadow text-lg px-12 py-8"
+                className="gap-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-xl hover:shadow-2xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl"
                 onClick={() => window.location.href = '/dashboard'}
               >
                 <RiArrowRightLine className="w-6 h-6" />
-                Start Free Now
+                Start Free Trial
               </Button>
               <Button
                 size="xl"
-                variant="secondary"
-                className="gap-3 bg-white text-black hover:bg-gray-100 border-4 border-black font-bold uppercase text-lg px-12 py-8"
+                className="gap-3 bg-white text-slate-700 hover:bg-slate-50 shadow-lg hover:shadow-xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl border border-slate-200"
                 onClick={() => window.location.href = '/demo'}
               >
-                <RiMic2Fill className="w-6 h-6" />
-                Try Demo
+                <RiPlayCircleLine className="w-6 h-6" />
+                Watch Demo
               </Button>
+            </div>
+
+            {/* Social Proof */}
+            <div className={`flex flex-wrap justify-center items-center gap-8 pt-12 text-sm text-slate-600 transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <div className="flex items-center gap-2">
+                <RiCheckLine className="w-5 h-5 text-emerald-500" />
+                <span>1,500+ Real Estate Agents</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <RiCheckLine className="w-5 h-5 text-emerald-500" />
+                <span>10,000+ Property Videos Created</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <RiCheckLine className="w-5 h-5 text-emerald-500" />
+                <span>60-Second Generation Time</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-            {/* Examples Carousel */}
-      <section className="relative bg-white py-20 border-b-8 border-black">
+      {/* Property Examples Carousel */}
+      <section className="relative bg-white py-20 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
               See What's Possible
             </h2>
-            <p className="text-gray-700 text-lg font-medium">Real examples created with our platform</p>
+            <p className="text-slate-600 text-lg">Real property video tours created with PropVideo</p>
           </div>
 
-          <div className="relative h-96 rounded-2xl overflow-hidden border-4 border-black brutalist-shadow">
-            {examples.map((example, index) => (
+          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            {propertyExamples.map((example, index) => (
               <div
                 key={index}
                 className={`absolute inset-0 transition-opacity duration-1000 ${
-                  index === currentPropvideo ? 'opacity-100' : 'opacity-0'
+                  index === currentProperty ? 'opacity-100' : 'opacity-0'
                 }`}
               >
                 <Image
@@ -248,9 +279,12 @@ export default function Home() {
                   className="object-cover"
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center">
-                  <div className="text-center text-white space-y-4">
-                    <h3 className="text-5xl font-black uppercase">{example.title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end justify-center pb-12">
+                  <div className="text-center text-white space-y-2">
+                    <div className="inline-block px-4 py-1 bg-sky-500/90 backdrop-blur-sm rounded-full text-sm font-semibold mb-2">
+                      {example.type}
+                    </div>
+                    <h3 className="text-4xl md:text-5xl font-bold">{example.title}</h3>
                   </div>
                 </div>
               </div>
@@ -258,13 +292,14 @@ export default function Home() {
 
             {/* Carousel indicators */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-              {examples.map((_, index) => (
+              {propertyExamples.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentPropvideo(index)}
-                  className={`w-3 h-3 border-2 border-black transition-all ${
-                    index === currentPropvideo ? 'w-8 bg-yellow-300' : 'bg-white'
+                  onClick={() => setCurrentProperty(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentProperty ? 'w-8 bg-sky-500' : 'w-2 bg-white/60'
                   }`}
+                  aria-label={`View property ${index + 1}`}
                 />
               ))}
             </div>
@@ -273,40 +308,32 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-white">
+      <section id="features" className="py-24 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-black border-4 border-black mb-6">
-              <RiSparklingLine className="w-6 h-6 text-blue-400" />
-              <Text variant="body-sm" className="text-blue-400 font-bold uppercase tracking-wider">Features</Text>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-100 rounded-full mb-6">
+              <RiSparklingLine className="w-5 h-5 text-sky-600" />
+              <Text variant="body-sm" className="text-sky-700 font-semibold">Features</Text>
             </div>
-            <Heading variant="h2" className="mb-4 uppercase text-4xl md:text-5xl lg:text-6xl">EVERYTHING YOU NEED</Heading>
-            <Text variant="body-lg" className="text-gray-600 max-w-3xl mx-auto">
-              Powerful features designed for creators, businesses, and developers
+            <Heading variant="h2" className="mb-4 text-4xl md:text-5xl text-slate-900">Everything You Need</Heading>
+            <Text variant="body-lg" className="text-slate-600 max-w-3xl mx-auto">
+              Professional property video tours made simple with AI-powered automation
             </Text>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon
-              const bgColors = ["bg-white", "bg-black", "bg-blue-400"]
-              const textColors = ["text-black", "text-blue-400", "text-black"]
-              const borderColors = ["border-black", "border-black", "border-black"]
-              const shadowColors = ["brutalist-shadow", "brutalist-shadow-yellow", "brutalist-shadow"]
-
-              const colorIndex = index % 3
-
               return (
-                <div key={index} className={`p-8 ${bgColors[colorIndex]} border-4 ${borderColors[colorIndex]} ${shadowColors[colorIndex]}`}>
-                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-blue-400" : "bg-black"} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-black" : "text-blue-400"}`} />
+                <div
+                  key={index}
+                  className="group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-sky-200"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <Heading variant="h4" className={`mb-4 ${textColors[colorIndex]} uppercase`}>
-                    {feature.title}
-                  </Heading>
-                  <Text variant="body" className={colorIndex === 1 ? "text-white" : "text-gray-600"}>
-                    {feature.description}
-                  </Text>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                 </div>
               )
             })}
@@ -314,79 +341,97 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-white">
+      {/* Tour Styles Section */}
+      <section id="styles" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black mb-6">
-              <Text variant="body-sm" className="text-black font-bold uppercase tracking-wider">Pricing</Text>
-            </div>
-            <Heading variant="h2" className="mb-4 uppercase text-4xl md:text-5xl lg:text-6xl">CHOOSE YOUR PLAN</Heading>
-            <Text variant="body-lg" className="text-gray-600 max-w-3xl mx-auto">
-              Start free, upgrade when you need more. All plans include our core features.
-            </Text>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
+              Choose Your Tour Style
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Select from multiple cinematic styles to match your property's personality
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {tourStyles.map((style, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl p-8 bg-gradient-to-br shadow-lg hover:shadow-2xl transition-all cursor-pointer"
+                style={{ background: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-90 group-hover:opacity-100 transition-opacity`} />
+                <div className="relative z-10 text-white">
+                  <h3 className="text-2xl font-bold mb-2">{style.name}</h3>
+                  <p className="text-white/90 text-sm">{style.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-gradient-to-br from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Choose the plan that fits your real estate business
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`p-8 border-4 border-black ${
+                className={`relative p-8 rounded-3xl border-2 transition-all duration-300 ${
                   plan.popular
-                    ? "bg-black brutalist-shadow-yellow"
-                    : "bg-white brutalist-shadow"
+                    ? 'border-sky-500 bg-white shadow-2xl scale-105'
+                    : 'border-slate-200 bg-white shadow-lg hover:shadow-xl'
                 }`}
               >
                 {plan.popular && (
-                  <div className="inline-flex items-center px-4 py-2 bg-blue-400 border-4 border-blue-400 mb-6">
-                    <Text variant="caption" className="text-black font-bold uppercase tracking-wider">Most Popular</Text>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                    MOST POPULAR
                   </div>
                 )}
-                <Heading variant="h3" className={`mb-2 uppercase ${plan.popular ? "text-blue-400" : "text-black"}`}>
-                  {plan.name}
-                </Heading>
-                <div className="mb-6">
-                  <span className={`text-5xl font-bold uppercase ${plan.popular ? "text-blue-400" : "text-black"}`}>
-                    {plan.price}
-                  </span>
-                  {plan.price !== "CUSTOM" && (
-                    <span className={`text-lg font-bold uppercase ${plan.popular ? "text-white" : "text-gray-600"}`}>/mo</span>
-                  )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                  <div className="flex items-end justify-center gap-1 mb-2">
+                    <span className="text-5xl font-bold text-slate-900">{plan.price}</span>
+                    {plan.period && <span className="text-slate-600 text-lg mb-2">{plan.period}</span>}
+                  </div>
+                  <p className="text-slate-600 text-sm">{plan.description}</p>
                 </div>
-                <Text variant="body" className={`mb-8 ${plan.popular ? "text-white" : "text-gray-600"}`}>
-                  {plan.description}
-                </Text>
+
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-3">
                       {feature.included ? (
-                        <RiCheckLine className={`w-5 h-5 flex-shrink-0 ${plan.popular ? "text-blue-400" : "text-black"}`} />
+                        <RiCheckLine className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
                       ) : (
-                        <RiCloseLine className={`w-5 h-5 flex-shrink-0 ${plan.popular ? "text-gray-600" : "text-gray-400"}`} />
+                        <RiCloseLine className="w-5 h-5 text-slate-300 flex-shrink-0 mt-0.5" />
                       )}
-                      <Text
-                        variant="body-sm"
-                        className={`${
-                          feature.included
-                            ? plan.popular ? "text-white" : "text-black"
-                            : plan.popular ? "text-gray-600" : "text-gray-400"
-                        } font-medium`}
-                      >
+                      <span className={feature.included ? 'text-slate-700' : 'text-slate-400'}>
                         {feature.text}
-                      </Text>
+                      </span>
                     </li>
                   ))}
                 </ul>
+
                 <Button
-                  size="lg"
-                  className={`w-full gap-3 border-4 border-black font-bold uppercase ${
+                  className={`w-full py-6 font-semibold rounded-xl transition-all ${
                     plan.popular
-                      ? "bg-blue-400 text-black hover:bg-blue-300"
-                      : "bg-black text-blue-400 hover:bg-gray-900"
+                      ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-lg hover:shadow-xl'
+                      : 'bg-slate-900 text-white hover:bg-slate-800'
                   }`}
+                  onClick={() => window.location.href = plan.ctaText === 'Contact Sales' ? '/contact' : '/dashboard'}
                 >
                   {plan.ctaText}
-                  <RiArrowRightLine className="w-5 h-5" />
                 </Button>
               </div>
             ))}
@@ -394,43 +439,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-black border-t-8 border-blue-400">
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-sky-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-blue-400 mb-8">
-            <RiSparklingLine className="w-6 h-6 text-black" />
-            <Text variant="body-sm" className="text-black font-bold uppercase tracking-wider">Ready to Start?</Text>
-          </div>
-          <Heading variant="h1" className="mb-6 text-blue-400 uppercase text-5xl md:text-6xl lg:text-7xl">
-            TRANSFORM YOUR VOICE CONTENT
-          </Heading>
-          <Text variant="body-lg" className="text-white mb-12 max-w-2xl mx-auto">
-            Join thousands of creators and businesses using VoiceCraft to create professional voice content in seconds. Start your free trial today—no credit card required.
-          </Text>
-          <div className="flex flex-wrap justify-center gap-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Create Amazing Property Videos?
+          </h2>
+          <p className="text-xl text-sky-100 mb-12 max-w-2xl mx-auto">
+            Join 1,500+ real estate professionals using PropVideo to showcase properties and close deals faster.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
             <Button
               size="xl"
-              className="gap-3 bg-blue-400 text-black hover:bg-blue-300 border-4 border-blue-400 font-bold uppercase brutalist-shadow-yellow"
+              className="gap-3 bg-white text-sky-600 hover:bg-sky-50 shadow-2xl font-bold text-lg px-12 py-8 rounded-2xl"
               onClick={() => window.location.href = '/dashboard'}
             >
-              <RiArrowRightLine className="w-5 h-5" />
+              <RiArrowRightLine className="w-6 h-6" />
               Start Free Trial
             </Button>
             <Button
               size="xl"
-              variant="secondary"
-              className="gap-3 bg-white text-black hover:bg-gray-100 border-4 border-white font-bold uppercase"
+              className="gap-3 bg-sky-700/50 backdrop-blur text-white hover:bg-sky-700/70 border-2 border-white/30 font-semibold text-lg px-12 py-8 rounded-2xl"
               onClick={() => window.location.href = '/contact'}
             >
-              Schedule a Demo
+              Contact Sales
             </Button>
           </div>
         </div>
       </section>
 
       <Footer />
-
-      {/* Newsletter Popup */}
       <NewsletterPopup />
     </div>
   )
