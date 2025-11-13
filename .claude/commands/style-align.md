@@ -290,7 +290,7 @@ npm run lint:product
 
 1. **Commit with clear message**: `git commit -m "Align [PageName] to PropVideo design system"`
 2. **Document changes**: Note what was changed and why
-3. **Run `/review`** before pushing
+3. **Run `/codereview`** before pushing
 
 ---
 

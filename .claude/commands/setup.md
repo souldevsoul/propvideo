@@ -211,10 +211,10 @@ Before you start coding, verify:
 Now that your environment is stable and quality checks are working:
 
 1. **Pick a task** from GitHub Issues or your team lead
-2. **Use `/bug`** if fixing a bug
-3. **Use `/feature`** if implementing a new feature
-4. **Always use `/review`** before committing
-5. **Use `/test`** to test your changes
+2. **Use `/fixbug`** if fixing a bug
+3. **Use `/addfeature`** if implementing a new feature
+4. **Always use `/codereview`** before committing
+5. **Use `/runtest`** to test your changes
 6. **Use `/pre-production`** before deploying
 
 ## Common Setup Issues
@@ -256,6 +256,6 @@ npm run build
 
 Remember:
 - Always run `npm run lint:product` before committing
-- Use the slash commands (`/bug`, `/feature`, `/review`, `/test`)
+- Use the slash commands (`/fixbug`, `/addfeature`, `/codereview`, `/runtest`)
 - Ask questions if anything is unclear
 - Never ignore ESLint errors without understanding them first

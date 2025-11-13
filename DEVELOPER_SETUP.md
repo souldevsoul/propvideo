@@ -473,11 +473,11 @@ Claude Code is an AI coding assistant that helps you:
 
 We've created custom commands to help you work effectively:
 
-#### `/bug` - Fix Bugs Properly
+#### `/fixbug` - Fix Bugs Properly
 When you encounter a bug, use this command:
 
 ```
-/bug
+/fixbug
 ```
 
 Then describe the bug. Claude Code will:
@@ -490,15 +490,15 @@ Then describe the bug. Claude Code will:
 
 **Example:**
 ```
-/bug
+/fixbug
 Portrait download button doesn't work on mobile
 ```
 
-#### `/feature` - Implement New Features
+#### `/addfeature` - Implement New Features
 When adding a new feature:
 
 ```
-/feature
+/addfeature
 ```
 
 Describe what you want to build. Claude Code will:
@@ -510,15 +510,15 @@ Describe what you want to build. Claude Code will:
 
 **Example:**
 ```
-/feature
+/addfeature
 Add ability to batch upload multiple pet photos
 ```
 
-#### `/review` - Code Review
+#### `/codereview` - Code Review
 Before committing code:
 
 ```
-/review
+/codereview
 ```
 
 Claude Code will review your changes for:
@@ -529,11 +529,11 @@ Claude Code will review your changes for:
 - Accessibility
 - Error handling
 
-#### `/test` - Systematic Testing
+#### `/runtest` - Systematic Testing
 When you need to test:
 
 ```
-/test
+/runtest
 ```
 
 Choose from:
@@ -563,7 +563,7 @@ This runs through a comprehensive checklist of 50+ items to ensure production re
 ❌ **DON'T:**
 - Skip the guardrails and checks
 - Ignore Claude Code's security warnings
-- Commit code without running `/review`
+- Commit code without running `/codereview`
 - Deploy without running `/pre-production`
 
 ---
@@ -641,7 +641,7 @@ npm run build
 ```
 
 ### 5. Manual Testing
-Use Claude Code's `/test` command for guided testing.
+Use Claude Code's `/runtest` command for guided testing.
 
 ---
 
@@ -730,14 +730,14 @@ When implementing features related to portrait generation:
 
 ### Use Claude Code First
 For most development questions, use Claude Code:
-- `/bug` for fixing issues
-- `/feature` for building new things
+- `/fixbug` for fixing issues
+- `/addfeature` for building new things
 - Ask questions about the codebase
 
 ### Ask Your Team
 - Slack channel: #petportrait-dev
 - Team lead: [NAME]
-- Code review: Use `/review` command first, then request human review
+- Code review: Use `/codereview` command first, then request human review
 
 ### External Resources
 - Next.js docs: https://nextjs.org/docs
@@ -756,8 +756,8 @@ For most development questions, use Claude Code:
 5. ✅ Familiarize yourself with Claude Code
 6. ✅ Read `DESIGN_SYSTEM.md`
 7. ✅ Run through the codebase with Claude Code
-8. ✅ Try `/test` with a quick smoke test
-9. ✅ Pick a small bug from GitHub Issues and fix it using `/bug`
+8. ✅ Try `/runtest` with a quick smoke test
+9. ✅ Pick a small bug from GitHub Issues and fix it using `/fixbug`
 10. ✅ Submit your first PR!
 
 ---
