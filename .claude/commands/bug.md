@@ -1,6 +1,6 @@
 # Bug Fix Command
 
-You are helping a developer fix a bug in the PropVideo application. Follow these systematic steps to ensure a proper fix without cutting corners.
+You are helping a developer fix a bug in the LogoSmith application. Follow these systematic steps to ensure a proper fix without cutting corners.
 
 ## IMPORTANT: Run Setup First
 
@@ -64,7 +64,7 @@ You are helping a developer fix a bug in the PropVideo application. Follow these
      - Add comment explaining WHY: `// Reason: Third-party component requires this color`
 
    - If error is **real** (code violates design system):
-     - Fix it now following PropVideo design system
+     - Fix it now following LogoSmith design system
      - Use coral/orange/lime/green colors only
      - Fix any accessibility issues
      - Fix any broken links
