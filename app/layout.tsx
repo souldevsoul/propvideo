@@ -21,8 +21,8 @@ const inter = Inter({
 // Font will be loaded through globals.css
 
 export const metadata: Metadata = {
-  title: "VoiceCraft - AI-Powered Voice Synthesis",
-  description: "Create professional voice content in seconds with AI-powered voice synthesis and cloning.",
+  title: "PropVideo - AI Property Tour Video Generation",
+  description: "Create stunning property tour videos in minutes with AI. Transform photos into cinematic real estate tours with professional voiceovers and music.",
 };
 
 export default function RootLayout({
