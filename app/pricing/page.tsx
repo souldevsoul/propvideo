@@ -168,7 +168,7 @@ export default function PricingPage() {
     },
     {
       question: "Do you offer discounts for non-profits or education?",
-      answer: "Yes! We offer 50% discounts for qualified non-profit organizations and educational institutions. Contact us at sales@voicecraft.ai with your organization details.",
+      answer: "Yes! We offer 50% discounts for qualified non-profit organizations and educational institutions. Contact us at sales@propvideo.ai with your organization details.",
     },
     {
       question: "How secure is my data?",
@@ -196,7 +196,7 @@ export default function PricingPage() {
       <section className="py-20 border-b-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
               <RiSparklingLine className="w-6 h-6" />
               <span className="text-sm font-bold uppercase tracking-wider">Pricing</span>
             </div>
@@ -233,12 +233,12 @@ export default function PricingPage() {
                 key={index}
                 className={`relative p-8 border-4 border-black ${
                   tier.popular
-                    ? "bg-black text-white brutalist-shadow-yellow scale-105"
+                    ? "bg-black text-white shadow-lg scale-105"
                     : "bg-white brutalist-shadow"
                 }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-blue-400 border-4 border-black">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-sky-400 border-4 border-black">
                     <span className="text-sm font-bold uppercase text-black">Most Popular</span>
                   </div>
                 )}
@@ -246,7 +246,7 @@ export default function PricingPage() {
                 <div className="mb-6">
                   <h3
                     className={`text-2xl font-bold uppercase mb-2 ${
-                      tier.popular ? "text-blue-400" : "text-black"
+                      tier.popular ? "text-sky-400" : "text-black"
                     }`}
                   >
                     {tier.name}
@@ -254,7 +254,7 @@ export default function PricingPage() {
                   <div className="flex items-baseline gap-2 mb-2">
                     <span
                       className={`text-5xl font-bold ${
-                        tier.popular ? "text-blue-400" : "text-black"
+                        tier.popular ? "text-sky-400" : "text-black"
                       }`}
                     >
                       {tier.price}
@@ -276,8 +276,8 @@ export default function PricingPage() {
                   size="lg"
                   className={`w-full mb-8 border-4 font-bold uppercase ${
                     tier.popular
-                      ? "bg-blue-400 text-black border-blue-400 hover:bg-blue-300"
-                      : "bg-black text-blue-400 border-black hover:bg-gray-900"
+                      ? "bg-sky-400 text-black border-sky-400 hover:bg-sky-300"
+                      : "bg-black text-sky-400 border-black hover:bg-gray-900"
                   }`}
                   asChild
                 >
@@ -293,7 +293,7 @@ export default function PricingPage() {
                       {feature.included ? (
                         <RiCheckLine
                           className={`w-5 h-5 flex-shrink-0 ${
-                            tier.popular ? "text-blue-400" : "text-black"
+                            tier.popular ? "text-sky-400" : "text-black"
                           }`}
                         />
                       ) : (
@@ -339,13 +339,13 @@ export default function PricingPage() {
 
           {comparisonFeatures.map((category, catIndex) => (
             <div key={catIndex} className="mb-8 bg-white border-4 border-black brutalist-shadow">
-              <div className="bg-black text-blue-400 px-6 py-4 border-b-4 border-black">
+              <div className="bg-black text-sky-400 px-6 py-4 border-b-4 border-black">
                 <h3 className="text-xl font-bold uppercase">{category.category}</h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b-4 border-black bg-blue-400">
+                    <tr className="border-b-4 border-black bg-sky-400">
                       <th className="text-left p-4 font-bold uppercase text-sm">Feature</th>
                       <th className="text-center p-4 font-bold uppercase text-sm border-l-4 border-black">
                         Starter
@@ -373,7 +373,7 @@ export default function PricingPage() {
                             <span className="font-bold">{feature.starter}</span>
                           )}
                         </td>
-                        <td className="text-center p-4 border-l-4 border-black bg-blue-50">
+                        <td className="text-center p-4 border-l-4 border-black bg-sky-50">
                           {typeof feature.pro === "boolean" ? (
                             feature.pro ? (
                               <RiCheckLine className="w-6 h-6 text-black mx-auto" />
@@ -420,7 +420,7 @@ export default function PricingPage() {
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                <div className="w-12 h-12 bg-blue-400 border-2 border-black flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-sky-400 border-2 border-black flex items-center justify-center mb-4">
                   <RiMicLine className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold uppercase mb-2">KOKORO-82M</h3>
@@ -433,14 +433,14 @@ export default function PricingPage() {
                 </ul>
               </div>
 
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
-                <div className="w-12 h-12 bg-blue-400 border-2 border-black flex items-center justify-center mb-4">
+              <div className="p-6 bg-black text-white border-4 border-black shadow-lg">
+                <div className="w-12 h-12 bg-sky-400 border-2 border-black flex items-center justify-center mb-4">
                   <RiFlashlightLine className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-lg font-bold uppercase mb-2 text-blue-400">
+                <h3 className="text-lg font-bold uppercase mb-2 text-sky-400">
                   MINIMAX 2.6 TURBO
                 </h3>
-                <div className="text-3xl font-bold mb-2 text-blue-400">$0.10</div>
+                <div className="text-3xl font-bold mb-2 text-sky-400">$0.10</div>
                 <p className="text-sm text-gray-300 mb-4">per 1,000 characters</p>
                 <ul className="text-sm text-gray-300 space-y-1">
                   <li>• Real-time optimized</li>
@@ -450,7 +450,7 @@ export default function PricingPage() {
               </div>
 
               <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                <div className="w-12 h-12 bg-blue-400 border-2 border-black flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-sky-400 border-2 border-black flex items-center justify-center mb-4">
                   <RiGlobalLine className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold uppercase mb-2">VOICE CLONING</h3>
@@ -464,7 +464,7 @@ export default function PricingPage() {
               </div>
             </div>
 
-            <div className="p-8 bg-blue-400 border-4 border-black brutalist-shadow">
+            <div className="p-8 bg-sky-400 border-4 border-black brutalist-shadow">
               <h3 className="text-2xl font-bold uppercase mb-4">EXAMPLE MONTHLY COSTS</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-4 border-b-4 border-black">
@@ -489,14 +489,14 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-black border-y-8 border-blue-400">
+      <section className="py-24 bg-black border-y-8 border-sky-400">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-blue-400 mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-sky-400 mb-8">
               <RiQuestionLine className="w-6 h-6" />
               <span className="text-sm font-bold uppercase tracking-wider">FAQ</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 text-blue-400">
+            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 text-sky-400">
               FREQUENTLY ASKED QUESTIONS
             </h2>
             <p className="text-xl text-white">
@@ -508,7 +508,7 @@ export default function PricingPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="p-6 bg-white border-4 border-white brutalist-shadow-yellow"
+                className="p-6 bg-white border-4 border-white shadow-lg"
               >
                 <h3 className="text-lg font-bold uppercase mb-3">{faq.question}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
@@ -531,7 +531,7 @@ export default function PricingPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="xl"
-                className="gap-3 bg-blue-400 text-black border-4 border-black font-bold uppercase brutalist-shadow"
+                className="gap-3 bg-sky-400 text-black border-4 border-black font-bold uppercase brutalist-shadow"
                 asChild
               >
                 <a href="/signup">
@@ -550,7 +550,7 @@ export default function PricingPage() {
               <Button
                 size="xl"
                 variant="outline"
-                className="gap-3 bg-black text-blue-400 border-4 border-black font-bold uppercase brutalist-shadow"
+                className="gap-3 bg-black text-sky-400 border-4 border-black font-bold uppercase brutalist-shadow"
                 asChild
               >
                 <a href="/contact">Contact Sales</a>

@@ -105,7 +105,7 @@ export default function AboutPage() {
         ]}
         ctaButton={{
           text: "Get Started",
-          href: "/signup",
+          href: "/auth/signup",
         }}
       />
 
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <section className="py-20 border-b-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-500 border-4 border-black mb-8">
               <RiSparklingLine className="w-6 h-6" />
               <span className="text-sm font-bold uppercase tracking-wider">About Us</span>
             </div>
@@ -145,22 +145,22 @@ export default function AboutPage() {
                 Our platform is powered by <span className="font-bold">Kokoro-82M</span> (56.7M+ production runs), <span className="font-bold">Minimax AI</span> (50+ languages), and <span className="font-bold">XTTS-v2</span> (multilingual cloning). These aren't experimental models—they're proven at massive scale.
               </p>
             </div>
-            <div className="bg-black p-8 border-4 border-black brutalist-shadow-yellow">
+            <div className="bg-black p-8 border-4 border-black shadow-lg">
               <div className="space-y-8">
                 <div>
-                  <div className="text-6xl font-bold text-blue-400 mb-2">56.7M+</div>
+                  <div className="text-6xl font-bold text-sky-500 mb-2">56.7M+</div>
                   <div className="text-sm font-bold text-white uppercase">Voice Generations</div>
                 </div>
                 <div>
-                  <div className="text-6xl font-bold text-blue-400 mb-2">50+</div>
+                  <div className="text-6xl font-bold text-sky-500 mb-2">50+</div>
                   <div className="text-sm font-bold text-white uppercase">Languages Supported</div>
                 </div>
                 <div>
-                  <div className="text-6xl font-bold text-blue-400 mb-2">300+</div>
+                  <div className="text-6xl font-bold text-sky-500 mb-2">300+</div>
                   <div className="text-sm font-bold text-white uppercase">Voice Profiles</div>
                 </div>
                 <div>
-                  <div className="text-6xl font-bold text-blue-400 mb-2">99.9%</div>
+                  <div className="text-6xl font-bold text-sky-500 mb-2">99.9%</div>
                   <div className="text-sm font-bold text-white uppercase">Platform Uptime</div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-blue-400 border-y-8 border-black">
+      <section className="py-24 bg-sky-500 border-y-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
@@ -190,7 +190,7 @@ export default function AboutPage() {
                   className="p-8 bg-white border-4 border-black brutalist-shadow"
                 >
                   <div className="w-16 h-16 bg-black flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-blue-400" />
+                    <Icon className="w-8 h-8 text-sky-500" />
                   </div>
                   <h3 className="text-2xl font-bold uppercase mb-4">{value.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{value.description}</p>
@@ -217,7 +217,7 @@ export default function AboutPage() {
             {technology.map((tech, index) => {
               const Icon = tech.icon
               const bgColors = ["bg-white", "bg-black"]
-              const textColors = ["text-black", "text-blue-400"]
+              const textColors = ["text-black", "text-sky-500"]
               const descColors = ["text-gray-700", "text-white"]
               const colorIndex = index % 2
 
@@ -225,17 +225,17 @@ export default function AboutPage() {
                 <div
                   key={index}
                   className={`p-8 ${bgColors[colorIndex]} border-4 border-black ${
-                    colorIndex === 1 ? "brutalist-shadow-yellow" : "brutalist-shadow"
+                    colorIndex === 1 ? "shadow-lg" : "brutalist-shadow"
                   }`}
                 >
-                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-blue-400" : "bg-black"} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-black" : "text-blue-400"}`} />
+                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-sky-500" : "bg-black"} flex items-center justify-center mb-6`}>
+                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-black" : "text-sky-500"}`} />
                   </div>
                   <div className="flex justify-between items-start mb-4">
                     <h3 className={`text-2xl font-bold uppercase ${textColors[colorIndex]}`}>
                       {tech.name}
                     </h3>
-                    <span className={`text-sm font-bold uppercase ${colorIndex === 1 ? "text-blue-400" : "text-black"} px-3 py-1 ${colorIndex === 1 ? "bg-black" : "bg-blue-400"} border-2 border-black`}>
+                    <span className={`text-sm font-bold uppercase ${colorIndex === 1 ? "text-sky-500" : "text-black"} px-3 py-1 ${colorIndex === 1 ? "bg-black" : "bg-sky-500"} border-2 border-black`}>
                       {tech.stats}
                     </span>
                   </div>
@@ -248,10 +248,10 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 bg-black border-y-8 border-blue-400">
+      <section className="py-24 bg-black border-y-8 border-sky-500">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 text-blue-400">
+            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 text-sky-500">
               OUR JOURNEY
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
@@ -265,10 +265,10 @@ export default function AboutPage() {
                 key={index}
                 className="flex gap-6"
               >
-                <div className="flex-shrink-0 w-24 h-24 bg-blue-400 border-4 border-blue-400 flex items-center justify-center">
+                <div className="flex-shrink-0 w-24 h-24 bg-sky-500 border-4 border-sky-500 flex items-center justify-center">
                   <span className="text-2xl font-bold text-black">{milestone.year}</span>
                 </div>
-                <div className="flex-1 p-6 bg-white border-4 border-white brutalist-shadow-yellow">
+                <div className="flex-1 p-6 bg-white border-4 border-white shadow-lg">
                   <h3 className="text-xl font-bold uppercase mb-2">{milestone.title}</h3>
                   <p className="text-gray-700">{milestone.description}</p>
                 </div>
@@ -301,11 +301,11 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
+              <div className="p-6 bg-black text-white border-4 border-black shadow-lg">
                 <div className="flex items-start gap-4">
-                  <RiCheckDoubleLine className="w-8 h-8 flex-shrink-0 text-blue-400" />
+                  <RiCheckDoubleLine className="w-8 h-8 flex-shrink-0 text-sky-500" />
                   <div>
-                    <h3 className="text-xl font-bold uppercase mb-2 text-blue-400">
+                    <h3 className="text-xl font-bold uppercase mb-2 text-sky-500">
                       TRANSPARENT PRICING
                     </h3>
                     <p className="text-white">
@@ -329,7 +329,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-blue-400 border-4 border-black brutalist-shadow">
+              <div className="p-6 bg-sky-500 border-4 border-black brutalist-shadow">
                 <div className="flex items-start gap-4">
                   <RiCheckDoubleLine className="w-8 h-8 flex-shrink-0 text-black" />
                   <div>
@@ -343,11 +343,11 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
+              <div className="p-6 bg-black text-white border-4 border-black shadow-lg">
                 <div className="flex items-start gap-4">
-                  <RiCheckDoubleLine className="w-8 h-8 flex-shrink-0 text-blue-400" />
+                  <RiCheckDoubleLine className="w-8 h-8 flex-shrink-0 text-sky-500" />
                   <div>
-                    <h3 className="text-xl font-bold uppercase mb-2 text-blue-400">
+                    <h3 className="text-xl font-bold uppercase mb-2 text-sky-500">
                       CONSTANTLY IMPROVING
                     </h3>
                     <p className="text-white">
@@ -376,7 +376,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-white border-4 border-black brutalist-shadow text-center">
               <div className="w-24 h-24 bg-black border-4 border-black mx-auto mb-4 flex items-center justify-center">
-                <RiCodeLine className="w-12 h-12 text-blue-400" />
+                <RiCodeLine className="w-12 h-12 text-sky-500" />
               </div>
               <h3 className="text-xl font-bold uppercase mb-2">AI ENGINEERS</h3>
               <p className="text-gray-700">
@@ -384,9 +384,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-6 bg-blue-400 border-4 border-black brutalist-shadow text-center">
+            <div className="p-6 bg-sky-500 border-4 border-black brutalist-shadow text-center">
               <div className="w-24 h-24 bg-black border-4 border-black mx-auto mb-4 flex items-center justify-center">
-                <RiMicLine className="w-12 h-12 text-blue-400" />
+                <RiMicLine className="w-12 h-12 text-sky-500" />
               </div>
               <h3 className="text-xl font-bold uppercase mb-2">AUDIO EXPERTS</h3>
               <p className="text-gray-900">
@@ -394,11 +394,11 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow text-center">
-              <div className="w-24 h-24 bg-blue-400 border-4 border-black mx-auto mb-4 flex items-center justify-center">
+            <div className="p-6 bg-black text-white border-4 border-black shadow-lg text-center">
+              <div className="w-24 h-24 bg-sky-500 border-4 border-black mx-auto mb-4 flex items-center justify-center">
                 <RiTeamLine className="w-12 h-12 text-black" />
               </div>
-              <h3 className="text-xl font-bold uppercase mb-2 text-blue-400">PRODUCT TEAM</h3>
+              <h3 className="text-xl font-bold uppercase mb-2 text-sky-500">PRODUCT TEAM</h3>
               <p className="text-white">
                 Focused on building intuitive tools that creators actually want to use.
               </p>
@@ -420,10 +420,10 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="xl"
-                className="gap-3 bg-blue-400 text-black border-4 border-black font-bold uppercase brutalist-shadow"
+                className="gap-3 bg-sky-500 text-black border-4 border-black font-bold uppercase brutalist-shadow"
                 asChild
               >
-                <a href="/signup">
+                <a href="/auth/signup">
                   <RiArrowRightLine className="w-5 h-5" />
                   Get Started Free
                 </a>
@@ -439,7 +439,7 @@ export default function AboutPage() {
               <Button
                 size="xl"
                 variant="outline"
-                className="gap-3 bg-black text-blue-400 border-4 border-black font-bold uppercase brutalist-shadow"
+                className="gap-3 bg-black text-sky-500 border-4 border-black font-bold uppercase brutalist-shadow"
                 asChild
               >
                 <a href="/contact">Contact Us</a>

@@ -196,7 +196,7 @@ export default function PrivacyPage() {
       <section className="py-20 border-b-8 border-black">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
               <RiShieldCheckLine className="w-6 h-6" />
               <span className="text-sm font-bold uppercase tracking-wider">Privacy Policy</span>
             </div>
@@ -214,10 +214,10 @@ export default function PrivacyPage() {
       </section>
 
       {/* Quick Summary */}
-      <section className="py-16 bg-black border-b-8 border-blue-400">
+      <section className="py-16 bg-black border-b-8 border-sky-400">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold uppercase mb-8 text-blue-400">
+            <h2 className="text-3xl font-bold uppercase mb-8 text-sky-400">
               THE SHORT VERSION
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -261,7 +261,7 @@ export default function PrivacyPage() {
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-blue-400" />
+                        <Icon className="w-6 h-6 text-sky-400" />
                       </div>
                       <h2 className="text-3xl font-bold uppercase">{section.title}</h2>
                     </div>
@@ -272,7 +272,7 @@ export default function PrivacyPage() {
                       <div
                         key={itemIndex}
                         className={`p-6 border-4 border-black ${
-                          itemIndex % 2 === 0 ? "bg-white brutalist-shadow" : "bg-blue-50"
+                          itemIndex % 2 === 0 ? "bg-white brutalist-shadow" : "bg-sky-50"
                         }`}
                       >
                         <h3 className="text-lg font-bold uppercase mb-3">{item.subtitle}</h3>
@@ -289,7 +289,7 @@ export default function PrivacyPage() {
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                    <RiGlobalLine className="w-6 h-6 text-blue-400" />
+                    <RiGlobalLine className="w-6 h-6 text-sky-400" />
                   </div>
                   <h2 className="text-3xl font-bold uppercase">8. International Data Transfers</h2>
                 </div>
@@ -312,7 +312,7 @@ export default function PrivacyPage() {
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                    <RiUserLine className="w-6 h-6 text-blue-400" />
+                    <RiUserLine className="w-6 h-6 text-sky-400" />
                   </div>
                   <h2 className="text-3xl font-bold uppercase">9. Children's Privacy</h2>
                 </div>
@@ -323,7 +323,7 @@ export default function PrivacyPage() {
                   PropVideo is not intended for use by children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children under these ages.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  If we become aware that we have collected personal information from a child under the applicable age without parental consent, we will take steps to delete that information as quickly as possible. If you believe we have collected information from a child, please contact us immediately at privacy@voicecraft.ai.
+                  If we become aware that we have collected personal information from a child under the applicable age without parental consent, we will take steps to delete that information as quickly as possible. If you believe we have collected information from a child, please contact us immediately at privacy@propvideo.ai.
                 </p>
               </div>
             </div>
@@ -332,7 +332,7 @@ export default function PrivacyPage() {
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                    <RiLockLine className="w-6 h-6 text-blue-400" />
+                    <RiLockLine className="w-6 h-6 text-sky-400" />
                   </div>
                   <h2 className="text-3xl font-bold uppercase">10. Changes to This Policy</h2>
                 </div>
@@ -355,40 +355,40 @@ export default function PrivacyPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-black border-t-8 border-blue-400">
+      <section className="py-24 bg-black border-t-8 border-sky-400">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-20 h-20 bg-blue-400 border-4 border-blue-400 flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-sky-400 border-4 border-sky-400 flex items-center justify-center mx-auto mb-6">
               <RiMailLine className="w-10 h-10 text-black" />
             </div>
-            <h2 className="text-4xl font-bold uppercase mb-6 text-blue-400">
+            <h2 className="text-4xl font-bold uppercase mb-6 text-sky-400">
               QUESTIONS ABOUT PRIVACY?
             </h2>
             <p className="text-xl text-white mb-8">
               If you have questions about this Privacy Policy or how we handle your data, we're here to help.
             </p>
 
-            <div className="p-8 bg-white border-4 border-white brutalist-shadow-yellow">
+            <div className="p-8 bg-white border-4 border-white shadow-lg">
               <h3 className="text-2xl font-bold uppercase mb-4">CONTACT US</h3>
               <div className="space-y-3 text-left max-w-2xl mx-auto">
                 <div>
                   <span className="font-bold uppercase text-sm">Email:</span>
                   <br />
                   <a
-                    href="mailto:privacy@voicecraft.ai"
+                    href="mailto:privacy@propvideo.ai"
                     className="text-lg font-bold text-black underline hover:no-underline"
                   >
-                    privacy@voicecraft.ai
+                    privacy@propvideo.ai
                   </a>
                 </div>
                 <div>
                   <span className="font-bold uppercase text-sm">Data Protection Officer:</span>
                   <br />
                   <a
-                    href="mailto:dpo@voicecraft.ai"
+                    href="mailto:dpo@propvideo.ai"
                     className="text-lg font-bold text-black underline hover:no-underline"
                   >
-                    dpo@voicecraft.ai
+                    dpo@propvideo.ai
                   </a>
                 </div>
                 <div>

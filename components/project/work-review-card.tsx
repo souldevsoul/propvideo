@@ -79,15 +79,15 @@ export function WorkReviewCard({
 
   return (
     <>
-      <Card variant="outlined" className="border-4 border-cyan-500 bg-cyan-50">
+      <Card variant="outlined" className="border-4 border-sky-500 bg-sky-50">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="flex items-center gap-2 text-cyan-900">
-                <RiCheckLine className="h-6 w-6 text-cyan-600" />
+              <CardTitle className="flex items-center gap-2 text-sky-900">
+                <RiCheckLine className="h-6 w-6 text-sky-600" />
                 WORK SUBMITTED FOR REVIEW
               </CardTitle>
-              <CardDescription className="text-cyan-800">
+              <CardDescription className="text-sky-800">
                 {expertName} submitted completed work on{" "}
                 {new Date(submittedWork.submittedAt).toLocaleDateString()}
               </CardDescription>
@@ -147,14 +147,14 @@ export function WorkReviewCard({
           <Separator className="bg-black" />
 
           {/* Instructions */}
-          <div className="rounded-md border-4 border-blue-500 bg-blue-50 p-4">
+          <div className="rounded-md border-4 border-sky-500 bg-sky-50 p-4">
             <div className="flex items-start gap-3">
-              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-blue-600" />
+              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-sky-600" />
               <div className="flex-1">
-                <Heading variant="h3" className="text-sm font-bold text-blue-900">
+                <Heading variant="h3" className="text-sm font-bold text-sky-900">
                   REVIEW THE WORK
                 </Heading>
-                <Text variant="body" className="mt-1 text-sm text-blue-800">
+                <Text variant="body" className="mt-1 text-sm text-sky-800">
                   Listen to all submitted audios. If satisfied, approve the work and rate the expert. If
                   changes are needed, provide detailed feedback for revision.
                 </Text>
@@ -212,7 +212,7 @@ export function WorkReviewCard({
                       onMouseLeave={() => setHoveredRating(0)}
                     >
                       {isFilled ? (
-                        <RiStarFill className="h-10 w-10 text-blue-400" />
+                        <RiStarFill className="h-10 w-10 text-sky-400" />
                       ) : (
                         <RiStarLine className="h-10 w-10 text-slate-300" />
                       )}
@@ -256,7 +256,7 @@ export function WorkReviewCard({
                 </Text>
                 {expertRating && (
                   <div className="flex items-center gap-1">
-                    <RiStarFill className="h-4 w-4 text-blue-400" />
+                    <RiStarFill className="h-4 w-4 text-sky-400" />
                     <Text variant="caption" className="text-sm font-bold">
                       {expertRating.toFixed(1)}
                     </Text>
@@ -307,7 +307,7 @@ export function WorkReviewCard({
             <AlertDialogAction
               onClick={handleRequestChanges}
               disabled={changeRequest.length < 10 || loading}
-              className="bg-orange-400 text-black border-4 border-black hover:bg-orange-500"
+              className="bg-red-400 text-black border-4 border-black hover:bg-orange-500"
             >
               {loading ? "SENDING..." : "SEND FEEDBACK"}
             </AlertDialogAction>

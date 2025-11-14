@@ -29,7 +29,7 @@ export default function ContactPage() {
       icon: RiRocketLine,
       title: "Sales & Enterprise",
       description: "Interested in Enterprise plan, custom pricing, or volume discounts",
-      email: "sales@voicecraft.ai",
+      email: "sales@propvideo.ai",
       responseTime: "4 hours",
       color: "black",
     },
@@ -37,7 +37,7 @@ export default function ContactPage() {
       icon: RiTeamLine,
       title: "Partnerships",
       description: "Integration partnerships, affiliate programs, or collaboration opportunities",
-      email: "partners@voicecraft.ai",
+      email: "partners@propvideo.ai",
       responseTime: "48 hours",
       color: "yellow",
     },
@@ -57,18 +57,18 @@ export default function ContactPage() {
       title: "Technical Support",
       items: [
         "API integration help",
-        "Voice generation issues",
-        "Audio quality problems",
+        "Video generation issues",
+        "Quality and rendering problems",
         "Error troubleshooting",
       ],
     },
     {
-      title: "Voice Cloning",
+      title: "Property Tour Videos",
       items: [
-        "Clone quality improvement",
-        "Audio file requirements",
-        "Training time questions",
-        "Voice management",
+        "Video quality improvement",
+        "Photo upload requirements",
+        "Processing time questions",
+        "Style customization",
       ],
     },
     {
@@ -102,7 +102,7 @@ export default function ContactPage() {
       <section className="py-20 border-b-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
               <RiMailLine className="w-6 h-6" />
               <span className="text-sm font-bold uppercase tracking-wider">Contact Us</span>
             </div>
@@ -135,10 +135,10 @@ export default function ContactPage() {
                 method.color === "black"
                   ? "bg-black text-white"
                   : method.color === "yellow"
-                  ? "bg-blue-400"
+                  ? "bg-sky-400"
                   : "bg-white"
               const shadowClass =
-                method.color === "black" ? "brutalist-shadow-yellow" : "brutalist-shadow"
+                method.color === "black" ? "shadow-lg" : "brutalist-shadow"
 
               return (
                 <div
@@ -147,23 +147,23 @@ export default function ContactPage() {
                 >
                   <div
                     className={`w-16 h-16 ${
-                      method.color === "white" ? "bg-black" : method.color === "black" ? "bg-blue-400" : "bg-black"
+                      method.color === "white" ? "bg-black" : method.color === "black" ? "bg-sky-400" : "bg-black"
                     } flex items-center justify-center mb-6`}
                   >
                     <Icon
                       className={`w-8 h-8 ${
                         method.color === "white"
-                          ? "text-blue-400"
+                          ? "text-sky-400"
                           : method.color === "black"
                           ? "text-black"
-                          : "text-blue-400"
+                          : "text-sky-400"
                       }`}
                     />
                   </div>
 
                   <h3
                     className={`text-2xl font-bold uppercase mb-4 ${
-                      method.color === "black" ? "text-blue-400" : "text-black"
+                      method.color === "black" ? "text-sky-400" : "text-black"
                     }`}
                   >
                     {method.title}
@@ -185,7 +185,7 @@ export default function ContactPage() {
                     <a
                       href={`mailto:${method.email}`}
                       className={`text-lg font-bold underline ${
-                        method.color === "black" ? "text-blue-400" : "text-black"
+                        method.color === "black" ? "text-sky-400" : "text-black"
                       } hover:no-underline`}
                     >
                       {method.email}
@@ -225,7 +225,7 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-white p-8 border-4 border-black brutalist-shadow">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold uppercase mb-2">
@@ -236,7 +236,7 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-blue-400 font-medium"
+                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
                     placeholder="John Doe"
                   />
                 </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-blue-400 font-medium"
+                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -265,7 +265,7 @@ export default function ContactPage() {
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-blue-400 font-medium"
+                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
                     placeholder="Acme Inc."
                   />
                 </div>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-blue-400 font-medium bg-white"
+                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium bg-white"
                   >
                     <option value="">Select a topic...</option>
                     <option value="general">General Inquiry</option>
@@ -302,7 +302,7 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-blue-400 font-medium resize-none"
+                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -311,7 +311,7 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-400 text-black border-4 border-black font-bold uppercase hover:bg-blue-300"
+                  className="w-full bg-sky-400 text-black border-4 border-black font-bold uppercase hover:bg-sky-300"
                 >
                   <RiArrowRightLine className="w-5 h-5 mr-2" />
                   Send Message
@@ -343,12 +343,12 @@ export default function ContactPage() {
               <div
                 key={index}
                 className={`p-8 border-4 border-black ${
-                  index % 2 === 0 ? "bg-white brutalist-shadow" : "bg-black text-white brutalist-shadow-yellow"
+                  index % 2 === 0 ? "bg-white brutalist-shadow" : "bg-black text-white shadow-lg"
                 }`}
               >
                 <h3
                   className={`text-2xl font-bold uppercase mb-6 ${
-                    index % 2 === 0 ? "text-black" : "text-blue-400"
+                    index % 2 === 0 ? "text-black" : "text-sky-400"
                   }`}
                 >
                   {topic.title}
@@ -358,7 +358,7 @@ export default function ContactPage() {
                     <li key={i} className="flex items-start gap-3">
                       <RiCheckLine
                         className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          index % 2 === 0 ? "text-black" : "text-blue-400"
+                          index % 2 === 0 ? "text-black" : "text-sky-400"
                         }`}
                       />
                       <span className={index % 2 === 0 ? "text-gray-700" : "text-white"}>
@@ -374,7 +374,7 @@ export default function ContactPage() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-24 bg-blue-400 border-y-8 border-black">
+      <section className="py-24 bg-sky-400 border-y-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
@@ -399,12 +399,12 @@ export default function ContactPage() {
 
             <a
               href="/demo"
-              className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow text-center hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(234,179,8,1)] transition-all"
+              className="p-6 bg-black text-white border-4 border-black shadow-lg text-center hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(234,179,8,1)] transition-all"
             >
-              <RiRocketLine className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-lg font-bold uppercase mb-2 text-blue-400">Try Demo</h3>
+              <RiRocketLine className="w-12 h-12 text-sky-400 mx-auto mb-4" />
+              <h3 className="text-lg font-bold uppercase mb-2 text-sky-400">Try Demo</h3>
               <p className="text-sm text-white">
-                Test our voice generation before signing up
+                Test our video generation before signing up
               </p>
             </a>
 
@@ -423,26 +423,26 @@ export default function ContactPage() {
       </section>
 
       {/* Emergency Support */}
-      <section className="py-24 bg-black border-t-8 border-blue-400">
+      <section className="py-24 bg-black border-t-8 border-sky-400">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-6 text-blue-400">
+            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-6 text-sky-400">
               ENTERPRISE & URGENT SUPPORT
             </h2>
             <p className="text-xl text-white mb-8">
               Enterprise customers with SLA agreements have access to priority 24/7 support via dedicated channels.
             </p>
-            <div className="p-8 bg-white border-4 border-white brutalist-shadow-yellow">
+            <div className="p-8 bg-white border-4 border-white shadow-lg">
               <h3 className="text-2xl font-bold uppercase mb-4">ENTERPRISE CUSTOMERS</h3>
               <p className="text-gray-700 mb-6">
                 If you have an active Enterprise plan with SLA guarantee, use your dedicated support channels for immediate assistance.
               </p>
               <Button
                 size="lg"
-                className="bg-black text-blue-400 border-4 border-black font-bold uppercase"
+                className="bg-black text-sky-400 border-4 border-black font-bold uppercase"
                 asChild
               >
-                <a href="mailto:enterprise@voicecraft.ai">
+                <a href="mailto:enterprise@propvideo.ai">
                   Contact Enterprise Support
                   <RiArrowRightLine className="w-5 h-5 ml-2" />
                 </a>
