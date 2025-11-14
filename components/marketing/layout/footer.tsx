@@ -3,6 +3,7 @@ import {
   RiMailLine,
   RiPhoneLine,
   RiMapPinLine,
+  RiVideoLine,
 } from "react-icons/ri"
 import { SiVisa, SiMastercard, SiApplepay, SiGooglepay } from "react-icons/si"
 
@@ -16,10 +17,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold uppercase mb-6 text-sky-400">
-              PropVideo
-            </h3>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-sky-400 rounded-lg shadow-lg flex items-center justify-center">
+                <RiVideoLine className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold uppercase text-white">
+                PropVideo
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-6 leading-relaxed">
               AI-powered property tour video generation platform for real estate professionals.
             </p>
 
@@ -45,7 +51,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-sky-400">
+            <h4 className="text-lg font-bold uppercase mb-6 text-white">
               Product
             </h4>
             <ul className="space-y-3">
@@ -79,7 +85,7 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-sky-400">
+            <h4 className="text-lg font-bold uppercase mb-6 text-white">
               Legal & Policies
             </h4>
             <ul className="space-y-3">
@@ -123,7 +129,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-sky-400">
+            <h4 className="text-lg font-bold uppercase mb-6 text-white">
               Contact Us
             </h4>
             <ul className="space-y-4">
