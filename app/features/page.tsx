@@ -27,7 +27,7 @@ export default function FeaturesPage() {
     {
       icon: RiSparklingLine,
       title: "AI Video Generation",
-      subtitle: "PHOTOS TO CINEMATIC TOURS",
+      subtitle: "Photos to Cinematic Tours",
       description: "Transform static property photos into stunning video tours with AI. Upload photos, select your style, and get a professional tour video in minutes. Powered by cutting-edge video generation models.",
       features: [
         "Automatic photo-to-video conversion",
@@ -40,8 +40,8 @@ export default function FeaturesPage() {
     },
     {
       icon: RiMicLine,
-      title: "Professional Voiceover",
-      subtitle: "AI-GENERATED TOUR SCRIPTS",
+      title: "Professional Voiceovers",
+      subtitle: "AI-Generated Tour Scripts",
       description: "AI automatically writes and narrates professional tour scripts based on your property details. Choose from multiple voice styles and tones. Natural-sounding voiceovers that engage buyers.",
       features: [
         "Auto-generated tour scripts",
@@ -54,8 +54,8 @@ export default function FeaturesPage() {
     },
     {
       icon: RiSettings4Line,
-      title: "Tour Styles",
-      subtitle: "MATCH YOUR PROPERTY'S VIBE",
+      title: "Multiple Tour Styles",
+      subtitle: "Match Your Property's Vibe",
       description: "Choose from professionally designed tour styles: luxury, modern, cozy, dramatic, energetic, or elegant. Each style has unique transitions, pacing, color grading, and music recommendations.",
       features: [
         "6+ professional tour styles",
@@ -69,7 +69,7 @@ export default function FeaturesPage() {
     {
       icon: RiTimerLine,
       title: "Smart Photo Sequencing",
-      subtitle: "INTELLIGENT TOUR FLOW",
+      subtitle: "Intelligent Tour Flow",
       description: "AI automatically arranges your photos in the optimal order for maximum impact. Starts with curb appeal, flows through living spaces, and ends with selling points. Manual reordering available.",
       features: [
         "Automatic optimal photo ordering",
@@ -83,7 +83,7 @@ export default function FeaturesPage() {
     {
       icon: RiCodeLine,
       title: "Automated Scripting",
-      subtitle: "AI-POWERED TOUR NARRATION",
+      subtitle: "AI-Powered Tour Narration",
       description: "AI analyzes property details and photos to write compelling tour scripts. Highlights best features, uses persuasive language, and maintains professional tone. Fully editable before generation.",
       features: [
         "Property detail analysis",
@@ -96,8 +96,8 @@ export default function FeaturesPage() {
     },
     {
       icon: RiVoiceprintLine,
-      title: "Branding Overlay",
-      subtitle: "ADD YOUR PROFESSIONAL TOUCH",
+      title: "Agent Branding Overlay",
+      subtitle: "Add Your Professional Touch",
       description: "Add your agent logo, name, contact info, and brokerage branding to every video. Customize position, size, and timing. Build your personal brand with every tour you create.",
       features: [
         "Agent logo overlay",
@@ -110,8 +110,8 @@ export default function FeaturesPage() {
     },
     {
       icon: RiGlobalLine,
-      title: "Multiple Export Formats",
-      subtitle: "OPTIMIZE FOR EVERY PLATFORM",
+      title: "Multi-Format Export",
+      subtitle: "Optimize for Every Platform",
       description: "Export videos in formats optimized for Instagram (9:16), TikTok (9:16), YouTube (16:9), Facebook (1:1), and Zillow (16:9). One-click export for all platforms from a single tour.",
       features: [
         "16:9 for YouTube & Zillow",
@@ -125,7 +125,7 @@ export default function FeaturesPage() {
     {
       icon: RiHeadphoneLine,
       title: "Music Library",
-      subtitle: "PROFESSIONAL BACKGROUND TRACKS",
+      subtitle: "Professional Background Tracks",
       description: "Choose from 100+ royalty-free background music tracks. Organized by mood and style. Perfect for setting the tone of your tour. Volume control and fade options included.",
       features: [
         "100+ royalty-free tracks",
@@ -139,7 +139,7 @@ export default function FeaturesPage() {
     {
       icon: RiDatabase2Line,
       title: "Video Analytics",
-      subtitle: "TRACK ENGAGEMENT & PERFORMANCE",
+      subtitle: "Track Engagement & Performance",
       description: "Comprehensive analytics showing views, shares, downloads, and engagement metrics for every video. Track which properties get the most attention. Export reports for clients.",
       features: [
         "Real-time view tracking",
@@ -153,7 +153,7 @@ export default function FeaturesPage() {
     {
       icon: RiFlashlightLine,
       title: "Fast Generation",
-      subtitle: "MINUTES, NOT HOURS",
+      subtitle: "Minutes, Not Hours",
       description: "Generate professional property tour videos in 3-5 minutes. No video editing skills required. Fast processing powered by state-of-the-art AI models. Batch generation for multiple properties.",
       features: [
         "3-5 minute generation time",
@@ -167,7 +167,7 @@ export default function FeaturesPage() {
     {
       icon: RiShieldCheckLine,
       title: "Property Management",
-      subtitle: "ORGANIZE YOUR LISTINGS",
+      subtitle: "Organize Your Listings",
       description: "Centralized library for all your properties and videos. Search, filter, and organize by status, type, or date. Track which properties have videos. Import from MLS listings.",
       features: [
         "Unlimited property storage",
@@ -180,8 +180,8 @@ export default function FeaturesPage() {
     },
     {
       icon: RiTeamLine,
-      title: "Team Collaboration",
-      subtitle: "BUILT FOR REAL ESTATE TEAMS",
+      title: "CRM/MLS Integration",
+      subtitle: "Built for Real Estate Teams",
       description: "Share properties and videos across your team or brokerage. Role-based access control. Team analytics and centralized billing. Perfect for teams and brokerages of any size.",
       features: [
         "Unlimited team members (Team/Brokerage)",
@@ -202,32 +202,32 @@ export default function FeaturesPage() {
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "About", href: "/about" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Create Tour",
+          href: "/dashboard",
         }}
       />
 
       {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
+      <section className="py-20 bg-gradient-to-b from-sky-50 to-white">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
-              <RiSparklingLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Features</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-100 rounded-2xl mb-8 border-2 border-sky-200">
+              <RiSparklingLine className="w-6 h-6 text-sky-600" />
+              <span className="text-sm font-bold tracking-wider text-sky-900">Features</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              EVERYTHING YOU NEED FOR PROFESSIONAL PROPERTY TOURS
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-slate-900">
+              Everything You Need for Professional Property Tours
             </h1>
-            <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
               AI-powered video generation, professional voiceovers, and smart tools built for real estate agents and brokerages who want to sell faster.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="lg"
-                className="gap-3 bg-black text-sky-400 border-4 border-black font-bold uppercase"
+                className="gap-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold"
               >
                 <RiArrowRightLine className="w-5 h-5" />
                 Start Free Trial
@@ -235,7 +235,7 @@ export default function FeaturesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-3 border-4 border-black font-bold uppercase"
+                className="gap-3 border-2 border-slate-300 hover:border-sky-500 rounded-xl font-bold"
               >
                 View Pricing
               </Button>
@@ -245,24 +245,24 @@ export default function FeaturesPage() {
       </section>
 
       {/* Model Stats */}
-      <section className="py-16 bg-black border-b-8 border-sky-400">
+      <section className="py-16 bg-slate-900">
         <Container maxWidth="xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">3-5min</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Generation Time</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2">3-5min</div>
+              <div className="text-sm font-bold text-white tracking-wider">Generation Time</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">6+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Tour Styles</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2">6+</div>
+              <div className="text-sm font-bold text-white tracking-wider">Tour Styles</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">100+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Music Tracks</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2">100+</div>
+              <div className="text-sm font-bold text-white tracking-wider">Music Tracks</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">4K</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Video Quality</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2">4K</div>
+              <div className="text-sm font-bold text-white tracking-wider">Video Quality</div>
             </div>
           </div>
         </Container>
@@ -274,39 +274,39 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainFeatures.map((feature, index) => {
               const Icon = feature.icon
-              const bgColors = ["bg-white", "bg-black", "bg-sky-400"]
-              const textColors = ["text-black", "text-sky-400", "text-black"]
-              const subtitleColors = ["text-gray-600", "text-white", "text-gray-900"]
+              const bgColors = ["bg-white", "bg-slate-900", "bg-sky-100"]
+              const textColors = ["text-slate-900", "text-white", "text-slate-900"]
+              const subtitleColors = ["text-slate-600", "text-slate-300", "text-slate-700"]
               const colorIndex = index % 3
 
               return (
                 <div
                   key={index}
-                  className={`p-8 ${bgColors[colorIndex]} border-4 border-black ${
-                    colorIndex === 1 ? "shadow-lg" : "brutalist-shadow"
+                  className={`p-8 ${bgColors[colorIndex]} rounded-2xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 ${
+                    colorIndex === 1 ? "border-2 border-slate-700" : "border-2 border-sky-200"
                   }`}
                 >
-                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-sky-400" : "bg-black"} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-black" : "text-sky-400"}`} />
+                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-gradient-to-br from-sky-500 to-sky-600" : "bg-gradient-to-br from-slate-800 to-slate-900"} rounded-2xl flex items-center justify-center mb-6`}>
+                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-white" : "text-sky-400"}`} />
                   </div>
 
-                  <h3 className={`text-2xl font-bold uppercase mb-2 ${textColors[colorIndex]}`}>
+                  <h3 className={`text-2xl font-bold mb-2 ${textColors[colorIndex]}`}>
                     {feature.title}
                   </h3>
 
-                  <div className={`text-xs font-bold uppercase tracking-wider mb-4 ${subtitleColors[colorIndex]}`}>
+                  <div className={`text-xs font-bold tracking-wider mb-4 ${subtitleColors[colorIndex]}`}>
                     {feature.subtitle}
                   </div>
 
-                  <p className={`mb-6 ${colorIndex === 1 ? "text-white" : "text-gray-700"}`}>
+                  <p className={`mb-6 ${colorIndex === 1 ? "text-slate-300" : "text-slate-600"}`}>
                     {feature.description}
                   </p>
 
                   <ul className="space-y-2">
                     {feature.features.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <RiCheckDoubleLine className={`w-5 h-5 flex-shrink-0 ${colorIndex === 1 ? "text-sky-400" : "text-black"}`} />
-                        <span className={`text-sm ${colorIndex === 1 ? "text-white" : "text-gray-700"}`}>
+                        <RiCheckDoubleLine className={`w-5 h-5 flex-shrink-0 ${colorIndex === 1 ? "text-sky-400" : "text-emerald-500"}`} />
+                        <span className={`text-sm ${colorIndex === 1 ? "text-slate-300" : "text-slate-600"}`}>
                           {item}
                         </span>
                       </li>
@@ -320,22 +320,22 @@ export default function FeaturesPage() {
       </section>
 
       {/* Tour Styles CTA */}
-      <section className="py-24 bg-sky-400 border-y-8 border-black">
+      <section className="py-24 bg-gradient-to-br from-sky-500 to-sky-600">
         <Container maxWidth="xl">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-black border-4 border-black mb-8">
-              <RiVideoChatLine className="w-6 h-6 text-sky-400" />
-              <span className="text-sm font-bold uppercase tracking-wider text-sky-400">Tour Styles</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-2xl mb-8 border-2 border-white/30">
+              <RiVideoChatLine className="w-6 h-6 text-white" />
+              <span className="text-sm font-bold tracking-wider text-white">Tour Styles</span>
             </div>
-            <h2 className="text-5xl font-bold uppercase mb-6 text-black">
-              CHOOSE THE PERFECT STYLE FOR YOUR PROPERTY
+            <h2 className="text-5xl font-bold mb-6 text-white">
+              Choose the Perfect Style for Your Property
             </h2>
-            <p className="text-xl text-gray-900 mb-8">
+            <p className="text-xl text-sky-100 mb-8">
               From luxury estates to cozy homes, we have tour styles for every property type. Each style includes unique transitions, pacing, color grading, and music recommendations.
             </p>
             <Button
               size="xl"
-              className="gap-3 bg-black text-sky-400 border-4 border-black font-bold uppercase brutalist-shadow"
+              className="gap-3 bg-white text-sky-600 hover:bg-sky-50 rounded-2xl font-bold shadow-xl"
             >
               <RiArrowRightLine className="w-5 h-5" />
               Explore Tour Styles
@@ -345,19 +345,19 @@ export default function FeaturesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-black border-t-8 border-sky-400">
+      <section className="py-24 bg-slate-900">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold uppercase mb-6 text-sky-400">
-              READY TO GET STARTED?
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-white mb-12">
+            <p className="text-xl text-slate-300 mb-12">
               Join thousands of real estate agents using PropVideo to create stunning property tours. Start your free trial today—no credit card required.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="xl"
-                className="gap-3 bg-sky-400 text-black border-4 border-sky-400 font-bold uppercase"
+                className="gap-3 bg-sky-500 hover:bg-sky-600 text-white rounded-2xl font-bold"
               >
                 <RiArrowRightLine className="w-5 h-5" />
                 Start Free Trial
@@ -365,7 +365,7 @@ export default function FeaturesPage() {
               <Button
                 size="xl"
                 variant="outline"
-                className="gap-3 bg-white text-black border-4 border-white font-bold uppercase"
+                className="gap-3 bg-white text-slate-900 hover:bg-slate-100 border-2 border-white rounded-2xl font-bold"
               >
                 View Pricing
               </Button>

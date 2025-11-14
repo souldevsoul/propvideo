@@ -12,7 +12,7 @@ import {
   RiFireLine,
   RiLightbulbLine,
   RiCodeLine,
-  RiMicLine,
+  RiVideoChatLine,
 } from "react-icons/ri"
 
 export default function BlogPage() {
@@ -24,8 +24,8 @@ export default function BlogPage() {
   ]
 
   const featuredPost = {
-    title: "Kokoro-82M: Why 56M+ Runs Makes It the Most Trusted Voice Model",
-    excerpt: "Deep dive into the world's most popular voice synthesis model and why battle-tested technology matters for production applications.",
+    title: "How Video Tours Are Changing Real Estate Marketing in 2025",
+    excerpt: "Discover why property video tours are becoming essential for real estate agents and how AI-powered tools are making professional video creation accessible to everyone.",
     category: "Product Updates",
     date: "Nov 8, 2025",
     readTime: "8 min read",
@@ -35,8 +35,8 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
-      title: "Getting Started with Voice Cloning: A Complete Guide",
-      excerpt: "Learn how to create custom voice profiles using Minimax technology. From audio preparation to training optimization.",
+      title: "Creating Property Tour Videos: A Complete Guide",
+      excerpt: "Learn how to create professional property tour videos from photos. From upload to export, master the complete workflow.",
       category: "Tutorials",
       date: "Nov 5, 2025",
       readTime: "12 min read",
@@ -44,8 +44,8 @@ export default function BlogPage() {
       tag: "Beginner",
     },
     {
-      title: "10 Creative Ways to Use AI Voice Synthesis",
-      excerpt: "Discover innovative applications of voice AI: from audiobook narration to podcast production and e-learning content.",
+      title: "10 Video Marketing Tips for Realtors",
+      excerpt: "Discover proven strategies to use video tours to attract buyers, increase engagement, and close deals faster in competitive markets.",
       category: "Use Cases",
       date: "Nov 3, 2025",
       readTime: "6 min read",
@@ -53,8 +53,8 @@ export default function BlogPage() {
       tag: "Popular",
     },
     {
-      title: "Emotion Control in Voice AI: Technical Deep Dive",
-      excerpt: "How emotion parameters work in Minimax models and best practices for natural-sounding emotional delivery.",
+      title: "Choosing the Right Tour Style for Your Property",
+      excerpt: "How tour style parameters work in PropVideo and best practices for matching style to property type and target buyer.",
       category: "Tutorials",
       date: "Nov 1, 2025",
       readTime: "10 min read",
@@ -62,8 +62,8 @@ export default function BlogPage() {
       tag: "Technical",
     },
     {
-      title: "Comparing Voice Models: Kokoro vs Minimax vs XTTS",
-      excerpt: "A comprehensive comparison of the top three voice synthesis models: features, quality, speed, and pricing.",
+      title: "Comparing Video Models: Veo vs Luma for Property Tours",
+      excerpt: "A comprehensive comparison of the top video generation models: features, quality, speed, and best use cases for real estate.",
       category: "Product Updates",
       date: "Oct 28, 2025",
       readTime: "15 min read",
@@ -71,8 +71,8 @@ export default function BlogPage() {
       tag: "Popular",
     },
     {
-      title: "How Podcasters Are Using Voice AI to Scale Production",
-      excerpt: "Case study: How independent podcasters use voice synthesis to create intro/outro content and multilingual versions.",
+      title: "How Agents Use AI for Listings",
+      excerpt: "Case study: How top-performing agents use AI video tours to create more content, reach more buyers, and scale their business.",
       category: "Use Cases",
       date: "Oct 25, 2025",
       readTime: "7 min read",
@@ -80,8 +80,8 @@ export default function BlogPage() {
       tag: "Case Study",
     },
     {
-      title: "Voice AI API Integration: Best Practices",
-      excerpt: "Essential tips for integrating voice synthesis into your application: rate limiting, error handling, and caching strategies.",
+      title: "Virtual Staging Integration with Video Tours",
+      excerpt: "Essential tips for combining virtual staging with property videos: workflow optimization, quality control, and buyer perception.",
       category: "Tutorials",
       date: "Oct 22, 2025",
       readTime: "11 min read",
@@ -89,8 +89,8 @@ export default function BlogPage() {
       tag: "Technical",
     },
     {
-      title: "The Future of Multilingual Voice Content",
-      excerpt: "How AI voice technology is breaking language barriers and enabling creators to reach global audiences.",
+      title: "The Future of Real Estate Video",
+      excerpt: "How AI video technology is transforming property marketing and enabling agents to reach global audiences with multilingual tours.",
       category: "Product Updates",
       date: "Oct 19, 2025",
       readTime: "8 min read",
@@ -98,8 +98,8 @@ export default function BlogPage() {
       tag: "Trending",
     },
     {
-      title: "Optimizing Audio Quality: Pro Tips",
-      excerpt: "Advanced techniques for getting the best audio output: pitch adjustment, speed control, and format selection.",
+      title: "Music Selection for Property Tours: Pro Tips",
+      excerpt: "Advanced techniques for choosing the perfect background music: mood matching, tempo control, and legal considerations.",
       category: "Tutorials",
       date: "Oct 16, 2025",
       readTime: "9 min read",
@@ -107,13 +107,13 @@ export default function BlogPage() {
       tag: "Pro Tips",
     },
     {
-      title: "Voice AI for E-Learning: A Teacher's Perspective",
-      excerpt: "How educators are using voice synthesis to create engaging, accessible, and scalable learning content.",
+      title: "Social Media Optimization Tips for Property Videos",
+      excerpt: "How real estate professionals optimize property tour videos for Instagram, TikTok, and YouTube to maximize reach and engagement.",
       category: "Use Cases",
       date: "Oct 13, 2025",
       readTime: "6 min read",
       author: "Jennifer Liu",
-      tag: "Education",
+      tag: "Marketing",
     },
   ]
 
@@ -125,47 +125,47 @@ export default function BlogPage() {
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "About", href: "/about" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Create Tour",
+          href: "/dashboard",
         }}
       />
 
       {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
+      <section className="py-20 bg-gradient-to-b from-sky-50 to-white">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
-              <RiArticleLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Blog</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-100 rounded-2xl mb-8 border-2 border-sky-200">
+              <RiArticleLine className="w-6 h-6 text-sky-600" />
+              <span className="text-sm font-bold tracking-wider text-sky-900">Blog</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              VOICE AI INSIGHTS & UPDATES
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-slate-900">
+              Property Video Insights & Updates
             </h1>
-            <p className="text-xl text-gray-700">
-              Tutorials, use cases, product updates, and everything you need to master voice synthesis
+            <p className="text-xl text-slate-600">
+              Tutorials, use cases, product updates, and everything you need to master property video tours
             </p>
           </div>
         </Container>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-black border-b-8 border-sky-400">
+      <section className="py-8 bg-slate-900">
         <Container maxWidth="xl">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`px-6 py-3 font-bold uppercase text-sm border-4 ${
+                className={`px-6 py-3 font-bold text-sm rounded-xl transition-all ${
                   index === 0
-                    ? "bg-sky-400 text-black border-sky-400"
-                    : "bg-transparent text-white border-white hover:bg-white hover:text-black"
-                } transition-all`}
+                    ? "bg-sky-500 text-white hover:bg-sky-600"
+                    : "bg-transparent text-white border-2 border-slate-700 hover:bg-slate-800 hover:border-sky-500"
+                }`}
               >
                 {category.name}
-                <span className="ml-2">({category.count})</span>
+                <span className="ml-2 opacity-70">({category.count})</span>
               </button>
             ))}
           </div>
@@ -173,34 +173,34 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-b from-white to-sky-50">
         <Container maxWidth="xl">
           <div className="mb-6 flex items-center gap-3">
-            <RiFireLine className="w-6 h-6" />
-            <h2 className="text-2xl font-bold uppercase">Featured Post</h2>
+            <RiFireLine className="w-6 h-6 text-emerald-500" />
+            <h2 className="text-2xl font-bold">Featured Post</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 bg-black border-4 border-black shadow-lg p-8">
-            <div className="bg-sky-400 border-4 border-black aspect-video flex items-center justify-center">
-              <RiMicLine className="w-24 h-24 text-black" />
+          <div className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-xl p-8 border-2 border-slate-700">
+            <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl aspect-video flex items-center justify-center">
+              <RiVideoChatLine className="w-24 h-24 text-white opacity-90" />
             </div>
 
             <div className="flex flex-col justify-center text-white">
-              <div className="inline-flex items-center gap-2 text-sky-400 text-xs font-bold uppercase mb-3">
-                <span className="px-3 py-1 bg-sky-400 text-black border-2 border-sky-400">
+              <div className="inline-flex items-center gap-2 text-sky-400 text-xs font-bold mb-3">
+                <span className="px-3 py-1 bg-sky-500 text-white rounded-lg">
                   {featuredPost.category}
                 </span>
               </div>
 
-              <h3 className="text-3xl font-bold uppercase mb-4 leading-tight text-sky-400">
+              <h3 className="text-3xl font-bold mb-4 leading-tight text-white">
                 {featuredPost.title}
               </h3>
 
-              <p className="text-white mb-6 text-lg leading-relaxed">
+              <p className="text-slate-300 mb-6 text-lg leading-relaxed">
                 {featuredPost.excerpt}
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-6">
                 <div className="flex items-center gap-2">
                   <RiCalendarLine className="w-4 h-4" />
                   {featuredPost.date}
@@ -213,7 +213,7 @@ export default function BlogPage() {
 
               <Button
                 size="lg"
-                className="bg-sky-400 text-black border-4 border-sky-400 font-bold uppercase w-fit"
+                className="bg-sky-500 hover:bg-sky-600 text-white rounded-xl font-bold w-fit"
               >
                 Read Article
                 <RiArrowRightLine className="w-5 h-5 ml-2" />
@@ -227,20 +227,20 @@ export default function BlogPage() {
       <section className="py-24">
         <Container maxWidth="xl">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-              LATEST ARTICLES
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+              Latest Articles
             </h2>
-            <p className="text-xl text-gray-700">
-              Stay updated with the latest in voice AI technology
+            <p className="text-xl text-slate-600">
+              Stay updated with the latest in property video marketing
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => {
-              const bgColors = ["bg-white", "bg-black", "bg-sky-400"]
-              const textColors = ["text-black", "text-sky-400", "text-black"]
-              const excerptColors = ["text-gray-700", "text-white", "text-gray-900"]
-              const metaColors = ["text-gray-600", "text-gray-300", "text-gray-700"]
+              const bgColors = ["bg-white", "bg-slate-900", "bg-sky-100"]
+              const textColors = ["text-slate-900", "text-white", "text-slate-900"]
+              const excerptColors = ["text-slate-600", "text-slate-300", "text-slate-700"]
+              const metaColors = ["text-slate-500", "text-slate-400", "text-slate-600"]
               const colorIndex = index % 3
 
               const tagIcons: { [key: string]: any } = {
@@ -254,19 +254,19 @@ export default function BlogPage() {
               return (
                 <div
                   key={index}
-                  className={`${bgColors[colorIndex]} border-4 border-black ${
-                    colorIndex === 1 ? "shadow-lg" : "brutalist-shadow"
-                  } overflow-hidden flex flex-col`}
+                  className={`${bgColors[colorIndex]} rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all hover:shadow-xl hover:-translate-y-1 ${
+                    colorIndex === 1 ? "border-2 border-slate-700" : "border-2 border-sky-200"
+                  }`}
                 >
                   {/* Image Placeholder */}
                   <div
                     className={`h-48 ${
-                      colorIndex === 1 ? "bg-sky-400" : colorIndex === 2 ? "bg-black" : "bg-gray-200"
-                    } border-b-4 border-black flex items-center justify-center`}
+                      colorIndex === 1 ? "bg-gradient-to-br from-sky-500 to-sky-600" : colorIndex === 2 ? "bg-gradient-to-br from-slate-200 to-slate-300" : "bg-gradient-to-br from-slate-100 to-slate-200"
+                    } flex items-center justify-center`}
                   >
                     <RiArticleLine
                       className={`w-16 h-16 ${
-                        colorIndex === 1 ? "text-black" : colorIndex === 2 ? "text-sky-400" : "text-gray-400"
+                        colorIndex === 1 ? "text-white opacity-80" : colorIndex === 2 ? "text-sky-600" : "text-slate-400"
                       }`}
                     />
                   </div>
@@ -275,12 +275,10 @@ export default function BlogPage() {
                     {/* Category & Tag */}
                     <div className="flex items-center justify-between mb-3">
                       <span
-                        className={`text-xs font-bold uppercase px-3 py-1 ${
+                        className={`text-xs font-bold px-3 py-1 rounded-lg ${
                           colorIndex === 1
-                            ? "bg-sky-400 text-black"
-                            : colorIndex === 2
-                            ? "bg-black text-sky-400"
-                            : "bg-black text-sky-400"
+                            ? "bg-sky-500 text-white"
+                            : "bg-sky-100 text-sky-900"
                         }`}
                       >
                         {post.category}
@@ -288,11 +286,11 @@ export default function BlogPage() {
                       <div className="flex items-center gap-1">
                         <TagIcon
                           className={`w-4 h-4 ${
-                            colorIndex === 1 ? "text-sky-400" : "text-black"
+                            colorIndex === 1 ? "text-sky-400" : "text-sky-600"
                           }`}
                         />
                         <span
-                          className={`text-xs font-bold uppercase ${metaColors[colorIndex]}`}
+                          className={`text-xs font-bold ${metaColors[colorIndex]}`}
                         >
                           {post.tag}
                         </span>
@@ -301,7 +299,7 @@ export default function BlogPage() {
 
                     {/* Title */}
                     <h3
-                      className={`text-xl font-bold uppercase mb-3 leading-tight ${textColors[colorIndex]}`}
+                      className={`text-xl font-bold mb-3 leading-tight ${textColors[colorIndex]}`}
                     >
                       {post.title}
                     </h3>
@@ -325,13 +323,11 @@ export default function BlogPage() {
 
                     {/* Read More */}
                     <button
-                      className={`w-full py-3 font-bold uppercase text-sm border-4 ${
+                      className={`w-full py-3 font-bold text-sm rounded-xl transition-all ${
                         colorIndex === 1
-                          ? "bg-sky-400 text-black border-sky-400 hover:bg-sky-300"
-                          : colorIndex === 2
-                          ? "bg-black text-sky-400 border-black hover:bg-gray-900"
-                          : "bg-black text-sky-400 border-black hover:bg-gray-900"
-                      } transition-all`}
+                          ? "bg-sky-500 hover:bg-sky-600 text-white"
+                          : "bg-slate-900 hover:bg-slate-800 text-white"
+                      }`}
                     >
                       Read More →
                     </button>
@@ -346,7 +342,7 @@ export default function BlogPage() {
             <Button
               size="xl"
               variant="outline"
-              className="gap-3 bg-white text-black border-4 border-black font-bold uppercase brutalist-shadow"
+              className="gap-3 bg-white text-slate-900 border-2 border-slate-300 hover:border-sky-500 rounded-xl font-bold"
             >
               Load More Articles
               <RiArrowRightLine className="w-5 h-5" />
@@ -356,32 +352,32 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-24 bg-black border-y-8 border-sky-400">
+      <section className="py-24 bg-slate-900">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-6 text-sky-400">
-              STAY UPDATED
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Stay Updated
             </h2>
-            <p className="text-xl text-white mb-8">
-              Get the latest voice AI insights, tutorials, and product updates delivered to your inbox
+            <p className="text-xl text-slate-300 mb-8">
+              Get the latest property video insights, tutorials, and product updates delivered to your inbox
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 border-4 border-white font-medium text-lg focus:outline-none focus:ring-4 focus:ring-sky-400"
+                className="flex-1 px-6 py-4 rounded-xl border-2 border-slate-700 bg-slate-800 text-white font-medium text-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
               />
               <Button
                 size="lg"
-                className="bg-sky-400 text-black border-4 border-sky-400 font-bold uppercase px-8 whitespace-nowrap"
+                className="bg-sky-500 hover:bg-sky-600 text-white rounded-xl font-bold px-8 whitespace-nowrap"
               >
                 Subscribe
                 <RiArrowRightLine className="w-5 h-5 ml-2" />
               </Button>
             </div>
 
-            <p className="text-sm text-gray-400 mt-4">
+            <p className="text-sm text-slate-400 mt-4">
               No spam. Unsubscribe anytime. Read our{" "}
               <a href="/privacy" className="text-sky-400 underline hover:no-underline">
                 Privacy Policy

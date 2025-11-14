@@ -31,7 +31,7 @@ export default function ContactPage() {
       description: "Interested in Enterprise plan, custom pricing, or volume discounts",
       email: "sales@propvideo.ai",
       responseTime: "4 hours",
-      color: "black",
+      color: "dark",
     },
     {
       icon: RiTeamLine,
@@ -39,7 +39,7 @@ export default function ContactPage() {
       description: "Integration partnerships, affiliate programs, or collaboration opportunities",
       email: "partners@propvideo.ai",
       responseTime: "48 hours",
-      color: "yellow",
+      color: "sky",
     },
   ]
 
@@ -90,26 +90,26 @@ export default function ContactPage() {
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "About", href: "/about" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Create Tour",
+          href: "/dashboard",
         }}
       />
 
       {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
+      <section className="py-20 bg-gradient-to-b from-sky-50 to-white">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-400 border-4 border-black mb-8">
-              <RiMailLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Contact Us</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-sky-100 rounded-2xl mb-8 border-2 border-sky-200">
+              <RiMailLine className="w-6 h-6 text-sky-600" />
+              <span className="text-sm font-bold tracking-wider text-sky-900">Contact Us</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              WE'RE HERE TO HELP
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-slate-900">
+              We're Here to Help
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-slate-600 mb-8">
               Have questions? Need support? Want to discuss enterprise options? Our team is ready to assist you.
             </p>
           </div>
@@ -120,10 +120,10 @@ export default function ContactPage() {
       <section className="py-24">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-              GET IN TOUCH
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+              Get in Touch
             </h2>
-            <p className="text-xl text-gray-700">
+            <p className="text-xl text-slate-600">
               Choose the best way to reach us based on your needs
             </p>
           </div>
@@ -132,38 +132,34 @@ export default function ContactPage() {
             {contactMethods.map((method, index) => {
               const Icon = method.icon
               const bgColor =
-                method.color === "black"
-                  ? "bg-black text-white"
-                  : method.color === "yellow"
-                  ? "bg-sky-400"
+                method.color === "dark"
+                  ? "bg-slate-900 text-white"
+                  : method.color === "sky"
+                  ? "bg-sky-100"
                   : "bg-white"
-              const shadowClass =
-                method.color === "black" ? "shadow-lg" : "brutalist-shadow"
+              const borderColor =
+                method.color === "dark" ? "border-slate-700" : "border-sky-200"
 
               return (
                 <div
                   key={index}
-                  className={`p-8 ${bgColor} border-4 border-black ${shadowClass}`}
+                  className={`p-8 ${bgColor} rounded-2xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 border-2 ${borderColor}`}
                 >
                   <div
                     className={`w-16 h-16 ${
-                      method.color === "white" ? "bg-black" : method.color === "black" ? "bg-sky-400" : "bg-black"
-                    } flex items-center justify-center mb-6`}
+                      method.color === "dark" ? "bg-gradient-to-br from-sky-500 to-sky-600" : "bg-gradient-to-br from-slate-800 to-slate-900"
+                    } rounded-2xl flex items-center justify-center mb-6`}
                   >
                     <Icon
                       className={`w-8 h-8 ${
-                        method.color === "white"
-                          ? "text-sky-400"
-                          : method.color === "black"
-                          ? "text-black"
-                          : "text-sky-400"
+                        method.color === "dark" ? "text-white" : "text-sky-400"
                       }`}
                     />
                   </div>
 
                   <h3
-                    className={`text-2xl font-bold uppercase mb-4 ${
-                      method.color === "black" ? "text-sky-400" : "text-black"
+                    className={`text-2xl font-bold mb-4 ${
+                      method.color === "dark" ? "text-white" : "text-slate-900"
                     }`}
                   >
                     {method.title}
@@ -171,11 +167,9 @@ export default function ContactPage() {
 
                   <p
                     className={`mb-6 ${
-                      method.color === "black"
-                        ? "text-white"
-                        : method.color === "yellow"
-                        ? "text-gray-900"
-                        : "text-gray-700"
+                      method.color === "dark"
+                        ? "text-slate-300"
+                        : "text-slate-600"
                     }`}
                   >
                     {method.description}
@@ -185,7 +179,7 @@ export default function ContactPage() {
                     <a
                       href={`mailto:${method.email}`}
                       className={`text-lg font-bold underline ${
-                        method.color === "black" ? "text-sky-400" : "text-black"
+                        method.color === "dark" ? "text-sky-400" : "text-sky-600"
                       } hover:no-underline`}
                     >
                       {method.email}
@@ -193,12 +187,10 @@ export default function ContactPage() {
                   </div>
 
                   <div
-                    className={`flex items-center gap-2 text-sm font-bold uppercase ${
-                      method.color === "black"
-                        ? "text-white"
-                        : method.color === "yellow"
-                        ? "text-gray-900"
-                        : "text-gray-600"
+                    className={`flex items-center gap-2 text-sm font-bold ${
+                      method.color === "dark"
+                        ? "text-slate-300"
+                        : "text-slate-600"
                     }`}
                   >
                     <RiTimeLine className="w-5 h-5" />
@@ -212,23 +204,23 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-24 bg-gray-50 border-y-8 border-black">
+      <section className="py-24 bg-gradient-to-b from-white to-sky-50">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-                SEND US A MESSAGE
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+                Send Us a Message
               </h2>
-              <p className="text-xl text-gray-700">
+              <p className="text-xl text-slate-600">
                 Fill out the form and we'll get back to you as soon as possible
               </p>
             </div>
 
-            <div className="bg-white p-8 border-4 border-black brutalist-shadow">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-sky-200">
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-bold uppercase mb-2">
+                  <label htmlFor="name" className="block text-sm font-bold mb-2 text-slate-900">
                     Full Name *
                   </label>
                   <input
@@ -236,14 +228,14 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium"
                     placeholder="John Doe"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-bold uppercase mb-2">
+                  <label htmlFor="email" className="block text-sm font-bold mb-2 text-slate-900">
                     Email Address *
                   </label>
                   <input
@@ -251,35 +243,35 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 {/* Company */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-bold uppercase mb-2">
+                  <label htmlFor="company" className="block text-sm font-bold mb-2 text-slate-900">
                     Company (Optional)
                   </label>
                   <input
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium"
-                    placeholder="Acme Inc."
+                    className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium"
+                    placeholder="Acme Realty"
                   />
                 </div>
 
                 {/* Subject */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-bold uppercase mb-2">
+                  <label htmlFor="subject" className="block text-sm font-bold mb-2 text-slate-900">
                     Subject *
                   </label>
                   <select
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium bg-white"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium bg-white"
                   >
                     <option value="">Select a topic...</option>
                     <option value="general">General Inquiry</option>
@@ -294,7 +286,7 @@ export default function ContactPage() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-bold uppercase mb-2">
+                  <label htmlFor="message" className="block text-sm font-bold mb-2 text-slate-900">
                     Message *
                   </label>
                   <textarea
@@ -302,7 +294,7 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border-4 border-black focus:outline-none focus:ring-4 focus:ring-sky-400 font-medium resize-none"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 font-medium resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -311,13 +303,13 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-sky-400 text-black border-4 border-black font-bold uppercase hover:bg-sky-300"
+                  className="w-full bg-sky-500 hover:bg-sky-600 text-white rounded-xl font-bold"
                 >
                   <RiArrowRightLine className="w-5 h-5 mr-2" />
                   Send Message
                 </Button>
 
-                <p className="text-sm text-gray-600 text-center">
+                <p className="text-sm text-slate-600 text-center">
                   We typically respond within 24 hours on business days
                 </p>
               </form>
@@ -330,10 +322,10 @@ export default function ContactPage() {
       <section className="py-24">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-              COMMON SUPPORT TOPICS
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+              Common Support Topics
             </h2>
-            <p className="text-xl text-gray-700">
+            <p className="text-xl text-slate-600">
               Reach out about any of these topics—we're here to help
             </p>
           </div>
@@ -342,13 +334,13 @@ export default function ContactPage() {
             {supportTopics.map((topic, index) => (
               <div
                 key={index}
-                className={`p-8 border-4 border-black ${
-                  index % 2 === 0 ? "bg-white brutalist-shadow" : "bg-black text-white shadow-lg"
+                className={`p-8 rounded-2xl shadow-lg transition-all hover:shadow-xl ${
+                  index % 2 === 0 ? "bg-white border-2 border-sky-200" : "bg-slate-900 text-white border-2 border-slate-700"
                 }`}
               >
                 <h3
-                  className={`text-2xl font-bold uppercase mb-6 ${
-                    index % 2 === 0 ? "text-black" : "text-sky-400"
+                  className={`text-2xl font-bold mb-6 ${
+                    index % 2 === 0 ? "text-slate-900" : "text-white"
                   }`}
                 >
                   {topic.title}
@@ -358,10 +350,10 @@ export default function ContactPage() {
                     <li key={i} className="flex items-start gap-3">
                       <RiCheckLine
                         className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          index % 2 === 0 ? "text-black" : "text-sky-400"
+                          index % 2 === 0 ? "text-emerald-500" : "text-sky-400"
                         }`}
                       />
-                      <span className={index % 2 === 0 ? "text-gray-700" : "text-white"}>
+                      <span className={index % 2 === 0 ? "text-slate-600" : "text-slate-300"}>
                         {item}
                       </span>
                     </li>
@@ -374,13 +366,13 @@ export default function ContactPage() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-24 bg-sky-400 border-y-8 border-black">
+      <section className="py-24 bg-gradient-to-br from-sky-500 to-sky-600">
         <Container maxWidth="xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-              LOOKING FOR SOMETHING ELSE?
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Looking for Something Else?
             </h2>
-            <p className="text-xl text-gray-900">
+            <p className="text-xl text-sky-100">
               Quick links to help you find what you need
             </p>
           </div>
@@ -388,33 +380,33 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <a
               href="/pricing"
-              className="p-6 bg-white border-4 border-black brutalist-shadow text-center hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="p-6 bg-white rounded-2xl shadow-lg text-center hover:-translate-y-1 hover:shadow-xl transition-all"
             >
-              <RiQuestionLine className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-lg font-bold uppercase mb-2">Pricing FAQ</h3>
-              <p className="text-sm text-gray-700">
+              <RiQuestionLine className="w-12 h-12 mx-auto mb-4 text-sky-600" />
+              <h3 className="text-lg font-bold mb-2 text-slate-900">Pricing FAQ</h3>
+              <p className="text-sm text-slate-600">
                 Common questions about plans and billing
               </p>
             </a>
 
             <a
               href="/demo"
-              className="p-6 bg-black text-white border-4 border-black shadow-lg text-center hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(234,179,8,1)] transition-all"
+              className="p-6 bg-slate-900 text-white rounded-2xl shadow-xl border-2 border-slate-700 text-center hover:-translate-y-1 hover:shadow-2xl transition-all"
             >
               <RiRocketLine className="w-12 h-12 text-sky-400 mx-auto mb-4" />
-              <h3 className="text-lg font-bold uppercase mb-2 text-sky-400">Try Demo</h3>
-              <p className="text-sm text-white">
+              <h3 className="text-lg font-bold mb-2 text-white">Try Demo</h3>
+              <p className="text-sm text-slate-300">
                 Test our video generation before signing up
               </p>
             </a>
 
             <a
               href="/features"
-              className="p-6 bg-white border-4 border-black brutalist-shadow text-center hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="p-6 bg-white rounded-2xl shadow-lg text-center hover:-translate-y-1 hover:shadow-xl transition-all"
             >
-              <RiCustomerService2Line className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-lg font-bold uppercase mb-2">Feature Docs</h3>
-              <p className="text-sm text-gray-700">
+              <RiCustomerService2Line className="w-12 h-12 mx-auto mb-4 text-sky-600" />
+              <h3 className="text-lg font-bold mb-2 text-slate-900">Feature Docs</h3>
+              <p className="text-sm text-slate-600">
                 Learn about all PropVideo capabilities
               </p>
             </a>
@@ -423,23 +415,23 @@ export default function ContactPage() {
       </section>
 
       {/* Emergency Support */}
-      <section className="py-24 bg-black border-t-8 border-sky-400">
+      <section className="py-24 bg-slate-900">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-6 text-sky-400">
-              ENTERPRISE & URGENT SUPPORT
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Enterprise & Urgent Support
             </h2>
-            <p className="text-xl text-white mb-8">
+            <p className="text-xl text-slate-300 mb-8">
               Enterprise customers with SLA agreements have access to priority 24/7 support via dedicated channels.
             </p>
-            <div className="p-8 bg-white border-4 border-white shadow-lg">
-              <h3 className="text-2xl font-bold uppercase mb-4">ENTERPRISE CUSTOMERS</h3>
-              <p className="text-gray-700 mb-6">
+            <div className="p-8 bg-white rounded-2xl shadow-xl border-2 border-sky-200">
+              <h3 className="text-2xl font-bold mb-4 text-slate-900">Enterprise Customers</h3>
+              <p className="text-slate-600 mb-6">
                 If you have an active Enterprise plan with SLA guarantee, use your dedicated support channels for immediate assistance.
               </p>
               <Button
                 size="lg"
-                className="bg-black text-sky-400 border-4 border-black font-bold uppercase"
+                className="bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold"
                 asChild
               >
                 <a href="mailto:enterprise@propvideo.ai">
