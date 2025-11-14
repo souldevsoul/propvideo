@@ -24,7 +24,7 @@ export default function AboutPage() {
     {
       icon: RiLightbulbLine,
       title: "Innovation First",
-      description: "We leverage the most advanced AI models to push the boundaries of what's possible with voice synthesis. Always testing, always improving.",
+      description: "We leverage the most advanced AI video generation technology to create stunning property tours. Always testing, always improving.",
     },
     {
       icon: RiShieldCheckLine,
@@ -34,33 +34,33 @@ export default function AboutPage() {
     {
       icon: RiHeartLine,
       title: "User-Centric",
-      description: "Built by creators, for creators. Every feature is designed with real user needs in mind, from hobbyists to enterprise teams.",
+      description: "Built by real estate professionals, for real estate professionals. Every feature is designed with agent needs in mind, from independent agents to large brokerages.",
     },
     {
       icon: RiGlobalLine,
       title: "Accessible to All",
-      description: "Professional voice technology should be accessible to everyone. That's why we offer a free tier and transparent pricing.",
+      description: "Professional property tour videos should be accessible to every agent. That's why we offer a free tier and transparent pricing.",
     },
   ]
 
   const technology = [
     {
       icon: RiSparklingLine,
-      name: "Kokoro-82M",
-      description: "The world's most popular voice synthesis model with 56.7M+ production runs. Based on StyleTTS2 with 82M parameters.",
-      stats: "56.7M+ Runs",
+      name: "AI Video Generation",
+      description: "Advanced AI models transform property photos into cinematic video tours with smooth transitions and professional effects.",
+      stats: "4K Quality",
     },
     {
       icon: RiMicLine,
-      name: "Minimax AI",
-      description: "Cutting-edge voice cloning and synthesis technology supporting 50+ languages with natural emotion control.",
-      stats: "50+ Languages",
+      name: "Professional Voiceover",
+      description: "AI-powered voiceover synthesis creates natural-sounding tour narration with multiple voice styles and tones.",
+      stats: "6+ Voices",
     },
     {
       icon: RiFlashlightLine,
-      name: "XTTS-v2",
-      description: "Advanced multilingual voice cloning supporting 17 languages with one-shot cloning capabilities.",
-      stats: "4.4M+ Runs",
+      name: "Automated Scripting",
+      description: "Intelligent AI analyzes property details to generate compelling tour scripts that highlight key features and selling points.",
+      stats: "Smart AI",
     },
     {
       icon: RiCodeLine,
@@ -74,22 +74,22 @@ export default function AboutPage() {
     {
       year: "2024",
       title: "PropVideo Founded",
-      description: "Started with a mission to democratize professional voice synthesis technology.",
+      description: "Started with a mission to make professional property tour videos accessible to every real estate agent.",
     },
     {
       year: "2024",
       title: "Beta Launch",
-      description: "Launched private beta with 100 creators testing Kokoro-82M integration.",
+      description: "Launched private beta with 100 real estate agents testing AI video generation and tour scripting.",
     },
     {
       year: "2024",
-      title: "Voice Cloning Added",
-      description: "Integrated Minimax voice cloning technology, enabling custom voice creation.",
+      title: "Tour Styles Added",
+      description: "Integrated multiple tour styles (Luxury, Modern, Cozy, Dramatic) with professional voiceover options.",
     },
     {
       year: "2025",
       title: "Public Launch",
-      description: "Opened to the public with free tier, serving thousands of users worldwide.",
+      description: "Opened to the public with free tier, serving real estate professionals worldwide.",
     },
   ]
 
@@ -148,16 +148,16 @@ export default function AboutPage() {
             <div className="bg-black p-8 border-4 border-black shadow-lg">
               <div className="space-y-8">
                 <div>
-                  <div className="text-6xl font-bold text-sky-400 mb-2">56.7M+</div>
-                  <div className="text-sm font-bold text-white uppercase">Voice Generations</div>
+                  <div className="text-6xl font-bold text-sky-400 mb-2">10K+</div>
+                  <div className="text-sm font-bold text-white uppercase">Videos Created</div>
                 </div>
                 <div>
-                  <div className="text-6xl font-bold text-sky-400 mb-2">50+</div>
-                  <div className="text-sm font-bold text-white uppercase">Languages Supported</div>
+                  <div className="text-6xl font-bold text-sky-400 mb-2">6+</div>
+                  <div className="text-sm font-bold text-white uppercase">Tour Styles</div>
                 </div>
                 <div>
-                  <div className="text-6xl font-bold text-sky-400 mb-2">300+</div>
-                  <div className="text-sm font-bold text-white uppercase">Voice Profiles</div>
+                  <div className="text-6xl font-bold text-sky-400 mb-2">4K</div>
+                  <div className="text-sm font-bold text-white uppercase">Video Quality</div>
                 </div>
                 <div>
                   <div className="text-6xl font-bold text-sky-400 mb-2">99.9%</div>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                       PROVEN AT SCALE
                     </h3>
                     <p className="text-gray-700">
-                      Our primary model (Kokoro-82M) has over 56.7 million production runs. This isn't experimental technology—it's battle-tested at massive scale.
+                      Our AI video generation technology creates over 10,000 property tour videos. This isn't experimental technology—it's proven and trusted by real estate professionals.
                     </p>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default function AboutPage() {
                       ENTERPRISE SECURITY
                     </h3>
                     <p className="text-gray-700">
-                      End-to-end encryption, GDPR compliance, SOC 2 Type II certification. Your voice data is protected with enterprise-grade security standards.
+                      End-to-end encryption, GDPR compliance, SOC 2 Type II certification. Your property data and videos are protected with enterprise-grade security standards.
                     </p>
                   </div>
                 </div>

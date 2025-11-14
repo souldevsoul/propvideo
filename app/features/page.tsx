@@ -19,177 +19,177 @@ import {
   RiTeamLine,
   RiArrowRightLine,
   RiCheckDoubleLine,
-  RiSoundModuleLine,
+  RiVideoChatLine,
 } from "react-icons/ri"
 
 export default function FeaturesPage() {
   const mainFeatures = [
     {
       icon: RiSparklingLine,
-      title: "Powered by Kokoro-82M",
-      subtitle: "56M+ RUNS - MOST POPULAR MODEL",
-      description: "Built on the world's most popular voice synthesis model. Battle-tested at massive scale with 56.7 million production runs. Proven reliability, exceptional quality, lightning-fast inference.",
+      title: "AI Video Generation",
+      subtitle: "PHOTOS TO CINEMATIC TOURS",
+      description: "Transform static property photos into stunning video tours with AI. Upload photos, select your style, and get a professional tour video in minutes. Powered by cutting-edge video generation models.",
       features: [
-        "82M parameters based on StyleTTS2",
-        "Natural-sounding speech synthesis",
-        "Multiple voice profiles available",
-        "Automatic long text splitting",
-        "Speed control from 0.1x to 5.0x",
-        "Lightweight and efficient"
+        "Automatic photo-to-video conversion",
+        "Cinematic transitions and effects",
+        "Smart photo sequencing for flow",
+        "Professional camera movements",
+        "HD and 4K output quality",
+        "Generate videos in 3-5 minutes"
       ]
     },
     {
       icon: RiMicLine,
-      title: "Advanced Voice Cloning",
-      subtitle: "MINIMAX TECHNOLOGY",
-      description: "Clone any voice with Minimax's cutting-edge voice cloning technology. Quick training from just 10 seconds to 5 minutes of audio. Create custom voice profiles that work across all our synthesis models.",
+      title: "Professional Voiceover",
+      subtitle: "AI-GENERATED TOUR SCRIPTS",
+      description: "AI automatically writes and narrates professional tour scripts based on your property details. Choose from multiple voice styles and tones. Natural-sounding voiceovers that engage buyers.",
       features: [
-        "300+ preset voices included",
-        "Custom voice training in minutes",
-        "Noise reduction & volume normalization",
-        "Works with Speech 2.6 Turbo & HD",
-        "Quality validation built-in",
-        "Voice ID generation"
-      ]
-    },
-    {
-      icon: RiFlashlightLine,
-      title: "Real-Time Synthesis",
-      subtitle: "LIGHTNING FAST PERFORMANCE",
-      description: "Generate professional voice content in seconds, not minutes. Minimax 2.6 Turbo optimized for real-time applications with minimal latency. Perfect for live applications, chatbots, and streaming.",
-      features: [
-        "Sub-second response times",
-        "Real-time streaming support",
-        "Batch processing for efficiency",
-        "Queue management for scale",
-        "Concurrent request handling",
-        "CDN-optimized audio delivery"
+        "Auto-generated tour scripts",
+        "Multiple voice styles (professional, friendly, luxury)",
+        "Natural emotional delivery",
+        "Multilingual voiceover support",
+        "Custom script editing available",
+        "Highlight key property features"
       ]
     },
     {
       icon: RiSettings4Line,
-      title: "Emotion & Expression Control",
-      subtitle: "NATURAL EMOTIONAL DELIVERY",
-      description: "Fine-tune every aspect of voice delivery. Control emotion, pitch, speed, and volume to create the perfect voice for your content. From happy and excited to calm and serious - full emotional range.",
+      title: "Tour Styles",
+      subtitle: "MATCH YOUR PROPERTY'S VIBE",
+      description: "Choose from professionally designed tour styles: luxury, modern, cozy, dramatic, energetic, or elegant. Each style has unique transitions, pacing, color grading, and music recommendations.",
       features: [
-        "8 emotion presets (happy, sad, angry, etc.)",
-        "Automatic emotion detection",
-        "Pitch adjustment (-12 to +12 semitones)",
-        "Speed control (0.5x to 2.0x)",
-        "Volume control (0 to 10)",
-        "Temperature control for variance"
-      ]
-    },
-    {
-      icon: RiGlobalLine,
-      title: "Multilingual Support",
-      subtitle: "50+ LANGUAGES",
-      description: "Generate voices in 50+ languages with native accents and natural intonation. Powered by Minimax and XTTS-v2 for global reach. Cross-language voice transfer supported.",
-      features: [
-        "50+ languages (Minimax)",
-        "17 languages with voice cloning (XTTS-v2)",
-        "Native accent support",
-        "Natural cross-language intonation",
-        "Language-specific normalization",
-        "Automatic language detection"
-      ]
-    },
-    {
-      icon: RiHeadphoneLine,
-      title: "Studio Quality Audio",
-      subtitle: "PROFESSIONAL OUTPUT",
-      description: "Professional-grade audio output at up to 48kHz sample rate. Multiple format support including MP3, WAV, FLAC, and PCM. Perfect for podcasts, audiobooks, videos, and commercial production.",
-      features: [
-        "48kHz sample rate (max)",
-        "MP3, WAV, FLAC, PCM formats",
-        "Configurable bitrates",
-        "Mono & stereo channel support",
-        "Subtitle export with timestamps",
-        "High-fidelity output"
-      ]
-    },
-    {
-      icon: RiShieldCheckLine,
-      title: "Security & Privacy",
-      subtitle: "ENTERPRISE-GRADE PROTECTION",
-      description: "Your voice data is encrypted end-to-end and never shared with third parties. Full GDPR compliance, SOC 2 Type II certified. Enterprise-grade security for peace of mind.",
-      features: [
-        "End-to-end encryption",
-        "GDPR compliant",
-        "SOC 2 Type II certified",
-        "Data residency options",
-        "Zero data retention (optional)",
-        "Audit logs & compliance reports"
-      ]
-    },
-    {
-      icon: RiVoiceprintLine,
-      title: "Voice Library Management",
-      subtitle: "ORGANIZE YOUR VOICES",
-      description: "Manage unlimited custom voice clones. Organize, preview, edit, and delete voice profiles. Search and filter your voice library. Track usage statistics for each voice.",
-      features: [
-        "Unlimited voice storage (Enterprise)",
-        "Voice preview & testing",
-        "Metadata & descriptions",
-        "Usage analytics per voice",
-        "Batch operations",
-        "Import/export voice profiles"
+        "6+ professional tour styles",
+        "Luxury estate presentations",
+        "Modern minimalist aesthetics",
+        "Cozy residential warmth",
+        "Dramatic architectural showcases",
+        "Custom style creation (Enterprise)"
       ]
     },
     {
       icon: RiTimerLine,
-      title: "Advanced Text Processing",
-      subtitle: "INTELLIGENT TEXT HANDLING",
-      description: "Automatic text splitting for long content. Pause markers for timing control. Number and date normalization. SSML support for advanced control over pronunciation and delivery.",
+      title: "Smart Photo Sequencing",
+      subtitle: "INTELLIGENT TOUR FLOW",
+      description: "AI automatically arranges your photos in the optimal order for maximum impact. Starts with curb appeal, flows through living spaces, and ends with selling points. Manual reordering available.",
       features: [
-        "Automatic long text splitting",
-        "Pause markers (<#0.5#>)",
-        "Number & date normalization",
-        "Custom pronunciation dictionary",
-        "SSML markup support (coming soon)",
-        "Character limit: 10,000 per request"
-      ]
-    },
-    {
-      icon: RiDatabase2Line,
-      title: "Usage & Analytics",
-      subtitle: "TRACK YOUR USAGE",
-      description: "Comprehensive analytics dashboard showing character usage, voice generation history, model performance, and cost tracking. Export reports for accounting and billing.",
-      features: [
-        "Real-time usage tracking",
-        "Character count analytics",
-        "Generation history",
-        "Cost estimation & tracking",
-        "Export reports (CSV, PDF)",
-        "Webhook notifications"
+        "Automatic optimal photo ordering",
+        "Room-type smart detection",
+        "Highlight feature recognition",
+        "Drag-and-drop manual reordering",
+        "Photo quality enhancement",
+        "Duplicate detection"
       ]
     },
     {
       icon: RiCodeLine,
-      title: "Developer API",
-      subtitle: "FULL API ACCESS",
-      description: "Complete REST API with comprehensive documentation. SDKs available for Node.js, Python, Go, and more. Webhook support for async operations. Rate limiting and authentication included.",
+      title: "Automated Scripting",
+      subtitle: "AI-POWERED TOUR NARRATION",
+      description: "AI analyzes property details and photos to write compelling tour scripts. Highlights best features, uses persuasive language, and maintains professional tone. Fully editable before generation.",
       features: [
-        "RESTful API",
-        "Official SDKs (Node.js, Python, Go)",
-        "Webhook support",
-        "Rate limiting & quotas",
-        "API key management",
-        "Detailed error messages"
+        "Property detail analysis",
+        "Feature highlight prioritization",
+        "Persuasive copywriting",
+        "Tone customization",
+        "Script templates by property type",
+        "Character count optimization"
+      ]
+    },
+    {
+      icon: RiVoiceprintLine,
+      title: "Branding Overlay",
+      subtitle: "ADD YOUR PROFESSIONAL TOUCH",
+      description: "Add your agent logo, name, contact info, and brokerage branding to every video. Customize position, size, and timing. Build your personal brand with every tour you create.",
+      features: [
+        "Agent logo overlay",
+        "Contact info display",
+        "Brokerage branding",
+        "Custom positioning & sizing",
+        "Intro/outro branding cards",
+        "QR code for listings"
+      ]
+    },
+    {
+      icon: RiGlobalLine,
+      title: "Multiple Export Formats",
+      subtitle: "OPTIMIZE FOR EVERY PLATFORM",
+      description: "Export videos in formats optimized for Instagram (9:16), TikTok (9:16), YouTube (16:9), Facebook (1:1), and Zillow (16:9). One-click export for all platforms from a single tour.",
+      features: [
+        "16:9 for YouTube & Zillow",
+        "9:16 for Instagram & TikTok",
+        "1:1 for Facebook & Instagram",
+        "4:5 for Instagram Feed",
+        "Custom aspect ratio support",
+        "Platform-specific optimizations"
+      ]
+    },
+    {
+      icon: RiHeadphoneLine,
+      title: "Music Library",
+      subtitle: "PROFESSIONAL BACKGROUND TRACKS",
+      description: "Choose from 100+ royalty-free background music tracks. Organized by mood and style. Perfect for setting the tone of your tour. Volume control and fade options included.",
+      features: [
+        "100+ royalty-free tracks",
+        "Organized by mood & style",
+        "Orchestral, ambient, modern genres",
+        "Auto-sync with video duration",
+        "Volume & fade controls",
+        "Custom music upload (Enterprise)"
+      ]
+    },
+    {
+      icon: RiDatabase2Line,
+      title: "Video Analytics",
+      subtitle: "TRACK ENGAGEMENT & PERFORMANCE",
+      description: "Comprehensive analytics showing views, shares, downloads, and engagement metrics for every video. Track which properties get the most attention. Export reports for clients.",
+      features: [
+        "Real-time view tracking",
+        "Share & download metrics",
+        "Engagement heatmaps",
+        "Platform-specific analytics",
+        "Export analytics reports",
+        "Property performance comparison"
+      ]
+    },
+    {
+      icon: RiFlashlightLine,
+      title: "Fast Generation",
+      subtitle: "MINUTES, NOT HOURS",
+      description: "Generate professional property tour videos in 3-5 minutes. No video editing skills required. Fast processing powered by state-of-the-art AI models. Batch generation for multiple properties.",
+      features: [
+        "3-5 minute generation time",
+        "No editing skills needed",
+        "Batch generation support",
+        "Priority processing queue",
+        "Instant preview before final render",
+        "Re-generate with new settings anytime"
+      ]
+    },
+    {
+      icon: RiShieldCheckLine,
+      title: "Property Management",
+      subtitle: "ORGANIZE YOUR LISTINGS",
+      description: "Centralized library for all your properties and videos. Search, filter, and organize by status, type, or date. Track which properties have videos. Import from MLS listings.",
+      features: [
+        "Unlimited property storage",
+        "Photo library per property",
+        "Video version history",
+        "Search & filter by criteria",
+        "MLS import (coming soon)",
+        "Bulk property operations"
       ]
     },
     {
       icon: RiTeamLine,
       title: "Team Collaboration",
-      subtitle: "WORK TOGETHER",
-      description: "Built for teams. Share voice clones across your organization. Role-based access control. Team analytics and usage tracking. Centralized billing and management.",
+      subtitle: "BUILT FOR REAL ESTATE TEAMS",
+      description: "Share properties and videos across your team or brokerage. Role-based access control. Team analytics and centralized billing. Perfect for teams and brokerages of any size.",
       features: [
-        "Unlimited team members (Enterprise)",
+        "Unlimited team members (Team/Brokerage)",
+        "Shared property library",
         "Role-based permissions",
-        "Shared voice library",
-        "Team usage analytics",
-        "Centralized billing",
-        "SSO integration (Enterprise)"
+        "Team analytics dashboard",
+        "Centralized billing & usage",
+        "Brokerage branding templates"
       ]
     },
   ]
@@ -219,10 +219,10 @@ export default function FeaturesPage() {
               <span className="text-sm font-bold uppercase tracking-wider">Features</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              EVERYTHING YOU NEED FOR PROFESSIONAL VOICE CONTENT
+              EVERYTHING YOU NEED FOR PROFESSIONAL PROPERTY TOURS
             </h1>
             <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
-              Powered by the world's most popular voice models. Built for creators, businesses, and developers who demand the best.
+              AI-powered video generation, professional voiceovers, and smart tools built for real estate agents and brokerages who want to sell faster.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
@@ -249,20 +249,20 @@ export default function FeaturesPage() {
         <Container maxWidth="xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">56.7M+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Kokoro Runs</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">3-5min</div>
+              <div className="text-sm font-bold text-white uppercase tracking-wider">Generation Time</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">50+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Languages</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">6+</div>
+              <div className="text-sm font-bold text-white uppercase tracking-wider">Tour Styles</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">300+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Voices</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">100+</div>
+              <div className="text-sm font-bold text-white uppercase tracking-wider">Music Tracks</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">48kHz</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Audio Quality</div>
+              <div className="text-5xl font-bold text-sky-400 mb-2 uppercase">4K</div>
+              <div className="text-sm font-bold text-white uppercase tracking-wider">Video Quality</div>
             </div>
           </div>
         </Container>
@@ -319,26 +319,26 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      {/* Model Comparison CTA */}
+      {/* Tour Styles CTA */}
       <section className="py-24 bg-sky-400 border-y-8 border-black">
         <Container maxWidth="xl">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-black border-4 border-black mb-8">
-              <RiSoundModuleLine className="w-6 h-6 text-sky-400" />
-              <span className="text-sm font-bold uppercase tracking-wider text-sky-400">Multiple Models</span>
+              <RiVideoChatLine className="w-6 h-6 text-sky-400" />
+              <span className="text-sm font-bold uppercase tracking-wider text-sky-400">Tour Styles</span>
             </div>
             <h2 className="text-5xl font-bold uppercase mb-6 text-black">
-              CHOOSE THE RIGHT MODEL FOR YOUR NEEDS
+              CHOOSE THE PERFECT STYLE FOR YOUR PROPERTY
             </h2>
             <p className="text-xl text-gray-900 mb-8">
-              We support multiple voice models: Kokoro-82M (simplest, most popular), Minimax 2.6 Turbo (advanced features), and XTTS-v2 (multilingual cloning).
+              From luxury estates to cozy homes, we have tour styles for every property type. Each style includes unique transitions, pacing, color grading, and music recommendations.
             </p>
             <Button
               size="xl"
               className="gap-3 bg-black text-sky-400 border-4 border-black font-bold uppercase brutalist-shadow"
             >
               <RiArrowRightLine className="w-5 h-5" />
-              Compare Models
+              Explore Tour Styles
             </Button>
           </div>
         </Container>
@@ -352,7 +352,7 @@ export default function FeaturesPage() {
               READY TO GET STARTED?
             </h2>
             <p className="text-xl text-white mb-12">
-              Join thousands of creators and businesses using PropVideo. Start your free trial today—no credit card required.
+              Join thousands of real estate agents using PropVideo to create stunning property tours. Start your free trial today—no credit card required.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button

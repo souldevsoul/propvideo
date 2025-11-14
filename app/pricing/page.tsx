@@ -22,40 +22,40 @@ export default function PricingPage() {
       name: "Starter",
       price: "$0",
       period: "forever",
-      description: "Perfect for trying out PropVideo and small projects",
+      description: "Perfect for trying out PropVideo and individual agents",
       popular: false,
       features: [
-        { text: "5,000 characters/month", included: true },
-        { text: "Kokoro-82M voice model", included: true },
-        { text: "Basic voice presets", included: true },
-        { text: "MP3 audio format", included: true },
-        { text: "48kHz sample rate", included: true },
+        { text: "3 video tours/month", included: true },
+        { text: "60-second max duration", included: true },
+        { text: "1080p quality", included: true },
+        { text: "3 tour styles", included: true },
+        { text: "PropVideo watermark", included: true },
+        { text: "Basic music library", included: true },
         { text: "Email support", included: true },
-        { text: "Voice cloning", included: false },
-        { text: "Advanced models", included: false },
-        { text: "Team collaboration", included: false },
-        { text: "Priority support", included: false },
+        { text: "Agent branding", included: false },
+        { text: "Video analytics", included: false },
+        { text: "API access", included: false },
       ],
       cta: "Start Free",
       ctaHref: "/signup",
     },
     {
       name: "Pro",
-      price: "$29",
+      price: "$49",
       period: "per month",
-      description: "For creators and businesses that need powerful voice synthesis",
+      description: "For real estate agents who need professional property tour videos",
       popular: true,
       features: [
-        { text: "100,000 characters/month", included: true },
-        { text: "All voice models (Kokoro, Minimax, XTTS)", included: true },
-        { text: "5 custom voice clones", included: true },
-        { text: "Emotion control (8 emotions)", included: true },
-        { text: "Speed, pitch, volume control", included: true },
-        { text: "MP3, WAV, FLAC formats", included: true },
-        { text: "50+ languages", included: true },
+        { text: "30 video tours/month", included: true },
+        { text: "120-second max duration", included: true },
+        { text: "4K quality", included: true },
+        { text: "All tour styles (6+ styles)", included: true },
+        { text: "No watermark", included: true },
+        { text: "Full music library (100+ tracks)", included: true },
+        { text: "Agent branding (logo, contact)", included: true },
+        { text: "Video analytics", included: true },
         { text: "API access", included: true },
-        { text: "Priority email support", included: true },
-        { text: "Usage analytics", included: true },
+        { text: "Priority support", included: true },
       ],
       cta: "Start Free Trial",
       ctaHref: "/signup?plan=pro",
@@ -64,18 +64,18 @@ export default function PricingPage() {
       name: "Enterprise",
       price: "Custom",
       period: "contact us",
-      description: "Advanced features, unlimited usage, and dedicated support",
+      description: "Advanced features, unlimited usage, and dedicated support for brokerages",
       popular: false,
       features: [
-        { text: "Unlimited characters", included: true },
-        { text: "All voice models + beta access", included: true },
-        { text: "Unlimited voice clones", included: true },
-        { text: "Custom voice model training", included: true },
+        { text: "Unlimited video tours", included: true },
+        { text: "Unlimited duration", included: true },
+        { text: "4K quality", included: true },
+        { text: "All tour styles + custom", included: true },
+        { text: "White-label (remove all branding)", included: true },
         { text: "Dedicated infrastructure", included: true },
-        { text: "SLA guarantee (99.9% uptime)", included: true },
         { text: "Team collaboration (unlimited)", included: true },
-        { text: "SSO integration", included: true },
-        { text: "Priority 24/7 support", included: true },
+        { text: "99.9% SLA guarantee", included: true },
+        { text: "24/7 priority support", included: true },
         { text: "Custom integrations", included: true },
       ],
       cta: "Contact Sales",
@@ -87,35 +87,41 @@ export default function PricingPage() {
     {
       category: "USAGE LIMITS",
       features: [
-        { name: "Characters per month", starter: "5,000", pro: "100,000", enterprise: "Unlimited" },
-        { name: "Voice clones", starter: "0", pro: "5", enterprise: "Unlimited" },
-        { name: "API requests/min", starter: "10", pro: "60", enterprise: "Custom" },
+        { name: "Video tours per month", starter: "3", pro: "30", enterprise: "Unlimited" },
+        { name: "Max video duration", starter: "60s", pro: "120s", enterprise: "Unlimited" },
+        { name: "Properties", starter: "10", pro: "100", enterprise: "Unlimited" },
         { name: "Concurrent generations", starter: "1", pro: "3", enterprise: "Unlimited" },
       ],
     },
     {
-      category: "VOICE MODELS",
+      category: "VIDEO QUALITY",
       features: [
-        { name: "Kokoro-82M (56M+ runs)", starter: true, pro: true, enterprise: true },
-        { name: "Minimax 2.6 Turbo", starter: false, pro: true, enterprise: true },
-        { name: "Minimax 2.6 HD", starter: false, pro: true, enterprise: true },
-        { name: "XTTS-v2 Multilingual", starter: false, pro: true, enterprise: true },
-        { name: "Beta model access", starter: false, pro: false, enterprise: true },
-        { name: "Custom model training", starter: false, pro: false, enterprise: true },
+        { name: "1080p Full HD", starter: true, pro: true, enterprise: true },
+        { name: "4K Ultra HD", starter: false, pro: true, enterprise: true },
+        { name: "Luxury tour style", starter: false, pro: true, enterprise: true },
+        { name: "Modern tour style", starter: true, pro: true, enterprise: true },
+        { name: "Cozy tour style", starter: true, pro: true, enterprise: true },
+        { name: "Dramatic tour style", starter: false, pro: true, enterprise: true },
+        { name: "Energetic tour style", starter: false, pro: true, enterprise: true },
+        { name: "Elegant tour style", starter: false, pro: true, enterprise: true },
+        { name: "Custom tour styles", starter: false, pro: false, enterprise: true },
+        { name: "Aspect ratios (16:9, 9:16, 1:1, 4:5)", starter: "16:9", pro: true, enterprise: true },
+        { name: "Export formats (MP4, MOV, WebM)", starter: "MP4", pro: true, enterprise: true },
       ],
     },
     {
       category: "FEATURES",
       features: [
-        { name: "Basic voice presets", starter: true, pro: true, enterprise: true },
-        { name: "Voice cloning (Minimax)", starter: false, pro: true, enterprise: true },
-        { name: "Emotion control (8 emotions)", starter: false, pro: true, enterprise: true },
-        { name: "Speed & pitch adjustment", starter: true, pro: true, enterprise: true },
-        { name: "Volume control", starter: true, pro: true, enterprise: true },
-        { name: "50+ languages", starter: false, pro: true, enterprise: true },
-        { name: "Audio formats (MP3, WAV, FLAC)", starter: "MP3", pro: true, enterprise: true },
-        { name: "Subtitle export", starter: false, pro: true, enterprise: true },
+        { name: "Basic music library (20 tracks)", starter: true, pro: true, enterprise: true },
+        { name: "Full music library (100+ tracks)", starter: false, pro: true, enterprise: true },
+        { name: "Agent branding (logo, contact)", starter: false, pro: true, enterprise: true },
+        { name: "Remove watermark", starter: false, pro: true, enterprise: true },
+        { name: "Professional voiceover styles", starter: "1", pro: "6+", enterprise: "All + custom" },
+        { name: "Video analytics", starter: false, pro: true, enterprise: true },
+        { name: "API access", starter: false, pro: true, enterprise: true },
         { name: "Batch processing", starter: false, pro: true, enterprise: true },
+        { name: "White-label", starter: false, pro: false, enterprise: true },
+        { name: "Custom integrations", starter: false, pro: false, enterprise: true },
       ],
     },
     {
@@ -136,35 +142,35 @@ export default function PricingPage() {
   const faqs = [
     {
       question: "How is usage calculated?",
-      answer: "Usage is calculated based on the number of characters in your input text. For example, 'Hello World' contains 11 characters (including the space). Characters are counted before text processing, so what you type is what you pay for.",
+      answer: "Usage is calculated based on the number of video tours you generate each month and their duration. For example, generating a 60-second video tour counts as 1 video toward your monthly limit. Unused videos do not roll over to the next month.",
     },
     {
-      question: "What happens if I exceed my character limit?",
-      answer: "On the Starter plan, generation will be paused until the next month. On Pro, you can purchase additional character packs for $10 per 50,000 characters. Enterprise plans have unlimited characters.",
+      question: "What happens if I exceed my video limit?",
+      answer: "On the Starter plan, generation will be paused until the next month. On Pro, you can purchase additional video packs for $5 per video. Enterprise plans have unlimited videos.",
     },
     {
       question: "Can I cancel anytime?",
       answer: "Yes! All plans can be canceled at any time. If you cancel, you'll retain access until the end of your current billing period, and you won't be charged again.",
     },
     {
-      question: "What's the difference between the voice models?",
-      answer: "Kokoro-82M is the simplest and most popular (56M+ runs), great for most use cases. Minimax 2.6 Turbo offers advanced features like emotion control and 50+ languages. XTTS-v2 specializes in multilingual voice cloning. Pro plan includes all models.",
+      question: "What's the difference between tour styles?",
+      answer: "Tour styles control the pacing, transitions, and visual treatment of your video. Luxury style features slow, elegant transitions with warm color grading. Modern is sleek and fast-paced. Cozy uses soft transitions and warm tones. Dramatic has bold cuts and high contrast. Energetic is quick and vibrant. Elegant combines refined pacing with sophisticated effects.",
     },
     {
-      question: "How does voice cloning work?",
-      answer: "Upload 10 seconds to 5 minutes of clear audio of the voice you want to clone. Our Minimax-powered technology will create a custom voice profile (voice_id) that you can use with all our synthesis models. The more audio you provide, the better the quality.",
+      question: "How does agent branding work?",
+      answer: "Upload your logo and add your contact information (name, phone, email). Your branding will be overlaid on your videos as a professional lower-third or end card. You can customize placement, size, and style. White-label option (Enterprise only) removes all PropVideo branding.",
     },
     {
-      question: "What audio formats are supported?",
-      answer: "Starter plan supports MP3. Pro and Enterprise support MP3, WAV, FLAC, and PCM. All formats can be exported at up to 48kHz sample rate for studio-quality audio.",
+      question: "What video formats are supported?",
+      answer: "We support multiple aspect ratios: 16:9 (YouTube, Facebook, websites), 9:16 (Instagram Stories, TikTok, Reels), 1:1 (Instagram feed), and 4:5 (Facebook/Instagram feed). Export formats include MP4 (most compatible), MOV (highest quality), and WebM (web-optimized).",
     },
     {
       question: "Is there a free trial for Pro?",
       answer: "Yes! All new Pro subscribers get a 14-day free trial. No credit card required to start. Cancel anytime during the trial and you won't be charged.",
     },
     {
-      question: "What languages are supported?",
-      answer: "Kokoro-82M supports multiple languages. Minimax models support 50+ languages including English, Spanish, French, German, Chinese, Japanese, and more. XTTS-v2 supports 17 languages with voice cloning capabilities.",
+      question: "What export formats are available?",
+      answer: "Starter plan supports MP4 at 1080p. Pro and Enterprise support MP4, MOV, and WebM at resolutions up to 4K. All formats are optimized for social media platforms (Instagram, TikTok, YouTube, Facebook, Zillow).",
     },
     {
       question: "Do you offer discounts for non-profits or education?",
@@ -172,7 +178,7 @@ export default function PricingPage() {
     },
     {
       question: "How secure is my data?",
-      answer: "All voice data is encrypted end-to-end (AES-256). We're GDPR compliant and SOC 2 Type II certified. Your audio files and voice clones are never shared with third parties. Enterprise plans can opt for zero data retention.",
+      answer: "All property photos and videos are encrypted end-to-end (AES-256). We're GDPR compliant and SOC 2 Type II certified. Your listing data and generated videos are never shared with third parties. Enterprise plans can opt for zero data retention after video generation.",
     },
   ]
 
@@ -414,7 +420,7 @@ export default function PricingPage() {
                 TRANSPARENT PRICING MODEL
               </h2>
               <p className="text-xl text-gray-600">
-                Based on Replicate API costs with our markup
+                Based on video generation costs with our markup
               </p>
             </div>
 
@@ -423,13 +429,13 @@ export default function PricingPage() {
                 <div className="w-12 h-12 bg-sky-400 border-2 border-black flex items-center justify-center mb-4">
                   <RiMicLine className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold uppercase mb-2">KOKORO-82M</h3>
-                <div className="text-3xl font-bold mb-2">$0.05</div>
-                <p className="text-sm text-gray-600 mb-4">per 1,000 characters</p>
+                <h3 className="text-lg font-bold uppercase mb-2">BASIC TOURS</h3>
+                <div className="text-3xl font-bold mb-2">$1.50</div>
+                <p className="text-sm text-gray-600 mb-4">per video tour</p>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Most economical</li>
-                  <li>• 56M+ production runs</li>
-                  <li>• Best for volume</li>
+                  <li>• 60 seconds max</li>
+                  <li>• 1080p quality</li>
+                  <li>• With watermark</li>
                 </ul>
               </div>
 
@@ -438,14 +444,14 @@ export default function PricingPage() {
                   <RiFlashlightLine className="w-6 h-6 text-black" />
                 </div>
                 <h3 className="text-lg font-bold uppercase mb-2 text-sky-400">
-                  MINIMAX 2.6 TURBO
+                  PREMIUM TOURS
                 </h3>
-                <div className="text-3xl font-bold mb-2 text-sky-400">$0.10</div>
-                <p className="text-sm text-gray-300 mb-4">per 1,000 characters</p>
+                <div className="text-3xl font-bold mb-2 text-sky-400">$5.00</div>
+                <p className="text-sm text-gray-300 mb-4">per video tour</p>
                 <ul className="text-sm text-gray-300 space-y-1">
-                  <li>• Real-time optimized</li>
-                  <li>• Emotion control</li>
-                  <li>• 50+ languages</li>
+                  <li>• 120 seconds max</li>
+                  <li>• 4K quality</li>
+                  <li>• No watermark + branding</li>
                 </ul>
               </div>
 
@@ -453,13 +459,13 @@ export default function PricingPage() {
                 <div className="w-12 h-12 bg-sky-400 border-2 border-black flex items-center justify-center mb-4">
                   <RiGlobalLine className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold uppercase mb-2">VOICE CLONING</h3>
-                <div className="text-3xl font-bold mb-2">$0.20</div>
-                <p className="text-sm text-gray-600 mb-4">per clone training</p>
+                <h3 className="text-lg font-bold uppercase mb-2">ENTERPRISE TOURS</h3>
+                <div className="text-3xl font-bold mb-2">Custom</div>
+                <p className="text-sm text-gray-600 mb-4">contact for pricing</p>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• One-time cost</li>
-                  <li>• Use unlimited times</li>
-                  <li>• 10s-5min audio</li>
+                  <li>• Unlimited duration</li>
+                  <li>• White-label</li>
+                  <li>• Custom styles</li>
                 </ul>
               </div>
             </div>
@@ -468,20 +474,20 @@ export default function PricingPage() {
               <h3 className="text-2xl font-bold uppercase mb-4">EXAMPLE MONTHLY COSTS</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-4 border-b-4 border-black">
-                  <span className="font-bold">Small Blog (10K chars/month)</span>
-                  <span className="text-2xl font-bold">$0.50 - $1.00</span>
+                  <span className="font-bold">Small Agent (5 videos/month)</span>
+                  <span className="text-2xl font-bold">$7.50 - $25</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b-4 border-black">
-                  <span className="font-bold">Medium Podcast (100K chars/month)</span>
-                  <span className="text-2xl font-bold">$5.00 - $10.00</span>
+                  <span className="font-bold">Medium Agent (20 videos/month)</span>
+                  <span className="text-2xl font-bold">$30 - $100</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-bold">Large Business (1M chars/month)</span>
-                  <span className="text-2xl font-bold">$50.00 - $100.00</span>
+                  <span className="font-bold">Large Brokerage (100+ videos/month)</span>
+                  <span className="text-2xl font-bold">Custom Pricing</span>
                 </div>
               </div>
               <p className="text-sm mt-6 font-medium">
-                * API costs only. Pro plan ($29/mo) includes 100K characters plus all premium features.
+                * Per-video costs only. Pro plan ($49/mo) includes 30 videos plus all premium features.
               </p>
             </div>
           </div>
