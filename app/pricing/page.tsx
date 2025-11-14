@@ -150,10 +150,10 @@ export default function PricingPage() {
     },
     {
       question: "Can I cancel anytime?",
-      answer: "Yes! All plans can be canceled at any time. If you cancel, you'll retain access until the end of your current billing period, and you won't be charged again.",
+      answer: "Yes! All plans can be canceled at any time. If you cancel, you'll retain access until the end of your current billing period, and you won&apos;t be charged again.",
     },
     {
-      question: "What's the difference between tour styles?",
+      question: "What&apos;s the difference between tour styles?",
       answer: "Tour styles control the pacing, transitions, and visual treatment of your video. Luxury style features slow, elegant transitions with warm color grading. Modern is sleek and fast-paced. Cozy uses soft transitions and warm tones. Dramatic has bold cuts and high contrast. Energetic is quick and vibrant. Elegant combines refined pacing with sophisticated effects.",
     },
     {
@@ -166,7 +166,7 @@ export default function PricingPage() {
     },
     {
       question: "Is there a free trial for Pro?",
-      answer: "Yes! All new Pro subscribers get a 14-day free trial. No credit card required to start. Cancel anytime during the trial and you won't be charged.",
+      answer: "Yes! All new Pro subscribers get a 14-day free trial. No credit card required to start. Cancel anytime during the trial and you won&apos;t be charged.",
     },
     {
       question: "What export formats are available?",
@@ -178,7 +178,7 @@ export default function PricingPage() {
     },
     {
       question: "How secure is my data?",
-      answer: "All property photos and videos are encrypted end-to-end (AES-256). We're GDPR compliant and SOC 2 Type II certified. Your listing data and generated videos are never shared with third parties. Enterprise plans can opt for zero data retention after video generation.",
+      answer: "All property photos and videos are encrypted end-to-end (AES-256). We&apos;re GDPR compliant and SOC 2 Type II certified. Your listing data and generated videos are never shared with third parties. Enterprise plans can opt for zero data retention after video generation.",
     },
   ]
 
@@ -339,7 +339,7 @@ export default function PricingPage() {
               DETAILED FEATURE COMPARISON
             </h2>
             <p className="text-xl text-gray-600">
-              See exactly what's included in each plan
+              See exactly what&apos;s included in each plan
             </p>
           </div>
 

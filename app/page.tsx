@@ -248,7 +248,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
-              See What's Possible
+              See What&apos;s Possible
             </h2>
             <p className="text-slate-600 text-lg">Real property video tours created with PropVideo</p>
           </div>
@@ -338,7 +338,7 @@ export default function Home() {
               Choose Your Tour Style
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-              Select from multiple cinematic styles to match your property's personality
+              Select from multiple cinematic styles to match your property&apos;s personality
             </p>
           </div>
 

@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
 
     const skip = (page - 1) * limit;
 
-    const where: any = {
+    const where: { userId: string; listingStatus?: string } = {
       userId,
     };
 

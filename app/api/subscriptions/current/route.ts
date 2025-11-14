@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/get-current-user'
 import { getUserSubscription, getUserPlan, isUserOnTrial, getTrialDaysRemaining } from '@/lib/subscriptions'
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     const userId = await requireAuth()
 
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       },
     })
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Get subscription error:', error)
     return NextResponse.json(
       {

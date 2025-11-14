@@ -55,7 +55,7 @@ export default function FeaturesPage() {
     {
       icon: RiSettings4Line,
       title: "Multiple Tour Styles",
-      subtitle: "Match Your Property's Vibe",
+      subtitle: "Match Your Property&apos;s Vibe",
       description: "Choose from professionally designed tour styles: luxury, modern, cozy, dramatic, energetic, or elegant. Each style has unique transitions, pacing, color grading, and music recommendations.",
       features: [
         "6+ professional tour styles",

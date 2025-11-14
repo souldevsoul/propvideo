@@ -33,7 +33,7 @@ export interface ReEstimateDialogProps {
 }
 
 export function ReEstimateDialog({
-  projectId,
+  _projectId,
   projectName,
   clientName,
   currentEstimate,

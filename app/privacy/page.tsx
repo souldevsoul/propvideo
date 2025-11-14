@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         },
         {
           subtitle: "AI Model Providers",
-          text: "Your property photos and generation requests are sent to Replicate's infrastructure to run AI models (Veo, Luma, Minimax). Replicate's privacy policy governs their data handling. We have data processing agreements in place with all AI providers.",
+          text: "Your property photos and generation requests are sent to Replicate&apos;s infrastructure to run AI models (Veo, Luma, Minimax). Replicate&apos;s privacy policy governs their data handling. We have data processing agreements in place with all AI providers.",
         },
         {
           subtitle: "Legal Requirements",
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
         },
         {
           subtitle: "Data Isolation",
-          text: "Each customer's data is logically isolated. Voice clones are associated only with your account. No cross-customer data sharing or access.",
+          text: "Each customer&apos;s data is logically isolated. Voice clones are associated only with your account. No cross-customer data sharing or access.",
         },
       ],
     },
@@ -314,7 +314,7 @@ export default function PrivacyPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center">
                     <RiUserLine className="w-6 h-6 text-sky-400" />
                   </div>
-                  <h2 className="text-3xl font-bold text-slate-900">9. Children's Privacy</h2>
+                  <h2 className="text-3xl font-bold text-slate-900">9. Children&apos;s Privacy</h2>
                 </div>
               </div>
 
@@ -365,7 +365,7 @@ export default function PrivacyPage() {
               Questions About Privacy?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              If you have questions about this Privacy Policy or how we handle your data, we're here to help.
+              If you have questions about this Privacy Policy or how we handle your data, we&apos;re here to help.
             </p>
 
             <div className="p-8 bg-white rounded-2xl shadow-xl border-2 border-sky-200">

@@ -241,7 +241,7 @@ async function runCompleteTest() {
     console.log('   Via API:', apiResults.generatedAudio);
     console.log('\n✨ Integration is fully working!\n');
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('\n❌ Test failed:', error.message);
     console.error(error);
     process.exit(1);

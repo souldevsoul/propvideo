@@ -126,7 +126,7 @@ export default function SpecialistProjectDetailPage({
         <div className="flex flex-col items-center justify-center h-96">
           <Heading variant="h3" className="font-bold uppercase">PROJECT NOT FOUND</Heading>
           <Text variant="body" className="mt-2 text-slate-600">
-            This project does not exist or you don't have access to it.
+            This project does not exist or you don&apos;t have access to it.
           </Text>
           <Button
             variant="outline"

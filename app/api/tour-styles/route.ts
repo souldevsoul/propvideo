@@ -6,7 +6,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const popularOnly = searchParams.get('popular') === 'true';
 
-    const where: any = {};
+    const where: { popular?: boolean } = {};
     if (popularOnly) {
       where.popular = true;
     }

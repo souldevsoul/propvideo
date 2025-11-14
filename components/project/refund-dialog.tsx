@@ -30,7 +30,7 @@ export interface RefundDialogProps {
 }
 
 export function RefundDialog({
-  projectId,
+  _projectId,
   projectName,
   clientName,
   reservedCredits,

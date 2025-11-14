@@ -53,7 +53,7 @@ async function runTests() {
 
   const results: { passed: number; failed: number } = { passed: 0, failed: 0 };
   let propertyId = '';
-  const videoId = '';
+  const _videoId = '';
 
   // Test 1: Tour Styles
   log('\n📋 Test Group 1: Tour Styles API', colors.blue);

@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create Stripe Checkout Session
-    // @ts-ignore - Stripe type compatibility issue with Next.js 16
+    // @ts-expect-error - Stripe type compatibility issue with Next.js 16
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
       sessionId: session.id,
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Checkout error:', error);
 
     // Handle Zod validation errors

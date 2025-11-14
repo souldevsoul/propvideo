@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 // Stack Sans Headline from Google Fonts
-// Note: Loading via CSS since next/font/google doesn't support this font yet
+// Note: Loading via CSS since next/font/google doesn&apos;t support this font yet
 // Font will be loaded through globals.css
 
 export const metadata: Metadata = {

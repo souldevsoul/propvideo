@@ -37,7 +37,11 @@ export default function AdminProjectsPage() {
       }
 
       // Map API response to table format
-      const mappedProjects: ProjectTableRow[] = data.projects.map((project: any) => ({
+      const mappedProjects: ProjectTableRow[] = data.projects.map((project: {
+        id: string; name: string; status: string; user?: { name?: string; email?: string };
+        expert?: { user?: { name?: string } }; estimatedCost?: number; actualCost?: number;
+        createdAt: string; assignedAt?: string; completedAt?: string; priority?: string;
+      }) => ({
         id: project.id,
         name: project.name,
         status: project.status,
@@ -61,7 +65,7 @@ export default function AdminProjectsPage() {
     }
   }
 
-  const handleViewProject = (projectId: string) => {
+  const handleViewProject = (_projectId: string) => {
     window.location.href = `/dashboard/projects` // Or create /admin/projects/[id]
   }
 

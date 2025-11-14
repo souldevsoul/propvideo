@@ -243,7 +243,7 @@ export default function BlogPage() {
               const metaColors = ["text-slate-500", "text-slate-400", "text-slate-600"]
               const colorIndex = index % 3
 
-              const tagIcons: { [key: string]: any } = {
+              const tagIcons: Record<string, React.ComponentType<{ className?: string }>> = {
                 Popular: RiFireLine,
                 Technical: RiCodeLine,
                 Beginner: RiLightbulbLine,

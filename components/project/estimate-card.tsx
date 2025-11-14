@@ -5,7 +5,7 @@ import { RiMoneyDollarCircleLine, RiTimeLine, RiCheckLine, RiCloseLine, RiAlertL
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Text, Heading } from "@/components/ui/typography"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Textarea } from "@/components/ui/textarea"
 import {
@@ -43,7 +43,7 @@ export interface EstimateCardProps {
 }
 
 export function EstimateCard({
-  projectId,
+  _projectId,
   status,
   estimate,
   userCredits,
@@ -307,7 +307,7 @@ export function EstimateCard({
             </AlertDialogHeader>
             <div className="py-4">
               <Textarea
-                placeholder="Optional: Explain why you're rejecting this estimate..."
+                placeholder="Optional: Explain why you&apos;re rejecting this estimate..."
                 value={rejectReason}
                 onChange={(e) => setRejectReason(e.target.value)}
                 rows={4}

@@ -23,7 +23,7 @@ type AppHeaderProps = {
 }
 
 export function AppHeader({ user }: AppHeaderProps) {
-  const pathname = usePathname()
+  const _pathname = usePathname()
 
   return (
     <header className="sticky top-0 z-50 border-b-4 border-black bg-white">
@@ -36,7 +36,7 @@ export function AppHeader({ user }: AppHeaderProps) {
           <span className="text-xl font-bold uppercase tracking-tight">VOICECRAFT</span>
         </Link>
 
-        {/* Empty space for balance - nav links removed as they're in dropdown */}
+        {/* Empty space for balance - nav links removed as they&apos;re in dropdown */}
         <div className="flex-1" />
 
         {/* User Dropdown or Get Started */}

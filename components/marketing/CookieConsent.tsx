@@ -8,7 +8,7 @@ export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [preferences, setPreferences] = useState({
-    necessary: true, // Always true, can't be disabled
+    necessary: true, // Always true, can&apos;t be disabled
     analytics: false,
     marketing: false,
   })

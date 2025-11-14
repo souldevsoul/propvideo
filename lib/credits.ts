@@ -64,7 +64,7 @@ export async function deductCredits(
   amount: number,
   type: string,
   description: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   // Check if user has enough credits
   const currentCredits = await getUserCredits(userId);
@@ -109,7 +109,7 @@ export async function addCredits(
   amount: number,
   type: string,
   description: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   const result = await prisma.$transaction(async (tx) => {
     // Add credits to user
@@ -141,7 +141,7 @@ export async function addCredits(
  */
 export async function deductVoiceGenerationCredits(
   userId: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   return deductCredits(
     userId,
@@ -158,7 +158,7 @@ export async function deductVoiceGenerationCredits(
 export async function deductVoiceCloningCredits(
   userId: string,
   voiceName: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   return deductCredits(
     userId,
@@ -175,7 +175,7 @@ export async function deductVoiceCloningCredits(
 export async function deductAIEstimationCredits(
   userId: string,
   videoId?: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   const result = await prisma.$transaction(async (tx) => {
     // Deduct credits from user
@@ -209,7 +209,7 @@ export async function deductAIEstimationCredits(
 export async function getCreditHistory(
   userId: string,
   limit: number = 50
-): Promise<any[]> {
+): Promise<unknown[]> {
   const transactions = await prisma.creditLedger.findMany({
     where: { userId },
     orderBy: { createdAt: 'desc' },
@@ -253,7 +253,7 @@ export async function purchaseCredits(
   userId: string,
   amount: number,
   paymentId: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   return addCredits(
     userId,
@@ -271,7 +271,7 @@ export async function refundCredits(
   userId: string,
   amount: number,
   reason: string,
-  metadata?: any
+  metadata?: Record<string, unknown>
 ): Promise<{ success: boolean; newBalance: number }> {
   return addCredits(
     userId,

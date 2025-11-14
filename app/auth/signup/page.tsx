@@ -23,18 +23,13 @@ function SignUpForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [error, setError] = useState("")
+  const [_error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-  const [selectedPlan, setSelectedPlan] = useState<'starter' | 'pro'>('starter')
-
-  // Get plan from URL params
-  useEffect(() => {
+  const [selectedPlan] = useState<'starter' | 'pro'>(() => {
     const plan = searchParams?.get('plan')
-    if (plan === 'pro') {
-      setSelectedPlan('pro')
-    }
-  }, [searchParams])
+    return plan === 'pro' ? 'pro' : 'starter'
+  })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

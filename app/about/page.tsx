@@ -8,7 +8,6 @@ import {
   RiSparklingLine,
   RiHeartLine,
   RiLightbulbLine,
-  RiRocketLine,
   RiShieldCheckLine,
   RiGlobalLine,
   RiTeamLine,
@@ -39,7 +38,7 @@ export default function AboutPage() {
     {
       icon: RiGlobalLine,
       title: "Accessible to All",
-      description: "Professional property tour videos should be accessible to every agent. That's why we offer a free tier and transparent pricing.",
+      description: "Professional property tour videos should be accessible to every agent. That&apos;s why we offer a free tier and transparent pricing.",
     },
   ]
 
@@ -121,7 +120,7 @@ export default function AboutPage() {
               CREATING STUNNING PROPERTY TOURS WITH AI
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              We're building the future of real estate marketing. Professional property tour videos powered by advanced AI technology.
+              We&apos;re building the future of real estate marketing. Professional property tour videos powered by advanced AI technology.
             </p>
           </div>
         </Container>
@@ -139,7 +138,7 @@ export default function AboutPage() {
                 Property marketing has the power to transform how real estate professionals showcase listings and connect with buyers. But for too long, professional property tour videos have been expensive and time-consuming to create.
               </p>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                We built PropVideo to change that. By leveraging advanced AI video generation technology, we're making cinematic property tour videos accessible to every real estate professional—from independent agents to large brokerages.
+                We built PropVideo to change that. By leveraging advanced AI video generation technology, we&apos;re making cinematic property tour videos accessible to every real estate professional—from independent agents to large brokerages.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
                 Our platform uses <span className="font-bold">AI-powered video generation</span>, <span className="font-bold">professional voiceover synthesis</span>, and <span className="font-bold">automated tour scripting</span>. Create stunning property tours in minutes, not days.
@@ -295,7 +294,7 @@ export default function AboutPage() {
                       PROVEN AT SCALE
                     </h3>
                     <p className="text-gray-700">
-                      Our AI video generation technology creates over 10,000 property tour videos. This isn't experimental technology—it's proven and trusted by real estate professionals.
+                      Our AI video generation technology creates over 10,000 property tour videos. This isn&apos;t experimental technology—it&apos;s proven and trusted by real estate professionals.
                     </p>
                   </div>
                 </div>
@@ -309,7 +308,7 @@ export default function AboutPage() {
                       TRANSPARENT PRICING
                     </h3>
                     <p className="text-white">
-                      No hidden fees, no surprises. We show you exactly what you're paying for based on real API costs. Start free, scale as you grow.
+                      No hidden fees, no surprises. We show you exactly what you&apos;re paying for based on real API costs. Start free, scale as you grow.
                     </p>
                   </div>
                 </div>
@@ -351,7 +350,7 @@ export default function AboutPage() {
                       CONSTANTLY IMPROVING
                     </h3>
                     <p className="text-white">
-                      We're always adding new models, features, and capabilities. Beta access to cutting-edge models for Pro and Enterprise users.
+                      We&apos;re always adding new models, features, and capabilities. Beta access to cutting-edge models for Pro and Enterprise users.
                     </p>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button as MantineButton, ButtonProps as MantineButtonProps } from "@mantine/core"
+import { Button as MantineButton } from "@mantine/core"
 import { cn } from "@/lib/utils"
 
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
@@ -111,21 +111,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     // If asChild is true, just render the children directly with styling
     if (asChild && React.isValidElement(children)) {
-      return React.cloneElement(children as React.ReactElement<any>, {
+      return React.cloneElement(children as React.ReactElement<{ className?: string; style?: React.CSSProperties }>, {
         className: cn(
           "inline-flex items-center justify-center gap-2 font-bold transition-all duration-200",
           "hover:scale-[1.02] active:scale-[0.98]",
           "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-400 focus-visible:ring-offset-2",
           variant === 'primary' && "bg-sky-400 text-black border-4 border-black uppercase",
           className,
-          (children as any).props.className
+          (children as React.ReactElement<{ className?: string }>).props.className
         ),
         style: {
           height: size === 'icon' ? sizeConfig.h : undefined,
           width: size === 'icon' ? sizeConfig.h : undefined,
           paddingLeft: size !== 'icon' ? sizeConfig.px : 0,
           paddingRight: size !== 'icon' ? sizeConfig.px : 0,
-          ...(children as any).props.style,
+          ...(children as React.ReactElement<{ style?: React.CSSProperties }>).props.style,
         },
       })
     }

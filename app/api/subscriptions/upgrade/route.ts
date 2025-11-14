@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma"
 import { z } from "zod"
 import Stripe from "stripe"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+const _stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2025-08-27.basil",
 })
 
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
       { error: "Invalid plan" },
       { status: 400 }
     )
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Upgrade subscription error:", error)
 
     if (error instanceof z.ZodError) {

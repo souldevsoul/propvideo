@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
       },
     })
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Create subscription error:', error)
 
     if (error instanceof z.ZodError) {

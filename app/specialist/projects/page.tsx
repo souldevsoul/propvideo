@@ -40,7 +40,7 @@ export default function SpecialistProjectsPage() {
   const fetchProjects = async () => {
     try {
       // TODO: Replace with real API call to GET /api/specialist/projects
-      const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+      const _baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
       // const response = await fetch(`${baseUrl}/api/specialist/projects`, {
       //   cache: 'no-store',
       // })

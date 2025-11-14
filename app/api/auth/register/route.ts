@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
       user,
       message,
     })
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Registration error:", error)
 
     // Handle Zod validation errors

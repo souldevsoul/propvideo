@@ -1,5 +1,6 @@
 "use client"
 
+import { useMemo } from "react"
 import { RiUserLine, RiTimeLine, RiMoneyDollarCircleLine, RiArrowRightLine } from "react-icons/ri"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -22,7 +23,7 @@ export interface SpecialistProjectCardProps {
 }
 
 export function SpecialistProjectCard({
-  id,
+  id: _id,
   name,
   description,
   status,
@@ -67,7 +68,11 @@ export function SpecialistProjectCard({
     }
   }
 
-  const isUrgent = deadline && new Date(deadline) < new Date(Date.now() + 24 * 60 * 60 * 1000)
+  const isUrgent = useMemo(() => {
+    if (!deadline) return false
+    const urgentThreshold = Date.now() + 24 * 60 * 60 * 1000
+    return new Date(deadline).getTime() < urgentThreshold
+  }, [deadline])
 
   return (
     <Card

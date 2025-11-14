@@ -220,7 +220,7 @@ export default function SpecialistDashboard() {
                 NO ACTIVE PROJECTS
               </Heading>
               <Text variant="body" className="mt-2 text-center text-slate-600">
-                You don't have any assigned projects at the moment.
+                You don&apos;t have any assigned projects at the moment.
                 <br />
                 Projects will appear here when assigned by an admin.
               </Text>

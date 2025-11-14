@@ -43,7 +43,7 @@ export interface WorkReviewCardProps {
 }
 
 export function WorkReviewCard({
-  projectId,
+  _projectId,
   submittedWork,
   expertName,
   expertRating,

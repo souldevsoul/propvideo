@@ -7,7 +7,7 @@ export async function getCurrentUser() {
 }
 
 export async function requireAuth() {
-  const user = await getCurrentUser() as any
+  const user = await getCurrentUser() as { id: string } | undefined
   if (!user || !user.id) {
     throw new Error("Unauthorized")
   }

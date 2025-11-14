@@ -8,7 +8,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2025-08-27.basil",
 })
 
-export async function POST(request: NextRequest) {
+export async function POST(equest: NextRequest) {
   try {
     const session = await getServerSession(authOptions)
 
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
       message:
         "Subscription cancelled successfully. You will have access until the end of your billing period.",
     })
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Cancel subscription error:", error)
 
     return NextResponse.json(

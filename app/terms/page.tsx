@@ -92,7 +92,7 @@ export default function TermsPage() {
         },
         {
           subtitle: "Property Photo Misuse",
-          text: "Uploading photos of properties you don't have rights to use; using photos without property owner consent; misrepresenting property details or features; violating copyright or intellectual property rights.",
+          text: "Uploading photos of properties you don&apos;t have rights to use; using photos without property owner consent; misrepresenting property details or features; violating copyright or intellectual property rights.",
         },
         {
           text: "We reserve the right to investigate suspected violations and take appropriate action, including account suspension or termination, reporting to authorities, and pursuing legal remedies.",
@@ -320,7 +320,7 @@ export default function TermsPage() {
                   <h3 className="text-lg font-bold text-slate-900">Liability</h3>
                 </div>
                 <p className="text-slate-600 text-sm">
-                  Service provided "as is." Our liability is limited. You're responsible for your use of generated content.
+                  Service provided "as is." Our liability is limited. You&apos;re responsible for your use of generated content.
                 </p>
               </div>
               <div className="p-6 bg-white rounded-2xl border-2 border-sky-200">

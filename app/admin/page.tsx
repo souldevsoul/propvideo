@@ -6,8 +6,6 @@ import {
   RiUserLine,
   RiTeamLine,
   RiMoneyDollarCircleLine,
-  RiCheckboxCircleLine,
-  RiTimeLine,
 } from "react-icons/ri"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Text, Heading } from "@/components/ui/typography"
@@ -47,10 +45,10 @@ export default function AdminDashboard() {
         const projectsData = await projectsResponse.json()
         if (projectsData.success && projectsData.projects) {
           totalProjects = projectsData.projects.length
-          activeProjects = projectsData.projects.filter((p: any) =>
+          activeProjects = projectsData.projects.filter((p: { status: string }) =>
             p.status === 'assigned' || p.status === 'in_review' || p.status === 'waiting_for_assignment'
           ).length
-          completedProjects = projectsData.projects.filter((p: any) => p.status === 'completed').length
+          completedProjects = projectsData.projects.filter((p: { status: string }) => p.status === 'completed').length
         }
       }
 

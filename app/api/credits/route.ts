@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/get-current-user';
 import { getUserCredits, getCreditHistory } from '@/lib/credits';
 
-// GET /api/credits - Get user's current credit balance and history
+// GET /api/credits - Get user&apos;s current credit balance and history
 export async function GET(request: NextRequest) {
   try {
     const userId = await requireAuth();
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     // Get current balance
     const balance = await getUserCredits(userId);
 
-    const response: any = {
+    const response: { success: boolean; balance: number; history?: unknown[] } = {
       success: true,
       balance,
     };
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.json(response);
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Get credits error:', error);
     return NextResponse.json(
       {
