@@ -21,8 +21,47 @@ const inter = Inter({
 // Font will be loaded through globals.css
 
 export const metadata: Metadata = {
-  title: "PropVideo - AI Property Tour Video Generation",
+  title: {
+    default: "PropVideo - AI Property Tour Video Generation",
+    template: "%s | PropVideo"
+  },
   description: "Create stunning property tour videos in minutes with AI. Transform photos into cinematic real estate tours with professional voiceovers and music.",
+  keywords: ["property tour", "real estate video", "AI video generation", "property marketing", "listing video", "real estate tours", "property videos"],
+  authors: [{ name: "PropVideo, Inc." }],
+  creator: "PropVideo",
+  publisher: "PropVideo",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
+  openGraph: {
+    title: "PropVideo - AI Property Tour Video Generation",
+    description: "Transform property photos into cinematic video tours with AI. Professional voiceovers, music, and branding in minutes.",
+    url: "/",
+    siteName: "PropVideo",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PropVideo - AI Property Tour Video Generation"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PropVideo - AI Property Tour Video Generation",
+    description: "Create stunning property tour videos in minutes with AI",
+    creator: "@propvideo",
+    images: ["/og-image.png"]
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" }
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" }
+    ]
+  }
 };
 
 export default function RootLayout({

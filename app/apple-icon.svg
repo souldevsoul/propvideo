@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Sky blue background with rounded corners -->
+  <rect width="180" height="180" rx="40" fill="#0EA5E9"/>
+
+  <!-- House shape in white -->
+  <path d="M90 50 L50 80 L50 130 L80 130 L80 100 L100 100 L100 130 L130 130 L130 80 Z" fill="white" stroke="none"/>
+
+  <!-- Roof highlight -->
+  <path d="M90 50 L50 80 L55 80 L90 55 L125 80 L130 80 Z" fill="#E0F2FE" stroke="none"/>
+
+  <!-- Window details -->
+  <rect x="60" y="90" width="15" height="15" fill="#0EA5E9"/>
+  <rect x="105" y="90" width="15" height="15" fill="#0EA5E9"/>
+
+  <!-- Video camera badge in emerald -->
+  <circle cx="125" cy="125" r="28" fill="#10B981" stroke="white" stroke-width="3"/>
+  <rect x="110" y="115" width="20" height="20" rx="2" fill="white"/>
+  <path d="M130 120 L145 113 L145 137 L130 130 Z" fill="white"/>
+</svg>

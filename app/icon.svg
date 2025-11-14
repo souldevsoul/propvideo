@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Sky blue background circle -->
+  <circle cx="32" cy="32" r="32" fill="#0EA5E9"/>
+
+  <!-- House shape in white -->
+  <path d="M32 16 L18 28 L18 46 L28 46 L28 36 L36 36 L36 46 L46 46 L46 28 Z" fill="white"/>
+
+  <!-- Roof -->
+  <path d="M32 16 L18 28 L20 28 L32 18 L44 28 L46 28 Z" fill="#E0F2FE"/>
+
+  <!-- Video camera in emerald -->
+  <circle cx="44" cy="44" r="9" fill="#10B981"/>
+  <path d="M40 42 L40 46 L44 46 L44 42 Z" fill="white"/>
+  <path d="M44 43 L48 41 L48 47 L44 45 Z" fill="white"/>
+</svg>
