@@ -67,18 +67,12 @@ export async function createSubscription(
   startTrial: boolean = false
 ) {
   const planLimits = PLANS[plan]
-  const now = new Date()
-  const trialEndsAt = startTrial && planLimits.trialDays > 0
-    ? new Date(now.getTime() + planLimits.trialDays * 24 * 60 * 60 * 1000)
-    : null
 
   const subscription = await prisma.subscription.create({
     data: {
       userId,
       plan,
       status: startTrial ? 'trialing' : 'active',
-      isTrialing: startTrial,
-      trialEndsAt,
       monthlyCharacterLimit: planLimits.monthlyCharacterLimit,
       monthlyVoiceClones: planLimits.monthlyVoiceClones,
       allowCustomVoices: planLimits.allowCustomVoices,
@@ -107,14 +101,13 @@ export async function checkSubscriptionLimit(
   }
 
   // Check if trial has expired
-  if (subscription.isTrialing && subscription.trialEndsAt) {
+  if (subscription.status === 'trialing' && subscription.stripeCurrentPeriodEnd) {
     const now = new Date()
-    if (now > subscription.trialEndsAt) {
+    if (now > subscription.stripeCurrentPeriodEnd) {
       await prisma.subscription.update({
         where: { id: subscription.id },
         data: {
           status: 'expired',
-          isTrialing: false,
         },
       })
       return {
@@ -158,12 +151,12 @@ export async function getUserPlan(userId: string): Promise<PlanType> {
  */
 export async function isUserOnTrial(userId: string): Promise<boolean> {
   const subscription = await getUserSubscription(userId)
-  if (!subscription || !subscription.isTrialing) return false
+  if (!subscription || subscription.status !== 'trialing') return false
 
   // Check if trial is still valid
-  if (subscription.trialEndsAt) {
+  if (subscription.stripeCurrentPeriodEnd) {
     const now = new Date()
-    return now <= subscription.trialEndsAt
+    return now <= subscription.stripeCurrentPeriodEnd
   }
 
   return false
@@ -174,12 +167,12 @@ export async function isUserOnTrial(userId: string): Promise<boolean> {
  */
 export async function getTrialDaysRemaining(userId: string): Promise<number> {
   const subscription = await getUserSubscription(userId)
-  if (!subscription || !subscription.isTrialing || !subscription.trialEndsAt) {
+  if (!subscription || subscription.status !== 'trialing' || !subscription.stripeCurrentPeriodEnd) {
     return 0
   }
 
   const now = new Date()
-  const diff = subscription.trialEndsAt.getTime() - now.getTime()
+  const diff = subscription.stripeCurrentPeriodEnd.getTime() - now.getTime()
   const daysRemaining = Math.ceil(diff / (1000 * 60 * 60 * 24))
 
   return Math.max(0, daysRemaining)

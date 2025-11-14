@@ -252,9 +252,9 @@ export function CloneVoiceDrawer({ open, onOpenChange, onSuccess }: CloneVoiceDr
           </div>
 
           {/* Requirements Info */}
-          <div className="rounded-md border-2 border-blue-500 bg-blue-50 p-4">
-            <h4 className="text-sm font-bold text-blue-900 mb-2">Recording Tips</h4>
-            <ul className="text-xs text-blue-800 space-y-1">
+          <div className="rounded-md border-2 border-sky-500 bg-sky-50 p-4">
+            <h4 className="text-sm font-bold text-sky-900 mb-2">Recording Tips</h4>
+            <ul className="text-xs text-sky-800 space-y-1">
               <li>• Use clear audio with minimal background noise</li>
               <li>• Record 30-60 seconds of natural speech</li>
               <li>• Speak at a normal pace with varied intonation</li>

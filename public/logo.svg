@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- House icon -->
+  <g transform="translate(5, 15)">
+    <!-- House shape in sky blue -->
+    <path d="M20 8 L8 18 L8 32 L14 32 L14 24 L22 24 L22 32 L28 32 L28 18 Z" fill="#0EA5E9"/>
+    <!-- Roof highlight -->
+    <path d="M20 8 L8 18 L9.5 18 L20 9.5 L26.5 18 L28 18 Z" fill="#38BDF8"/>
+    <!-- Video camera badge -->
+    <circle cx="26" cy="26" r="6" fill="#10B981"/>
+    <rect x="23" y="24" width="3" height="4" fill="white" rx="0.5"/>
+    <path d="M26 25.5 L29 24 L29 28 L26 26.5 Z" fill="white"/>
+  </g>
+
+  <!-- PropVideo text -->
+  <text x="45" y="37" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#0F172A">
+    Prop<tspan fill="#0EA5E9">Video</tspan>
+  </text>
+</svg>

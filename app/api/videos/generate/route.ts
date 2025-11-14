@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { z } from 'zod';
+import { generatePropertyTourVideo } from '@/lib/replicate';
 
 const generateVideoSchema = z.object({
   propertyId: z.string().min(1, 'Property ID is required'),
@@ -88,12 +89,44 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // TODO: Call Replicate API to generate video
-    // For now, just return the video record
-    // In Phase 7, we'll implement actual video generation with Replicate
+    // Start video generation with Replicate (async)
+    // This will run in the background and update the video status via webhook
+    try {
+      const photoUrls = property.photos.map(photo => photo.photoUrl);
 
-    // Simulate video generation (would be async in production)
-    // await generateVideoWithReplicate(video, property.photos);
+      const replicateResult = await generatePropertyTourVideo({
+        photos: photoUrls,
+        duration: validatedData.duration,
+        tourStyle: validatedData.tourStyle,
+        voiceoverText,
+        voiceStyle: validatedData.voiceStyle,
+        aspectRatio: validatedData.aspectRatio,
+      });
+
+      // Update video record with Replicate prediction ID
+      await prisma.propertyVideo.update({
+        where: { id: video.id },
+        data: {
+          replicateId: replicateResult.predictionId,
+          status: 'processing',
+        },
+      });
+
+      console.log(`Video generation started for ${video.id} with Replicate prediction ${replicateResult.predictionId}`);
+    } catch (replicateError) {
+      console.error('Failed to start Replicate generation:', replicateError);
+      // Update video status to failed
+      await prisma.propertyVideo.update({
+        where: { id: video.id },
+        data: { status: 'failed' },
+      });
+
+      return NextResponse.json({
+        success: false,
+        error: 'Failed to start video generation with Replicate',
+        details: replicateError instanceof Error ? replicateError.message : 'Unknown error',
+      }, { status: 500 });
+    }
 
     return NextResponse.json({
       success: true,
@@ -106,7 +139,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         success: false,
         error: 'Validation error',
-        details: error.errors,
+        details: (error as any).errors,
       }, { status: 400 });
     }
 

@@ -52,7 +52,7 @@ function SignInForm() {
         <div className="text-center mb-8">
           <Link href="/">
             <h1 className="text-4xl font-black uppercase">
-              VOICE<span className="text-blue-400">CRAFT</span>
+              PROP<span className="text-sky-500">VIDEO</span>
             </h1>
           </Link>
           <p className="text-gray-600 mt-2">Sign in to your account</p>
@@ -78,7 +78,7 @@ function SignInForm() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="support@propvideo.ai"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -109,7 +109,7 @@ function SignInForm() {
 
             <Button
               type="submit"
-              className="w-full h-14 text-lg gap-3 bg-black text-blue-400 hover:bg-gray-900 border-4 border-black font-bold uppercase brutalist-shadow"
+              className="w-full h-14 text-lg gap-3 bg-black text-sky-500 hover:bg-gray-900 border-4 border-black font-bold uppercase brutalist-shadow"
               disabled={isLoading}
             >
               {isLoading ? "Signing In..." : "Sign In"}
@@ -135,7 +135,7 @@ function SignInForm() {
               Don't have an account?{" "}
               <Link
                 href="/auth/signup"
-                className="font-bold text-black hover:text-blue-400 underline"
+                className="font-bold text-black hover:text-sky-500 underline"
               >
                 Sign Up
               </Link>
@@ -161,7 +161,7 @@ export default function SignInPage() {
         <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="text-center">
             <div className="w-16 h-16 bg-black flex items-center justify-center mx-auto mb-4 animate-pulse">
-              <RiLockLine className="w-10 h-10 text-blue-400" />
+              <RiLockLine className="w-10 h-10 text-sky-500" />
             </div>
             <p className="text-gray-600 font-bold uppercase">Loading...</p>
           </div>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="24" fill="#0EA5E9"/>
+
+  <!-- House shape in white -->
+  <path d="M24 12 L12 21 L12 35 L18 35 L18 27 L30 27 L30 35 L36 35 L36 21 Z" fill="white"/>
+
+  <!-- Roof highlight -->
+  <path d="M24 12 L12 21 L14 21 L24 13.5 L34 21 L36 21 Z" fill="#E0F2FE"/>
+
+  <!-- Video camera badge -->
+  <circle cx="34" cy="34" r="8" fill="#10B981"/>
+  <rect x="30" y="31" width="5" height="6" fill="white" rx="1"/>
+  <path d="M35 33 L40 30.5 L40 37.5 L35 35 Z" fill="white"/>
+</svg>

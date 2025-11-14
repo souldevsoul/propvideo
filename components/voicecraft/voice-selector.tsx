@@ -89,7 +89,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
               <select
                 value={languageFilter}
                 onChange={(e) => setLanguageFilter(e.target.value)}
-                className="px-3 py-2 border-2 border-black text-sm font-bold uppercase focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="px-3 py-2 border-2 border-black text-sm font-bold uppercase focus:outline-none focus:ring-2 focus:ring-sky-400"
               >
                 <option value="all">All Languages</option>
                 {languages.map(lang => (
@@ -116,7 +116,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
               padding="md"
               className={cn(
                 "cursor-pointer transition-all",
-                selectedVoiceId === voice.id && "ring-2 ring-blue-400 ring-offset-2"
+                selectedVoiceId === voice.id && "ring-2 ring-sky-400 ring-offset-2"
               )}
               onClick={() => onVoiceSelect?.(voice)}
             >
@@ -137,7 +137,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
                           "text-xs px-2 py-0.5 border-2 border-black font-bold uppercase",
                           selectedVoiceId === voice.id
                             ? "bg-white/20 text-white"
-                            : "bg-blue-400 text-black"
+                            : "bg-sky-400 text-black"
                         )}
                       >
                         Clone
@@ -184,7 +184,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
                     size="icon"
                     className={cn(
                       "w-8 h-8",
-                      voice.isFavorite && "text-blue-500"
+                      voice.isFavorite && "text-sky-500"
                     )}
                     onClick={(e) => {
                       e.stopPropagation()

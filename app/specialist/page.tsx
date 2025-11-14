@@ -109,18 +109,18 @@ export default function SpecialistDashboard() {
       {/* Stats Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {/* Active Projects */}
-        <Card variant="outlined" className="border-4 border-blue-500 bg-blue-50">
+        <Card variant="outlined" className="border-4 border-sky-500 bg-sky-50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-bold uppercase text-blue-900">
+            <CardTitle className="text-sm font-bold uppercase text-sky-900">
               ACTIVE PROJECTS
             </CardTitle>
-            <RiFolder3Line className="h-6 w-6 text-blue-600" />
+            <RiFolder3Line className="h-6 w-6 text-sky-600" />
           </CardHeader>
           <CardContent>
-            <Heading as="h2" className="text-3xl font-bold text-blue-900">
+            <Heading as="h2" className="text-3xl font-bold text-sky-900">
               {stats.activeProjects}
             </Heading>
-            <Text variant="caption" className="mt-2 text-xs text-blue-800">
+            <Text variant="caption" className="mt-2 text-xs text-sky-800">
               Currently in progress
             </Text>
           </CardContent>
@@ -145,41 +145,41 @@ export default function SpecialistDashboard() {
         </Card>
 
         {/* Total Earnings */}
-        <Card variant="outlined" className="border-4 border-blue-500 bg-blue-50">
+        <Card variant="outlined" className="border-4 border-sky-500 bg-sky-50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-bold uppercase text-blue-900">
+            <CardTitle className="text-sm font-bold uppercase text-sky-900">
               TOTAL EARNINGS
             </CardTitle>
-            <RiMoneyDollarCircleLine className="h-6 w-6 text-blue-600" />
+            <RiMoneyDollarCircleLine className="h-6 w-6 text-sky-600" />
           </CardHeader>
           <CardContent>
-            <Heading as="h2" className="text-3xl font-bold text-blue-900">
+            <Heading as="h2" className="text-3xl font-bold text-sky-900">
               ${stats.totalEarnings.toLocaleString()}
             </Heading>
-            <Text variant="caption" className="mt-2 text-xs text-blue-800">
+            <Text variant="caption" className="mt-2 text-xs text-sky-800">
               Lifetime earnings
             </Text>
           </CardContent>
         </Card>
 
         {/* Rating */}
-        <Card variant="outlined" className="border-4 border-purple-500 bg-purple-50">
+        <Card variant="outlined" className="border-4 border-sky-500 bg-sky-50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-bold uppercase text-purple-900">
+            <CardTitle className="text-sm font-bold uppercase text-sky-900">
               RATING
             </CardTitle>
-            <RiStarFill className="h-6 w-6 text-purple-600" />
+            <RiStarFill className="h-6 w-6 text-sky-600" />
           </CardHeader>
           <CardContent>
             <div className="flex items-baseline gap-2">
-              <Heading as="h2" className="text-3xl font-bold text-purple-900">
+              <Heading as="h2" className="text-3xl font-bold text-sky-900">
                 {stats.rating.toFixed(1)}
               </Heading>
-              <Text variant="body" className="text-lg font-bold text-purple-700">
+              <Text variant="body" className="text-lg font-bold text-sky-700">
                 / 5.0
               </Text>
             </div>
-            <Text variant="caption" className="mt-2 text-xs text-purple-800">
+            <Text variant="caption" className="mt-2 text-xs text-sky-800">
               Average client rating
             </Text>
           </CardContent>

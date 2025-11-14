@@ -107,9 +107,9 @@ function SignUpForm() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-md">
-          <div className="bg-blue-400 border-4 border-black brutalist-shadow p-8 text-center">
+          <div className="bg-sky-500 border-4 border-black brutalist-shadow p-8 text-center">
             <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-              <RiCheckLine className="w-10 h-10 text-blue-400" />
+              <RiCheckLine className="w-10 h-10 text-sky-500" />
             </div>
             <h2 className="text-3xl font-black uppercase mb-4">
               Welcome to PropVideo!
@@ -132,7 +132,7 @@ function SignUpForm() {
         <div className="text-center mb-8">
           <Link href="/">
             <h1 className="text-4xl font-black uppercase">
-              VOICE<span className="text-blue-400">CRAFT</span>
+              PROP<span className="text-sky-500">VIDEO</span>
             </h1>
           </Link>
           <p className="text-gray-600 mt-2">Create your account</p>
@@ -140,7 +140,7 @@ function SignUpForm() {
 
         {/* Selected Plan Badge */}
         {selectedPlan === 'pro' && (
-          <div className="bg-blue-400 border-4 border-black brutalist-shadow p-4 mb-6 text-center">
+          <div className="bg-sky-400 border-4 border-black brutalist-shadow p-4 mb-6 text-center">
             <p className="font-bold uppercase text-sm mb-1">Selected Plan</p>
             <p className="text-2xl font-black uppercase">PRO - 14-DAY FREE TRIAL</p>
             <p className="text-xs mt-1">No credit card required • Cancel anytime</p>
@@ -242,15 +242,15 @@ function SignUpForm() {
             </div>
 
             {/* Welcome Bonus Info */}
-            <div className="bg-blue-50 border-4 border-blue-400 p-4">
+            <div className="bg-sky-50 border-4 border-sky-400 p-4">
               <p className="text-sm font-bold text-center">
-                🎁 Get <span className="text-blue-600">1000 FREE CREDITS</span> ($10) when you sign up!
+                🎁 Get <span className="text-sky-600">1000 FREE CREDITS</span> ($10) when you sign up!
               </p>
             </div>
 
             <Button
               type="submit"
-              className="w-full h-14 text-lg gap-3 bg-black text-blue-400 hover:bg-gray-900 border-4 border-black font-bold uppercase brutalist-shadow"
+              className="w-full h-14 text-lg gap-3 bg-black text-sky-500 hover:bg-gray-900 border-4 border-black font-bold uppercase brutalist-shadow"
               disabled={isLoading}
             >
               {isLoading ? "Creating Account..." : "Create Account"}
@@ -276,7 +276,7 @@ function SignUpForm() {
               Already have an account?{" "}
               <Link
                 href="/auth/signin"
-                className="font-bold text-black hover:text-blue-400 underline"
+                className="font-bold text-black hover:text-sky-500 underline"
               >
                 Sign In
               </Link>
@@ -316,7 +316,7 @@ export default function SignUpPage() {
         <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="text-center">
             <div className="w-16 h-16 bg-black flex items-center justify-center mx-auto mb-4 animate-pulse">
-              <RiUserLine className="w-10 h-10 text-blue-400" />
+              <RiUserLine className="w-10 h-10 text-sky-500" />
             </div>
             <p className="text-gray-600 font-bold uppercase">Loading...</p>
           </div>

@@ -3,6 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { Button, Heading, Text } from "@/components/ui"
+import { Header } from "@/components/marketing/layout/header"
 import { Footer } from "@/components/marketing/layout/footer"
 import { NewsletterPopup } from "@/components/marketing/NewsletterPopup"
 import {
@@ -145,44 +146,32 @@ export default function Home() {
   // Tour styles
   const tourStyles = [
     { name: "Luxury", description: "Elegant, sophisticated, high-end properties", gradient: "from-amber-400 to-yellow-600" },
-    { name: "Modern", description: "Clean, contemporary, tech-forward homes", gradient: "from-sky-400 to-blue-600" },
+    { name: "Modern", description: "Clean, contemporary, tech-forward homes", gradient: "from-sky-400 to-sky-600" },
     { name: "Cozy", description: "Warm, inviting, family-friendly properties", gradient: "from-orange-400 to-red-500" },
-    { name: "Dramatic", description: "Bold, striking, statement properties", gradient: "from-purple-500 to-pink-600" },
+    { name: "Dramatic", description: "Bold, striking, statement properties", gradient: "from-sky-500 to-red-600" },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-sky-50">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-              <RiHomeSmileLine className="w-7 h-7 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">PropVideo</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Features</a>
-            <a href="#styles" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Tour Styles</a>
-            <a href="#pricing" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Pricing</a>
-            <a href="/about" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">About</a>
-          </nav>
-          <Button
-            size="md"
-            className="bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all font-semibold"
-            onClick={() => window.location.href = '/dashboard'}
-          >
-            Get Started
-          </Button>
-        </div>
-      </header>
+      <Header
+        logoText="PropVideo"
+        navLinks={[
+          { label: "Features", href: "/features" },
+          { label: "Pricing", href: "/pricing" },
+          { label: "About", href: "/about" },
+        ]}
+        ctaButton={{
+          text: "Get Started",
+          href: "/dashboard",
+        }}
+      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 -left-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
@@ -200,7 +189,7 @@ export default function Home() {
                   <span className="text-slate-900">Create Stunning</span>
                 </span>
                 <span className={`block transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">Property Videos</span>
+                  <span className="bg-gradient-to-r from-sky-600 to-sky-600 bg-clip-text text-transparent">Property Videos</span>
                 </span>
                 <span className={`block transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   <span className="text-slate-900">In Minutes</span>
@@ -219,7 +208,7 @@ export default function Home() {
             <div className={`flex flex-wrap justify-center gap-6 pt-4 transition-all duration-700 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Button
                 size="xl"
-                className="gap-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-xl hover:shadow-2xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl"
+                className="gap-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white hover:from-sky-600 hover:to-sky-700 shadow-xl hover:shadow-2xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl"
                 onClick={() => window.location.href = '/dashboard'}
               >
                 <RiArrowRightLine className="w-6 h-6" />
@@ -329,7 +318,7 @@ export default function Home() {
                   key={index}
                   className="group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-sky-200"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 bg-gradient-to-br from-sky-400 to-sky-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
@@ -394,7 +383,7 @@ export default function Home() {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1 bg-gradient-to-r from-sky-500 to-sky-600 text-white text-sm font-bold rounded-full">
                     MOST POPULAR
                   </div>
                 )}
@@ -426,7 +415,7 @@ export default function Home() {
                 <Button
                   className={`w-full py-6 font-semibold rounded-xl transition-all ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-600 hover:to-blue-700 shadow-lg hover:shadow-xl'
+                      ? 'bg-gradient-to-r from-sky-500 to-sky-600 text-white hover:from-sky-600 hover:to-sky-700 shadow-lg hover:shadow-xl'
                       : 'bg-slate-900 text-white hover:bg-slate-800'
                   }`}
                   onClick={() => window.location.href = plan.ctaText === 'Contact Sales' ? '/contact' : '/dashboard'}
@@ -440,7 +429,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-sky-600 to-blue-700 text-white">
+      <section className="py-24 bg-gradient-to-br from-sky-600 to-sky-700 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Create Amazing Property Videos?

@@ -3,6 +3,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { AppHeader } from "@/components/marketing/layout/app-header"
+import { Footer } from "@/components/marketing/layout/footer"
 
 type User = {
   name: string
@@ -50,6 +51,7 @@ export default function DashboardLayout({
     <div className="min-h-screen bg-white">
       <AppHeader user={user} />
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   )
 }

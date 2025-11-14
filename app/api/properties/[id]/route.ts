@@ -5,10 +5,10 @@ import { z } from 'zod';
 // GET - Get property details
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     const property = await prisma.property.findUnique({
       where: { id },
@@ -46,10 +46,10 @@ export async function GET(
 // PATCH - Update property
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     // Validation schema for updates
@@ -111,7 +111,7 @@ export async function PATCH(
       return NextResponse.json({
         success: false,
         error: 'Validation error',
-        details: error.errors,
+        details: (error as any).errors,
       }, { status: 400 });
     }
 
@@ -126,10 +126,10 @@ export async function PATCH(
 // DELETE - Delete property
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     // Delete property (photos and videos will cascade)
     await prisma.property.delete({

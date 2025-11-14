@@ -4,10 +4,10 @@ import { put } from '@vercel/blob';
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id: propertyId } = params;
+    const { id: propertyId } = await params;
 
     // Verify property exists
     const property = await prisma.property.findUnique({

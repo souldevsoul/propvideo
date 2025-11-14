@@ -25,11 +25,11 @@ export default function SpecialistLayout({
           </Heading>
         </div>
 
-        <div className="border-b-4 border-black bg-blue-50 p-4">
-          <Text variant="caption" className="text-xs font-bold uppercase text-blue-900">
+        <div className="border-b-4 border-black bg-sky-50 p-4">
+          <Text variant="caption" className="text-xs font-bold uppercase text-sky-900">
             SPECIALIST PORTAL
           </Text>
-          <Text variant="body" className="mt-1 text-sm font-bold text-blue-800">
+          <Text variant="body" className="mt-1 text-sm font-bold text-sky-800">
             Audio Expert Dashboard
           </Text>
         </div>
@@ -41,7 +41,7 @@ export default function SpecialistLayout({
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center space-x-3 border-2 border-transparent px-4 py-3 font-medium transition-all hover:border-black hover:bg-blue-400"
+                className="flex items-center space-x-3 border-2 border-transparent px-4 py-3 font-medium transition-all hover:border-black hover:bg-sky-400"
               >
                 <Icon className="h-5 w-5" />
                 <span className="text-sm uppercase">{item.name}</span>

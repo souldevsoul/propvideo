@@ -71,10 +71,6 @@ export async function POST(request: NextRequest) {
       }
 
       const limits = planLimits[plan]
-      const now = new Date()
-      const trialEndsAt = new Date(
-        now.getTime() + limits.trialDays * 24 * 60 * 60 * 1000
-      )
 
       // Update or create subscription
       if (currentSubscription) {
@@ -83,8 +79,6 @@ export async function POST(request: NextRequest) {
           data: {
             plan,
             status: "trialing",
-            isTrialing: true,
-            trialEndsAt,
             monthlyCharacterLimit: limits.monthlyCharacterLimit,
             monthlyVoiceClones: limits.monthlyVoiceClones,
             allowCustomVoices: limits.allowCustomVoices,
@@ -98,8 +92,6 @@ export async function POST(request: NextRequest) {
             userId: user.id,
             plan,
             status: "trialing",
-            isTrialing: true,
-            trialEndsAt,
             monthlyCharacterLimit: limits.monthlyCharacterLimit,
             monthlyVoiceClones: limits.monthlyVoiceClones,
             allowCustomVoices: limits.allowCustomVoices,

@@ -147,15 +147,15 @@ export function WorkSubmissionCard({
 
   return (
     <>
-      <Card variant="outlined" className="border-4 border-blue-500 bg-blue-50">
+      <Card variant="outlined" className="border-4 border-sky-500 bg-sky-50">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="flex items-center gap-2 text-blue-900">
-                <RiFileAddLine className="h-6 w-6 text-blue-600" />
+              <CardTitle className="flex items-center gap-2 text-sky-900">
+                <RiFileAddLine className="h-6 w-6 text-sky-600" />
                 SUBMIT COMPLETED WORK
               </CardTitle>
-              <CardDescription className="text-blue-800">
+              <CardDescription className="text-sky-800">
                 Upload completed audio files and submit for client review
               </CardDescription>
             </div>
@@ -257,7 +257,7 @@ export function WorkSubmissionCard({
                     <div
                       key={audio.id}
                       className={`border-b border-slate-200 pb-3 last:border-0 last:pb-0 ${
-                        isSelected ? "bg-blue-50" : ""
+                        isSelected ? "bg-sky-50" : ""
                       } rounded-md p-3 transition-colors`}
                     >
                       <div className="mb-2 flex items-center justify-between">
@@ -380,7 +380,7 @@ export function WorkSubmissionCard({
             <AlertDialogAction
               onClick={handleSubmit}
               disabled={loading}
-              className="bg-blue-400 text-black border-4 border-black hover:bg-blue-500"
+              className="bg-sky-400 text-black border-4 border-black hover:bg-sky-500"
             >
               {loading ? "SUBMITTING..." : "CONFIRM SUBMISSION"}
             </AlertDialogAction>

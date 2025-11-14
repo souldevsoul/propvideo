@@ -174,7 +174,7 @@ export async function deductVoiceCloningCredits(
  */
 export async function deductAIEstimationCredits(
   userId: string,
-  projectId: string,
+  videoId?: string,
   metadata?: any
 ): Promise<{ success: boolean; newBalance: number }> {
   const result = await prisma.$transaction(async (tx) => {
@@ -185,14 +185,14 @@ export async function deductAIEstimationCredits(
       select: { credits: true },
     });
 
-    // Record transaction in ledger with project reference
+    // Record transaction in ledger
     await tx.creditLedger.create({
       data: {
         userId,
-        projectId,
+        videoId,
         amount: -CREDIT_COSTS.AI_ESTIMATION,
         type: CREDIT_TRANSACTION_TYPES.AI_ESTIMATION,
-        description: 'AI project estimation',
+        description: 'AI video estimation',
         metadata: metadata || {},
       },
     });
@@ -215,10 +215,14 @@ export async function getCreditHistory(
     orderBy: { createdAt: 'desc' },
     take: limit,
     include: {
-      project: {
+      propertyVideo: {
         select: {
           id: true,
-          name: true,
+          property: {
+            select: {
+              address: true,
+            },
+          },
         },
       },
     },

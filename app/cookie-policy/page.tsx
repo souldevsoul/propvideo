@@ -8,8 +8,8 @@ export default function CookiePolicyPage() {
       <Header
         logoText="PropVideo"
         navLinks={[
-          { label: "Features", href: "/#features" },
-          { label: "Pricing", href: "/#pricing" },
+          { label: "Features", href: "/features" },
+          { label: "Pricing", href: "/pricing" },
           { label: "Demo", href: "/demo" },
         ]}
         ctaButton={{

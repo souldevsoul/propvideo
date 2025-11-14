@@ -28,7 +28,7 @@ const StatCard = React.forwardRef<HTMLDivElement, StatCardProps>(
           {/* Icon */}
           {Icon && (
             <div className="flex justify-center mb-4">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50 border-2 border-black">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-sky-50 border-2 border-black">
                 <Icon className="w-6 h-6 text-black" />
               </div>
             </div>
@@ -55,7 +55,7 @@ const StatCard = React.forwardRef<HTMLDivElement, StatCardProps>(
           {trend && (
             <div className={cn(
               "inline-flex items-center gap-1 mt-3 text-sm font-semibold",
-              trend.direction === "up" ? "text-emerald-600" : "text-rose-600"
+              trend.direction === "up" ? "text-emerald-600" : "text-red-600"
             )}>
               <span>{trend.direction === "up" ? "↑" : "↓"}</span>
               <span>{trend.value}</span>

@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -62,7 +63,7 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
         <Container maxWidth="xl">
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               {logo || (
                 <>
                   <div className="w-12 h-12 bg-sky-400 rounded-lg shadow-lg flex items-center justify-center">
@@ -71,7 +72,7 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
                   <span className="text-xl font-bold uppercase tracking-tight">{logoText}</span>
                 </>
               )}
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
@@ -89,16 +90,23 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
             {/* CTA Button */}
             <div className="hidden md:flex items-center gap-4">
               {ctaButton && (
-                <button
-                  onClick={ctaButton.onClick}
-                  className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-2 transition-colors"
-                >
+                <>
                   {ctaButton.href ? (
-                    <a href={ctaButton.href}>{ctaButton.text}</a>
+                    <Link
+                      href={ctaButton.href}
+                      className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-2 transition-colors"
+                    >
+                      {ctaButton.text}
+                    </Link>
                   ) : (
-                    ctaButton.text
+                    <button
+                      onClick={ctaButton.onClick}
+                      className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-2 transition-colors"
+                    >
+                      {ctaButton.text}
+                    </button>
                   )}
-                </button>
+                </>
               )}
             </div>
 
@@ -131,19 +139,27 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
                   </a>
                 ))}
                 {ctaButton && (
-                  <button
-                    className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-3 transition-colors w-full"
-                    onClick={() => {
-                      ctaButton.onClick?.()
-                      setMobileMenuOpen(false)
-                    }}
-                  >
+                  <>
                     {ctaButton.href ? (
-                      <a href={ctaButton.href}>{ctaButton.text}</a>
+                      <Link
+                        href={ctaButton.href}
+                        className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-3 transition-colors w-full text-center"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {ctaButton.text}
+                      </Link>
                     ) : (
-                      ctaButton.text
+                      <button
+                        className="bg-sky-400 text-white hover:bg-sky-500 rounded-lg shadow-lg font-bold uppercase px-6 py-3 transition-colors w-full"
+                        onClick={() => {
+                          ctaButton.onClick?.()
+                          setMobileMenuOpen(false)
+                        }}
+                      >
+                        {ctaButton.text}
+                      </button>
                     )}
-                  </button>
+                  </>
                 )}
               </div>
             </div>

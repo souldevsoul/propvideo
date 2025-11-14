@@ -59,21 +59,21 @@ export function ReEstimateDialog({
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
         {trigger || (
-          <Button variant="outline" size="sm" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50">
+          <Button variant="outline" size="sm" className="border-2 border-sky-500 text-sky-600 hover:bg-sky-50">
             <RiRefreshLine className="mr-2 h-4 w-4" />
             RE-ESTIMATE
           </Button>
         )}
       </AlertDialogTrigger>
-      <AlertDialogContent className="border-4 border-blue-500 sm:max-w-[600px]">
+      <AlertDialogContent className="border-4 border-sky-500 sm:max-w-[600px]">
         <AlertDialogHeader>
           <div className="flex items-center gap-3">
-            <div className="rounded-md border-4 border-blue-500 bg-blue-100 p-2">
-              <RiRefreshLine className="h-6 w-6 text-blue-600" />
+            <div className="rounded-md border-4 border-sky-500 bg-sky-100 p-2">
+              <RiRefreshLine className="h-6 w-6 text-sky-600" />
             </div>
             <div>
-              <AlertDialogTitle className="text-blue-900">RE-ESTIMATE PROJECT</AlertDialogTitle>
-              <AlertDialogDescription className="text-blue-800">
+              <AlertDialogTitle className="text-sky-900">RE-ESTIMATE PROJECT</AlertDialogTitle>
+              <AlertDialogDescription className="text-sky-800">
                 Generate a new AI estimate for this project
               </AlertDialogDescription>
             </div>
@@ -82,14 +82,14 @@ export function ReEstimateDialog({
 
         <div className="space-y-6 py-4">
           {/* Info */}
-          <div className="rounded-md border-4 border-blue-500 bg-blue-50 p-4">
+          <div className="rounded-md border-4 border-sky-500 bg-sky-50 p-4">
             <div className="flex items-start gap-3">
-              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-blue-600" />
+              <RiErrorWarningLine className="h-5 w-5 flex-shrink-0 text-sky-600" />
               <div>
-                <Text variant="body" className="font-bold text-blue-900">
+                <Text variant="body" className="font-bold text-sky-900">
                   This will generate a new estimate
                 </Text>
-                <Text variant="caption" className="mt-1 text-xs text-blue-800">
+                <Text variant="caption" className="mt-1 text-xs text-sky-800">
                   The project will return to "waiting_for_estimate_accept" status. If credits were reserved,
                   they will be refunded first, and the client will need to accept the new estimate.
                 </Text>
@@ -177,7 +177,7 @@ export function ReEstimateDialog({
           <AlertDialogAction
             onClick={handleReEstimate}
             disabled={reason.length < 20 || loading}
-            className="bg-blue-500 text-white border-4 border-black hover:bg-blue-600"
+            className="bg-sky-500 text-white border-4 border-black hover:bg-sky-600"
           >
             {loading ? "GENERATING NEW ESTIMATE..." : "CONFIRM RE-ESTIMATE"}
           </AlertDialogAction>

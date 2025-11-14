@@ -29,12 +29,11 @@ export async function POST(request: NextRequest) {
         id: subscription.id,
         plan: subscription.plan,
         status: subscription.status,
-        isTrialing: subscription.isTrialing,
-        trialEndsAt: subscription.trialEndsAt,
         monthlyCharacterLimit: subscription.monthlyCharacterLimit,
         monthlyVoiceClones: subscription.monthlyVoiceClones,
         allowCustomVoices: subscription.allowCustomVoices,
         allowCommercialUse: subscription.allowCommercialUse,
+        stripeCurrentPeriodEnd: subscription.stripeCurrentPeriodEnd,
       },
     })
 

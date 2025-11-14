@@ -60,7 +60,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
         case "uploading":
         case "processing":
           return (
-            <div className="w-5 h-5 border-2 border-blue-400 border-t-transparent rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-sky-400 border-t-transparent rounded-full animate-spin" />
           )
       }
     }
@@ -102,7 +102,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
           accept={['audio/mpeg', 'audio/wav', 'audio/m4a', 'audio/ogg']}
           className={cn(
             "border-2 border-dashed border-black rounded-xl transition-all duration-300",
-            "hover:border-blue-400 hover:bg-blue-50",
+            "hover:border-sky-400 hover:bg-sky-50",
             "cursor-pointer"
           )}
           styles={{
@@ -116,8 +116,8 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
         >
           <Stack align="center" gap="md" p="xl">
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl animate-pulse" />
-              <div className="relative inline-flex items-center justify-center w-20 h-20 bg-blue-400 border-4 border-black shadow-lg">
+              <div className="absolute inset-0 bg-sky-400/20 rounded-full blur-xl animate-pulse" />
+              <div className="relative inline-flex items-center justify-center w-20 h-20 bg-sky-400 border-4 border-black shadow-lg">
                 <Music className="w-10 h-10 text-black" />
               </div>
             </div>
@@ -130,13 +130,13 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
                 Drag and drop audio files or click to browse
               </Text>
               <Group justify="center" gap={4}>
-                <Badge variant="filled" color="yellow" size="sm" className="bg-blue-400 text-black border-2 border-black font-bold uppercase">
+                <Badge variant="filled" color="yellow" size="sm" className="bg-sky-400 text-black border-2 border-black font-bold uppercase">
                   {acceptedFormats.join(", ")}
                 </Badge>
                 <Badge variant="filled" color="dark" size="sm" className="bg-white text-black border-2 border-black font-bold uppercase">
                   Max {maxFileSize}MB
                 </Badge>
-                <Badge variant="filled" color="yellow" size="sm" className="bg-blue-400 text-black border-2 border-black font-bold uppercase">
+                <Badge variant="filled" color="yellow" size="sm" className="bg-sky-400 text-black border-2 border-black font-bold uppercase">
                   Up to {maxFiles} files
                 </Badge>
               </Group>
@@ -148,7 +148,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
         <Card
           variant="ghost"
           padding="md"
-          className="border-2 border-blue-200 bg-blue-50"
+          className="border-2 border-sky-200 bg-sky-50"
         >
           <Stack gap="xs">
             <Text size="sm" fw={700} c="blue.9">
@@ -176,7 +176,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
               <Text size="sm" fw={700} c="dark">
                 Uploaded Samples
               </Text>
-              <Badge variant="filled" size="lg" radius="sm" className="bg-blue-400 text-black border-2 border-black font-bold uppercase">
+              <Badge variant="filled" size="lg" radius="sm" className="bg-sky-400 text-black border-2 border-black font-bold uppercase">
                 {uploadedFiles.length}/{maxFiles}
               </Badge>
             </Group>

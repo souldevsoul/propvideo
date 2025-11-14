@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <!-- Earthy gradient -->
+  <defs>
+    <linearGradient id="rusticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#92400E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="225" fill="url(#rusticGrad)"/>
+
+  <!-- Rustic barn -->
+  <g opacity="0.3">
+    <path d="M200 85 L155 115 L155 175 L245 175 L245 115 Z" fill="#78350F"/>
+    <path d="M200 85 L150 115 L160 115 L200 92 L240 115 L250 115 Z" fill="#92400E"/>
+    <!-- Barn door -->
+    <rect x="190" y="140" width="20" height="35" fill="#451A03"/>
+    <!-- Window -->
+    <circle cx="220" cy="130" r="8" fill="#FCD34D" opacity="0.5"/>
+  </g>
+
+  <!-- Trees -->
+  <g opacity="0.25">
+    <rect x="120" y="160" width="8" height="20" fill="#78350F"/>
+    <polygon points="124,145 114,160 134,160" fill="#16A34A"/>
+    <rect x="280" y="155" width="6" height="25" fill="#78350F"/>
+    <polygon points="283,142 275,155 291,155" fill="#16A34A"/>
+  </g>
+
+  <!-- Text -->
+  <text x="200" y="120" text-anchor="middle" font-family="serif" font-size="36" font-weight="400" fill="#78350F" opacity="0.8">
+    Rustic
+  </text>
+  <text x="200" y="145" text-anchor="middle" font-family="system-ui" font-size="14" fill="#92400E" opacity="0.7">
+    Natural • Folk • Earthy
+  </text>
+</svg>

@@ -3,10 +3,8 @@
  * Only checks actual color values, not utility classes
  */
 
-/* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('node:fs');
 const path = require('node:path');
-/* eslint-enable @typescript-eslint/no-require-imports */
 
 // List of Tailwind utility prefixes that are NOT colors
 const NON_COLOR_UTILITIES = [
@@ -343,7 +341,7 @@ module.exports = {
             properties: {
               provider: {
                 type: 'string',
-                enum: ['stripe', 'ecommpay', 'paypal', 'square'],
+                enum: ['stripe'],
               },
             },
           },
