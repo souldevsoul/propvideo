@@ -1,4 +1,4 @@
-// VoiceCraft - AI Voice Synthesis Platform
+// PropVideo - AI Property Tour Video Generation Platform
 // Prisma Schema
 
 generator client {
@@ -26,12 +26,9 @@ model User {
 
   // Relations
   subscriptions Subscription[]
-  voices        Voice[]
-  generations   VoiceGeneration[]
   usage         UsageLog[]
-  audios        Audio[]
-  projects      Project[]
-  expertProfile ExpertProfile?
+  properties    Property[]
+  videos        PropertyVideo[]
   creditLedger  CreditLedger[]
   accounts      Account[]
   sessions      Session[]
@@ -39,90 +36,63 @@ model User {
   @@map("users")
 }
 
-// Voice model - user's uploaded/cloned voices
-model Voice {
+// Property model - real estate listings
+model Property {
   id          String   @id @default(cuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  name        String
-  description String?
-  language    String   @default("en-US")
-  accent      String?
-  gender      String?  // male, female, neutral
-  ageGroup    String?  // child, young adult, adult, senior
-  style       String?  // professional, conversational, dramatic, etc.
+  // Property Details
+  address     String
+  city        String
+  state       String
+  zipCode     String?
+  propertyType String  // "single-family", "condo", "townhouse", "multi-family", "commercial", "land"
+  listingType  String  // "sale", "rent", "sold", "lease"
 
-  // Replicate voice ID from voice cloning
-  voiceId     String?  @unique // Voice ID returned by Replicate
+  // Property Features
+  price       Decimal? @db.Decimal(12, 2)
+  bedrooms    Int?
+  bathrooms   Decimal? @db.Decimal(3, 1)
+  sqft        Int?
+  lotSize     Decimal? @db.Decimal(10, 2)
+  yearBuilt   Int?
+  description String?  @db.Text
 
-  // Audio sample for cloning
-  sampleAudioUrl String?
+  // Listing Info
+  mlsNumber    String?
+  listingStatus String  @default("active") // "active", "pending", "sold", "expired"
+  listingDate   DateTime?
 
-  // Model used for cloning
-  model       String?  // minimax-2.6-turbo, kokoro-82m, xtts-v2
-
-  // Voice characteristics
-  isPublic    Boolean  @default(false)
-  isCloned    Boolean  @default(false)
-  isVerified  Boolean  @default(false)
-
-  status      String   @default("active") // active, processing, failed
+  // Relations
+  photos      PropertyPhoto[]
+  videos      PropertyVideo[]
 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  // Relations
-  generations VoiceGeneration[]
-  audios      Audio[]
-
   @@index([userId])
-  @@index([isPublic])
-  @@index([voiceId])
-  @@map("voices")
+  @@index([listingStatus])
+  @@index([propertyType])
+  @@map("properties")
 }
 
-// Voice Generation - tracks voice synthesis jobs
-model VoiceGeneration {
-  id              String   @id @default(cuid())
-  userId          String
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+// PropertyPhoto model - property images
+model PropertyPhoto {
+  id          String   @id @default(cuid())
+  propertyId  String
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
 
-  voiceId         String
-  voice           Voice    @relation(fields: [voiceId], references: [id], onDelete: Cascade)
+  photoUrl    String   // Vercel Blob URL
+  roomType    String?  // "exterior", "living", "kitchen", "bedroom", "bathroom", "yard", "other"
+  caption     String?
+  order       Int      // For sequencing in tour
 
-  // Input
-  text            String   @db.Text
-  language        String   @default("en-US")
+  uploadedAt  DateTime @default(now())
 
-  // Output
-  audioUrl        String?
-  duration        Float?   // seconds
-  fileSize        Int?     // bytes
-  format          String   @default("mp3") // mp3, wav, ogg
-
-  // Settings used
-  speed           Float    @default(1.0)
-  pitch           Float    @default(1.0)
-  emotion         String?  // neutral, happy, sad, excited, etc.
-  emphasis        Json?    // word-level emphasis settings
-
-  // Status tracking
-  status          String   @default("pending") // pending, processing, completed, failed
-  errorMessage    String?
-
-  // Cost tracking
-  characterCount  Int
-  cost            Float?   // in credits or dollars
-
-  createdAt       DateTime @default(now())
-  completedAt     DateTime?
-
-  @@index([userId])
-  @@index([voiceId])
-  @@index([status])
-  @@index([createdAt])
-  @@map("voice_generations")
+  @@index([propertyId])
+  @@index([propertyId, order])
+  @@map("property_photos")
 }
 
 // Subscription model
@@ -177,186 +147,80 @@ model UsageLog {
   @@map("usage_logs")
 }
 
-// Pre-built voice templates (system voices)
-model VoiceTemplate {
+// PropertyVideo model - generated property tour videos
+model PropertyVideo {
+  id          String   @id @default(cuid())
+  propertyId  String
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Video Configuration
+  tourStyle   String   // "luxury", "modern", "cozy", "dramatic", "energetic", "elegant"
+  duration    Int      @default(60)  // seconds (30, 60, 90, 120)
+  aspectRatio String   @default("16:9")  // "16:9", "9:16", "1:1", "4:5"
+
+  // Content
+  voiceoverText String  @db.Text  // AI-generated script
+  voiceStyle    String  @default("professional")  // "professional", "friendly", "luxury", "energetic"
+  musicTrack    String?  // Selected background music
+
+  // Branding
+  agentName     String?
+  agentPhone    String?
+  agentEmail    String?
+  agentLogoUrl  String?
+  brokerageName String?
+
+  // Generated Video
+  videoUrl      String?
+  thumbnailUrl  String?
+  status        String  @default("processing")  // "processing", "completed", "failed"
+  replicateId   String?  // Replicate prediction ID
+  errorMessage  String?
+
+  // Analytics
+  views         Int     @default(0)
+  shares        Int     @default(0)
+  downloads     Int     @default(0)
+
+  // Relations
+  creditLedger  CreditLedger[]
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([propertyId])
+  @@index([userId])
+  @@index([status])
+  @@map("property_videos")
+}
+
+// TourStyle model - video style templates
+model TourStyle {
   id          String   @id @default(cuid())
 
-  name        String
-  description String?
-  language    String
-  accent      String?
-  gender      String
-  ageGroup    String
-  style       String
+  name        String   @unique  // "luxury", "modern", "cozy", etc.
+  displayName String
+  description String   @db.Text
+  exampleVideoUrl String?  // Demo video showing this style
 
-  // Audio sample
-  sampleAudioUrl String
+  // Visual Settings
+  transitionStyle String  // "smooth", "cinematic", "quick", "elegant"
+  colorGrading    String  // "warm", "cool", "neutral", "vibrant", "muted"
+  pace            String  // "slow", "medium", "fast"
 
-  // Featured on homepage
-  isFeatured  Boolean  @default(false)
-  isPremium   Boolean  @default(false)
+  // Music Recommendations
+  musicGenre      String[] // ["orchestral", "ambient", "modern"]
 
-  // Usage stats
-  usageCount  Int      @default(0)
+  popular         Boolean @default(false)
+  order           Int
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
-  @@index([language])
-  @@index([isFeatured])
-  @@map("voice_templates")
-}
-
-// Audio model - generated or uploaded audio files
-model Audio {
-  id             String   @id @default(cuid())
-  userId         String
-  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // Audio file details
-  filename       String
-  audioUrl       String   // Vercel Blob URL
-  duration       Float?   // seconds
-  fileSize       Int?     // bytes
-  format         String   @default("mp3") // mp3, wav, ogg
-
-  // Generation details (if generated)
-  voiceId        String?
-  voice          Voice?   @relation(fields: [voiceId], references: [id], onDelete: SetNull)
-  text           String?  @db.Text // Original text if generated
-  metadata       Json?    // Settings used for generation (speed, pitch, emotion, etc.)
-
-  // Upload details (if uploaded)
-  uploadSource   String?  // "upload", "generate", "import"
-
-  // Organization
-  tags           String[] // For categorization
-  description    String?
-
-  // Status
-  status         String   @default("ready") // ready, processing, failed
-
-  // Projects relationship
-  projectAudios  ProjectAudio[]
-
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  @@index([userId])
-  @@index([voiceId])
-  @@index([status])
-  @@index([createdAt])
-  @@map("audios")
-}
-
-// Project model - audio projects for expert assignment
-model Project {
-  id                String   @id @default(cuid())
-  userId            String
-  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // Project details
-  name              String
-  description       String?  @db.Text
-  request           String?  @db.Text  // Detailed user request for estimation
-  status            String   @default("draft")
-  // Status values: draft, estimating, waiting_for_estimate_accept, estimate_accepted,
-  //                waiting_for_assignment, assigned, in_review, completed, cancelled, refunded
-
-  // AI Estimation (from OpenAI)
-  estimatedCost     Float?   // in dollars
-  estimatedDuration Float?   // in hours
-  estimationData    Json?    // Full estimation response from OpenAI
-  actualCost        Float?   // Final actual cost after completion
-
-  // Expert assignment
-  expertId          String?
-  expert            ExpertProfile? @relation(fields: [expertId], references: [id], onDelete: SetNull)
-  instructions      String?  @db.Text
-  deadline          DateTime?
-  assignedAt        DateTime? // When expert was assigned
-
-  // Work submission and review
-  submittedAt       DateTime? // When work was submitted by expert
-  reviewedAt        DateTime? // When user reviewed the work
-  rating            Int?      // User's rating of the work (1-5)
-  feedback          String?   @db.Text // User's feedback on the work
-
-  // Project metadata
-  priority          String   @default("medium") // low, medium, high, urgent
-  tags              String[] // For categorization
-
-  // Audios in this project
-  projectAudios     ProjectAudio[]
-
-  // Credit transactions
-  creditLedger      CreditLedger[]
-
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-  completedAt       DateTime?
-
-  @@index([userId])
-  @@index([expertId])
-  @@index([status])
-  @@index([createdAt])
-  @@map("projects")
-}
-
-// ProjectAudio junction table - many-to-many relationship
-model ProjectAudio {
-  id         String   @id @default(cuid())
-  projectId  String
-  project    Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
-
-  audioId    String
-  audio      Audio    @relation(fields: [audioId], references: [id], onDelete: Cascade)
-
-  // Order in project (for sequencing)
-  order      Int      @default(0)
-
-  // Status tracking for this specific audio in the project
-  status     String   @default("pending") // pending, in_progress, completed
-  notes      String?  @db.Text
-
-  createdAt  DateTime @default(now())
-
-  @@unique([projectId, audioId])
-  @@index([projectId])
-  @@index([audioId])
-  @@map("project_audios")
-}
-
-// ExpertProfile model - expert users who can be assigned projects
-model ExpertProfile {
-  id             String   @id @default(cuid())
-  userId         String   @unique
-  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // Expert details
-  specialization String[] // voice-over, audio-editing, translation, etc.
-  bio            String?  @db.Text
-  hourlyRate     Float?   // in dollars
-
-  // Availability
-  isAvailable    Boolean  @default(true)
-  timezone       String?
-  workingHours   Json?    // Flexible JSON for working hours
-
-  // Performance metrics
-  rating         Float?   @default(0)
-  completedJobs  Int      @default(0)
-  averageTurnaround Float? // in hours
-
-  // Assigned projects
-  projects       Project[]
-
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  @@index([userId])
-  @@index([isAvailable])
-  @@map("expert_profiles")
+  @@index([popular])
+  @@map("tour_styles")
 }
 
 // CreditLedger model - tracks all credit transactions
@@ -367,12 +231,12 @@ model CreditLedger {
 
   // Transaction details
   amount      Int      // Positive for additions, negative for deductions
-  type        String   // PROJECT_RESERVATION, PROJECT_COMPLETION, PROJECT_REFUND, CREDIT_PURCHASE, etc.
+  type        String   // VIDEO_GENERATION, CREDIT_PURCHASE, REFUND, etc.
   description String   @db.Text
 
-  // Related project (if applicable)
-  projectId   String?
-  project     Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  // Related video (if applicable)
+  videoId     String?
+  propertyVideo PropertyVideo? @relation(fields: [videoId], references: [id], onDelete: SetNull)
 
   // Metadata
   metadata    Json?    // Additional transaction details
@@ -380,7 +244,7 @@ model CreditLedger {
   createdAt   DateTime @default(now())
 
   @@index([userId])
-  @@index([projectId])
+  @@index([videoId])
   @@index([type])
   @@index([createdAt])
   @@map("credit_ledger")
