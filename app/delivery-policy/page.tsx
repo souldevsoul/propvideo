@@ -11,7 +11,7 @@ export default function DeliveryPolicyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
@@ -34,7 +34,7 @@ export default function DeliveryPolicyPage() {
               DELIVERY POLICY
             </h1>
             <p className="text-xl text-gray-700 mb-6">
-              VoiceCraft is a digital service platform. Understand how we deliver our services to you.
+              PropVideo is a digital service platform. Understand how we deliver our services to you.
             </p>
             <p className="text-sm font-bold uppercase text-gray-900">
               Last Updated: {lastUpdated}
@@ -59,7 +59,7 @@ export default function DeliveryPolicyPage() {
                 <div className="p-6 bg-white border-4 border-black brutalist-shadow">
                   <h3 className="text-lg font-bold uppercase mb-3">Digital Service Delivery</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    VoiceCraft is a 100% digital service platform. We do not ship physical goods. All services are delivered electronically via our web application and API.
+                    PropVideo is a 100% digital service platform. We do not ship physical goods. All services are delivered electronically via our web application and API.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     There are no shipping addresses, tracking numbers, or physical delivery logistics involved with our service.
@@ -71,7 +71,7 @@ export default function DeliveryPolicyPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-black font-bold">•</span>
-                      <span>Instant access to VoiceCraft web application</span>
+                      <span>Instant access to PropVideo web application</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-black font-bold">•</span>
@@ -154,7 +154,7 @@ export default function DeliveryPolicyPage() {
                 <div className="p-6 bg-white border-4 border-black brutalist-shadow">
                   <h3 className="text-lg font-bold uppercase mb-3">Global Service</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    VoiceCraft services are available worldwide. You can access our platform from anywhere with an internet connection.
+                    PropVideo services are available worldwide. You can access our platform from anywhere with an internet connection.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     <span className="font-bold">Requirements:</span> Internet connection, modern web browser (Chrome, Firefox, Safari, Edge), valid payment method.

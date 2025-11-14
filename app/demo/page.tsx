@@ -9,7 +9,7 @@ export default function DemoPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/#features" },
           { label: "Pricing", href: "/#pricing" },
@@ -39,7 +39,7 @@ export default function DemoPage() {
               <span className="text-sm font-bold uppercase tracking-wider">Live Demo</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              Try VoiceCraft
+              Try PropVideo
             </h1>
             <p className="text-xl text-gray-700 max-w-2xl">
               Experience AI-powered voice synthesis in action. Generate professional voice content from text in seconds.

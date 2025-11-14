@@ -112,7 +112,7 @@ function SignUpForm() {
               <RiCheckLine className="w-10 h-10 text-blue-400" />
             </div>
             <h2 className="text-3xl font-black uppercase mb-4">
-              Welcome to VoiceCraft!
+              Welcome to PropVideo!
             </h2>
             <p className="text-lg mb-6">
               Your account has been created successfully. You received{" "}

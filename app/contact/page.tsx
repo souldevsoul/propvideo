@@ -20,7 +20,7 @@ export default function ContactPage() {
     {
       icon: RiCustomerService2Line,
       title: "General Support",
-      description: "Questions about your account, features, or how to use VoiceCraft",
+      description: "Questions about your account, features, or how to use PropVideo",
       email: "support@propvideo.ai",
       responseTime: "24 hours",
       color: "white",
@@ -86,7 +86,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
@@ -415,7 +415,7 @@ export default function ContactPage() {
               <RiCustomerService2Line className="w-12 h-12 mx-auto mb-4" />
               <h3 className="text-lg font-bold uppercase mb-2">Feature Docs</h3>
               <p className="text-sm text-gray-700">
-                Learn about all VoiceCraft capabilities
+                Learn about all PropVideo capabilities
               </p>
             </a>
           </div>

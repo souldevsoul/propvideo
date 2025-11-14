@@ -22,7 +22,7 @@ export default function PricingPage() {
       name: "Starter",
       price: "$0",
       period: "forever",
-      description: "Perfect for trying out VoiceCraft and small projects",
+      description: "Perfect for trying out PropVideo and small projects",
       popular: false,
       features: [
         { text: "5,000 characters/month", included: true },
@@ -180,7 +180,7 @@ export default function PricingPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },

@@ -447,7 +447,7 @@ export default function ComponentsPage() {
           </div>
         </section>
 
-        {/* VoiceCraft Components */}
+        {/* PropVideo Components */}
         <section>
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
@@ -494,7 +494,7 @@ export default function ComponentsPage() {
               <Card variant="elevated" padding="lg" className="bg-white border-4 border-black brutalist-shadow-yellow">
                 <AudioPlayer
                   title="WELCOME MESSAGE"
-                  subtitle="Generated with VoiceCraft"
+                  subtitle="Generated with PropVideo"
                   waveformColor="primary"
                 />
               </Card>
@@ -576,7 +576,7 @@ export default function ComponentsPage() {
                 name="STARTER"
                 price={0}
                 period="month"
-                description="Perfect for trying out VoiceCraft"
+                description="Perfect for trying out PropVideo"
                 features={[
                   { text: "10,000 characters/month", included: true },
                   { text: "5 preset voices", included: true },
@@ -626,7 +626,7 @@ export default function ComponentsPage() {
             <Heading variant="h3" className="mb-8 text-black uppercase">Testimonial Cards</Heading>
             <div className="grid md:grid-cols-2 gap-8">
               <TestimonialCard
-                quote="VoiceCraft has completely transformed our audiobook production pipeline. We've cut production time by 80% while maintaining incredible quality."
+                quote="PropVideo has completely transformed our audiobook production pipeline. We've cut production time by 80% while maintaining incredible quality."
                 author="Sarah Johnson"
                 role="CEO"
                 company="Story Audio Publishing"

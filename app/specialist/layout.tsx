@@ -21,7 +21,7 @@ export default function SpecialistLayout({
       <aside className="w-64 border-r-4 border-black bg-white">
         <div className="flex h-16 items-center justify-between border-b-4 border-black px-6">
           <Heading variant="h2" className="text-xl font-bold uppercase">
-            VoiceCraft
+            PropVideo
           </Heading>
         </div>
 

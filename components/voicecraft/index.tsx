@@ -1,4 +1,4 @@
-// VoiceCraft Components - AI Voice Synthesis Interactive Components
+// PropVideo Components - AI Voice Synthesis Interactive Components
 export { Waveform, type WaveformProps } from "./waveform"
 export { AudioPlayer, type AudioPlayerProps } from "./audio-player"
 export { VoiceSelector, type VoiceSelectorProps, type Voice } from "./voice-selector"

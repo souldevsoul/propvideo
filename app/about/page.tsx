@@ -73,7 +73,7 @@ export default function AboutPage() {
   const milestones = [
     {
       year: "2024",
-      title: "VoiceCraft Founded",
+      title: "PropVideo Founded",
       description: "Started with a mission to democratize professional voice synthesis technology.",
     },
     {
@@ -97,7 +97,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 Voice technology has the power to transform how we create content, communicate, and connect with audiences. But for too long, professional voice synthesis has been out of reach for most creators and businesses.
               </p>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                We built VoiceCraft to change that. By leveraging the world's most popular and battle-tested AI models, we're making studio-quality voice synthesis accessible to everyone—from solo creators to enterprise teams.
+                We built PropVideo to change that. By leveraging the world's most popular and battle-tested AI models, we're making studio-quality voice synthesis accessible to everyone—from solo creators to enterprise teams.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
                 Our platform is powered by <span className="font-bold">Kokoro-82M</span> (56.7M+ production runs), <span className="font-bold">Minimax AI</span> (50+ languages), and <span className="font-bold">XTTS-v2</span> (multilingual cloning). These aren't experimental models—they're proven at massive scale.

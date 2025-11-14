@@ -19,11 +19,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold uppercase mb-6 text-blue-400">
-              VoiceCraft
+            <h3 className="text-2xl font-bold uppercase mb-6 text-sky-400">
+              PropVideo
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Professional AI voice synthesis platform powered by the world's most trusted models.
+              AI-powered property tour video generation platform for real estate professionals.
             </p>
 
             {/* Payment Logos */}
@@ -190,9 +190,9 @@ export function Footer() {
                 <div>
                   <div className="text-sm font-bold uppercase text-gray-400 mb-1">Address</div>
                   <address className="text-white not-italic">
-                    VoiceCraft, Inc.
+                    PropVideo, Inc.
                     <br />
-                    123 Voice Street, Suite 100
+                    123 Property Lane, Suite 200
                     <br />
                     San Francisco, CA 94105
                     <br />
@@ -216,7 +216,7 @@ export function Footer() {
               </h5>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>
-                  <span className="font-bold">Legal Name:</span> VoiceCraft, Inc.
+                  <span className="font-bold">Legal Name:</span> PropVideo, Inc.
                 </p>
                 <p>
                   <span className="font-bold">Registration Number:</span> 12-3456789
@@ -225,7 +225,7 @@ export function Footer() {
                   <span className="font-bold">VAT Number:</span> US123456789
                 </p>
                 <p>
-                  <span className="font-bold">Registered Address:</span> 123 Voice Street, Suite 100, San Francisco, CA 94105, United States
+                  <span className="font-bold">Registered Address:</span> 123 Property Lane, Suite 200, San Francisco, CA 94105, United States
                 </p>
               </div>
             </div>
@@ -249,7 +249,7 @@ export function Footer() {
           <div className="pt-6 border-t-2 border-gray-800">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
               <p>
-                © {currentYear} VoiceCraft, Inc. All rights reserved.
+                © {currentYear} PropVideo, Inc. All rights reserved.
               </p>
               <p className="text-center md:text-right">
                 Card payments processed securely. We do not store your credit card information.

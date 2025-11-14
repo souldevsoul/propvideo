@@ -38,7 +38,7 @@ bg-gradient-to-r from-sky-500 to-indigo-600
 bg-gradient-to-br from-teal-50 to-sky-50
 ```
 
-**NEVER use (these are from VoiceCraft template or other projects):**
+**NEVER use (these are from PropVideo template or other projects):**
 - ❌ Yellow (`yellow-*`)
 - ❌ Orange (`orange-*`)
 - ❌ Emerald/Green (`emerald-*`, `green-*` - that's LogoSmith!)
@@ -249,7 +249,7 @@ npm run lint:product
 
 ## Example: Aligning a Pricing Card
 
-### Before (VoiceCraft style - brutalist, yellow)
+### Before (PropVideo style - brutalist, yellow)
 ```tsx
 <div className="border-4 border-black shadow-[0_8px_0_0_#000] rounded p-6">
   <h3 className="text-2xl font-black mb-2">Agent</h3>

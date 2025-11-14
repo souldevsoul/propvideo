@@ -1,8 +1,8 @@
-# 🗄️ VoiceCraft Database
+# 🗄️ PropVideo Database
 
 **Last Updated:** 2025-11-09
 
-Complete reference for VoiceCraft's database schema, migrations, and data management.
+Complete reference for PropVideo's database schema, migrations, and data management.
 
 ---
 

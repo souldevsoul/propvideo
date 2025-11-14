@@ -11,7 +11,7 @@ export default function CancellationPolicyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
@@ -34,7 +34,7 @@ export default function CancellationPolicyPage() {
               CANCELLATION POLICY
             </h1>
             <p className="text-xl text-gray-700 mb-6">
-              You can cancel your VoiceCraft subscription at any time. No questions asked, no hassle.
+              You can cancel your PropVideo subscription at any time. No questions asked, no hassle.
             </p>
             <p className="text-sm font-bold uppercase text-gray-900">
               Last Updated: {lastUpdated}
@@ -61,7 +61,7 @@ export default function CancellationPolicyPage() {
                   <ol className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
                       <span className="font-bold text-black">1.</span>
-                      <span>Log in to your VoiceCraft account</span>
+                      <span>Log in to your PropVideo account</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="font-bold text-black">2.</span>

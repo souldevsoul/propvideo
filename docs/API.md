@@ -1,4 +1,4 @@
-# 🔌 VoiceCraft API Reference
+# 🔌 PropVideo API Reference
 
 **Last Updated:** 2025-11-09
 
@@ -373,7 +373,7 @@ POST /api/voices/generate
 
 ```json
 {
-  "text": "Hello, welcome to VoiceCraft!",
+  "text": "Hello, welcome to PropVideo!",
   "voiceId": "Wise_Woman",
   "userId": "user_123",
   "emotion": "auto",

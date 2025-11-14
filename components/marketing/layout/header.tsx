@@ -27,7 +27,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
 const Header = React.forwardRef<HTMLElement, HeaderProps>(
   ({
     logo,
-    logoText = "VoiceCraft",
+    logoText = "PropVideo",
     navLinks = [],
     ctaButton,
     transparent = false,

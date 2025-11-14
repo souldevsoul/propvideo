@@ -29,7 +29,7 @@ export default function BlogPage() {
     category: "Product Updates",
     date: "Nov 8, 2025",
     readTime: "8 min read",
-    author: "VoiceCraft Team",
+    author: "PropVideo Team",
     image: "featured",
   }
 
@@ -67,7 +67,7 @@ export default function BlogPage() {
       category: "Product Updates",
       date: "Oct 28, 2025",
       readTime: "15 min read",
-      author: "VoiceCraft Team",
+      author: "PropVideo Team",
       tag: "Popular",
     },
     {
@@ -121,7 +121,7 @@ export default function BlogPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="PropVideo"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },

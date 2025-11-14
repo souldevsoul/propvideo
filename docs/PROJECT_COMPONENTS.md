@@ -2,7 +2,7 @@
 
 **Date:** 2025-11-09
 **Purpose:** Complete documentation for project lifecycle UI components
-**Design:** VoiceCraft Brutalist Design System
+**Design:** PropVideo Brutalist Design System
 
 ---
 
@@ -10,7 +10,7 @@
 
 Location: `/components/project/`
 
-All components follow the VoiceCraft brutalist design:
+All components follow the PropVideo brutalist design:
 - Black borders (2px or 4px)
 - Yellow (#EAB308) primary accent
 - Bold, uppercase typography
