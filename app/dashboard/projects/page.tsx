@@ -23,7 +23,7 @@ import {
   type EstimateData,
   type SubmittedWork,
 } from "@/components/project"
-import { AudioPlayer } from "@/components/voicecraft/audio-player"
+// AudioPlayer component removed - property video features coming soon
 
 type Project = {
   id: string
@@ -485,7 +485,9 @@ export default function ProjectsPage() {
                               {index + 1}. {pa.audio.filename}
                             </Text>
                           </div>
-                          <AudioPlayer audioUrl={pa.audio.audioUrl} />
+                          <div className="p-4 bg-slate-100 rounded text-sm text-slate-600">
+                            Audio player coming soon
+                          </div>
                         </div>
                       ))
                     ) : (

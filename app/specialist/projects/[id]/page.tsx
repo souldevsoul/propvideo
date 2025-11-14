@@ -12,7 +12,7 @@ import {
   type ProjectStatus,
   type ProjectAudio,
 } from "@/components/project"
-import { AudioPlayer } from "@/components/voicecraft/audio-player"
+// AudioPlayer component removed - property video features coming soon
 
 type ProjectDetail = {
   id: string
@@ -293,7 +293,9 @@ export default function SpecialistProjectDetailPage({
                       <Text variant="body" className="mb-2 font-bold text-sm">
                         {index + 1}. {audio.filename}
                       </Text>
-                      <AudioPlayer audioUrl={audio.audioUrl} />
+                      <div className="p-4 bg-slate-100 rounded text-sm text-slate-600">
+                        Audio player coming soon
+                      </div>
                     </div>
                   ))
                 ) : (
@@ -341,7 +343,9 @@ export default function SpecialistProjectDetailPage({
                 <Text variant="body" className="mb-2 font-bold text-sm">
                   {index + 1}. {audio.filename}
                 </Text>
-                <AudioPlayer audioUrl={audio.audioUrl} />
+                <div className="p-4 bg-slate-100 rounded text-sm text-slate-600">
+                  Audio player coming soon
+                </div>
               </div>
             ))}
           </div>

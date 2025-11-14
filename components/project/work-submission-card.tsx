@@ -19,7 +19,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { AudioPlayer } from "@/components/voicecraft/audio-player"
+// AudioPlayer component removed - property video features coming soon
 
 export interface ProjectAudio {
   id: string
@@ -287,7 +287,9 @@ export function WorkSubmissionCard({
                           </Button>
                         )}
                       </div>
-                      <AudioPlayer audioUrl={audio.audioUrl} />
+                      <div className="p-4 bg-slate-100 rounded text-sm text-slate-600">
+                        Audio player coming soon
+                      </div>
                     </div>
                   )
                 })

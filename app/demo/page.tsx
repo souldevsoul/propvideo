@@ -1,7 +1,6 @@
 import { Container } from "@/components/ui/container"
 import { Header } from "@/components/marketing/layout/header"
 import { Footer } from "@/components/marketing/layout/footer"
-import { VoiceGenerator } from "@/components/voicecraft"
 import { ArrowLeft } from "lucide-react"
 
 export default function DemoPage() {
@@ -46,8 +45,13 @@ export default function DemoPage() {
             </p>
           </div>
 
-          {/* Voice Generator */}
-          <VoiceGenerator />
+          {/* Demo Placeholder */}
+          <div className="p-12 border-2 border-sky-200 bg-sky-50 rounded-2xl text-center">
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Property Video Features Coming Soon</h2>
+            <p className="text-xl text-slate-600">
+              Interactive demo will be available here to showcase property video generation capabilities.
+            </p>
+          </div>
 
           {/* Info Cards */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">

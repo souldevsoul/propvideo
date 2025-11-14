@@ -14,16 +14,7 @@ import {
   BlogCard,
   StatCard
 } from "@/components/marketing/cards"
-import {
-  Waveform,
-  AudioPlayer,
-  VoiceSelector,
-  GenerationProgress,
-  VoiceCloneUploader,
-  type Voice,
-  type GenerationStep,
-  type UploadedFile
-} from "@/components/voicecraft"
+// VoiceCraft components removed - property video features coming soon
 import {
   Sparkles,
   Zap,
@@ -71,69 +62,6 @@ import {
 } from "react-icons/fi"
 
 export default function ComponentsPage() {
-  const [selectedVoice, setSelectedVoice] = React.useState<string | undefined>()
-  const [uploadedFiles, setUploadedFiles] = React.useState<UploadedFile[]>([])
-  const [voiceName, setVoiceName] = React.useState("")
-
-  // Sample data
-  const sampleVoices: Voice[] = [
-    {
-      id: "1",
-      name: "Emma Watson",
-      language: "en-US",
-      gender: "female",
-      description: "Professional, warm, and articulate voice perfect for narration",
-      previewUrl: "/audio/sample1.mp3",
-      isFavorite: true,
-    },
-    {
-      id: "2",
-      name: "James Morgan",
-      language: "en-GB",
-      gender: "male",
-      description: "Deep, authoritative voice ideal for documentaries",
-      previewUrl: "/audio/sample2.mp3",
-    },
-    {
-      id: "3",
-      name: "My Custom Voice",
-      language: "en-US",
-      gender: "neutral",
-      description: "Your cloned voice for personal projects",
-      isCloned: true,
-      isFavorite: true,
-    },
-  ]
-
-  const sampleGenerationSteps: GenerationStep[] = [
-    { id: "1", label: "Text Analysis", status: "completed", progress: 100 },
-    { id: "2", label: "Voice Synthesis", status: "processing", progress: 65 },
-    { id: "3", label: "Audio Rendering", status: "queued", progress: 0 },
-  ]
-
-  const handleFilesUpload = (files: File[]) => {
-    const newFiles: UploadedFile[] = files.map((file, index) => ({
-      id: `file-${Date.now()}-${index}`,
-      file,
-      url: URL.createObjectURL(file),
-      status: "uploading" as const,
-    }))
-    setUploadedFiles(prev => [...prev, ...newFiles])
-
-    setTimeout(() => {
-      setUploadedFiles(prev =>
-        prev.map(f =>
-          newFiles.find(nf => nf.id === f.id)
-            ? { ...f, status: "ready" as const, duration: 15 }
-            : f
-        )
-      )
-    }, 2000)
-  }
-
-  const handleFileRemove = (fileId: string) => {
-    setUploadedFiles(prev => prev.filter(f => f.id !== fileId))
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -447,112 +375,25 @@ export default function ComponentsPage() {
           </div>
         </section>
 
-        {/* PropVideo Components */}
+        {/* Property Video Components - Coming Soon */}
         <section>
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-12 bg-black flex items-center justify-center border-4 border-black shadow-lg">
                 <TbMicrophone className="w-6 h-6 text-sky-400" />
               </div>
-              <Heading variant="h2" className="text-black uppercase">Voice Components</Heading>
+              <Heading variant="h2" className="text-black uppercase">Property Video Components</Heading>
             </div>
             <div className="h-1 w-24 bg-black" />
           </div>
 
-          {/* Waveform */}
           <div className="mb-20">
-            <Heading variant="h3" className="mb-8 text-black uppercase">Audio Waveform</Heading>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black">
-                <Text variant="body-sm" className="text-black mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
-                  <TbWaveSine className="w-5 h-5" />
-                  Small
-                </Text>
-                <Waveform size="sm" color="primary" />
-              </Card>
-              <Card variant="elevated" padding="lg" className="bg-sky-400 border-4 border-black brutalist-shadow">
-                <Text variant="body-sm" className="text-black mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
-                  <TbWaveSine className="w-5 h-5" />
-                  Medium
-                </Text>
-                <Waveform size="md" color="secondary" />
-              </Card>
-              <Card variant="elevated" padding="lg" className="bg-black border-4 border-black">
-                <Text variant="body-sm" className="text-sky-400 mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
-                  <TbWaveSine className="w-5 h-5" />
-                  Large
-                </Text>
-                <Waveform size="lg" color="success" />
-              </Card>
-            </div>
-          </div>
-
-          {/* Audio Player */}
-          <div className="mb-20">
-            <Heading variant="h3" className="mb-8 text-black uppercase">Audio Player</Heading>
-            <div className="max-w-2xl">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black shadow-lg">
-                <AudioPlayer
-                  title="WELCOME MESSAGE"
-                  subtitle="Generated with PropVideo"
-                  waveformColor="primary"
-                />
-              </Card>
-            </div>
-          </div>
-
-          {/* Voice Selector */}
-          <div className="mb-20">
-            <Heading variant="h3" className="mb-8 text-black uppercase">Voice Selection</Heading>
-            <VoiceSelector
-              voices={sampleVoices}
-              selectedVoiceId={selectedVoice}
-              onVoiceSelect={(voice) => setSelectedVoice(voice.id)}
-              layout="grid"
-            />
-          </div>
-
-          {/* Generation Progress - Temporarily disabled due to caching issue */}
-          {/* <div className="mb-20">
-            <Heading variant="h3" className="mb-8 text-black uppercase">Generation Progress</Heading>
-            <div className="max-w-2xl space-y-4">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black shadow-lg">
-                <GenerationProgress
-                  status="processing"
-                  progress={65}
-                  steps={sampleGenerationSteps}
-                  message="Generating your voice..."
-                  estimatedTime={30}
-                />
-              </Card>
-              <Card variant="elevated" padding="lg" className="bg-black border-4 border-black brutalist-shadow">
-                <GenerationProgress
-                  status="completed"
-                  progress={100}
-                  message="Voice generation complete!"
-                />
-              </Card>
-            </div>
-          </div> */}
-
-          {/* Voice Clone Uploader */}
-          <div className="mb-20">
-            <Heading variant="h3" className="mb-8 text-black uppercase">Voice Clone Uploader</Heading>
-            <div className="max-w-2xl">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black shadow-lg">
-                <VoiceCloneUploader
-                  onFilesUpload={(files) => setUploadedFiles(files.map((file, index) => ({
-                    id: `file-${index}`,
-                    file,
-                    url: URL.createObjectURL(file),
-                    status: "ready" as const
-                  })))}
-                  uploadedFiles={uploadedFiles}
-                  voiceName={voiceName}
-                  onVoiceNameChange={setVoiceName}
-                />
-              </Card>
-            </div>
+            <Card variant="elevated" padding="lg" className="bg-white border-4 border-black shadow-lg text-center p-12">
+              <Heading variant="h3" className="mb-4 text-black uppercase">Property Video Features Coming Soon</Heading>
+              <Text variant="body" className="text-slate-600">
+                Property-specific components for video tours, narration, and music will be showcased here.
+              </Text>
+            </Card>
           </div>
         </section>
 
