@@ -61,10 +61,10 @@ function SignInForm() {
         {/* Sign In Form */}
         <div className="bg-white border-4 border-black brutalist-shadow p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {error && (
+            {_error && (
               <div className="bg-red-100 border-4 border-red-500 p-4">
                 <p className="text-red-700 font-bold uppercase text-sm">
-                  {error}
+                  {_error}
                 </p>
               </div>
             )}

@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to get credit information',
-        details: error.message || 'Unknown error',
+        details: (error as Error).message || 'Unknown error',
       },
       { status: 500 }
     );

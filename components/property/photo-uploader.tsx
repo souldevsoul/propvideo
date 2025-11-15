@@ -12,7 +12,8 @@ interface PhotoWithMetadata {
 }
 
 interface PhotoUploaderProps {
-  onUpload: (photos: PhotoWithMetadata[]) => Promise<void>;
+  onUpload?: (photos: PhotoWithMetadata[]) => Promise<void>;
+  onUploadComplete?: (photos: PhotoWithMetadata[]) => Promise<void>;
   maxPhotos?: number;
   isLoading?: boolean;
 }
@@ -27,7 +28,7 @@ const ROOM_TYPES = [
   { value: 'other', label: 'Other' },
 ];
 
-export function PhotoUploader({ onUpload, maxPhotos = 20, isLoading }: PhotoUploaderProps) {
+export function PhotoUploader({ onUpload, onUploadComplete, maxPhotos = 20, isLoading }: PhotoUploaderProps) {
   const [photos, setPhotos] = useState<PhotoWithMetadata[]>([]);
   const [dragActive, setDragActive] = useState(false);
 
@@ -92,8 +93,11 @@ export function PhotoUploader({ onUpload, maxPhotos = 20, isLoading }: PhotoUplo
   };
 
   const handleUpload = async () => {
-    await onUpload(photos);
-    setPhotos([]);
+    const uploadHandler = onUploadComplete || onUpload;
+    if (uploadHandler) {
+      await uploadHandler(photos);
+      setPhotos([]);
+    }
   };
 
   return (

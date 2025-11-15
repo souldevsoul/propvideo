@@ -49,7 +49,7 @@ export async function GET(_request: NextRequest) {
       {
         success: false,
         error: 'Failed to get subscription',
-        details: error.message || 'Unknown error',
+        details: (error as Error).message || 'Unknown error',
       },
       { status: 500 }
     )

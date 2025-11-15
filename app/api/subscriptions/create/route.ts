@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         error: 'Failed to create subscription',
-        details: error.message || 'Unknown error',
+        details: (error as Error).message || 'Unknown error',
       },
       { status: 500 }
     )

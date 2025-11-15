@@ -12,7 +12,6 @@ import {
   RiVideoLine,
   RiFlashlightLine,
   RiShieldCheckLine,
-  RiGlobalLine,
   RiArrowRightLine,
   RiPlayCircleLine,
   RiCheckLine,
@@ -22,6 +21,7 @@ import {
   RiCameraLine,
   RiBuildingLine,
   RiMapPinLine,
+  RiGlobalLine,
 } from "react-icons/ri"
 
 export default function Home() {
@@ -166,91 +166,209 @@ export default function Home() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-            alt="Modern luxury property"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient overlay with sky blue tones */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-sky-900/60 to-slate-900/80" />
-        </div>
-
-        {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-          <div className="absolute top-1/4 -left-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
-          <div className="text-center space-y-12">
-            {/* Badge */}
-            <div className={`inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-sky-200 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-              <RiSparklingLine className="w-5 h-5 text-sky-600" />
-              <Text variant="body-sm" className="font-semibold text-slate-700">AI-Powered Property Tour Videos</Text>
-            </div>
-
-            {/* Main Heading */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                <span className={`block transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-slate-900">Create Stunning</span>
-                </span>
-                <span className={`block transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="bg-gradient-to-r from-sky-600 to-sky-600 bg-clip-text text-transparent">Property Videos</span>
-                </span>
-                <span className={`block transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-slate-900">In Minutes</span>
-                </span>
-              </h1>
-            </div>
-
-            {/* Subtitle */}
-            <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Text variant="lead" className="text-slate-600 max-w-3xl mx-auto text-xl md:text-2xl">
-                Transform property photos into cinematic video tours with AI-generated voiceovers. Perfect for real estate agents, brokerages, and property managers.
-              </Text>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className={`flex flex-wrap justify-center gap-6 pt-4 transition-all duration-700 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Button
-                size="xl"
-                className="gap-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white hover:from-sky-600 hover:to-sky-700 shadow-xl hover:shadow-2xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl"
-                onClick={() => window.location.href = '/dashboard'}
-              >
-                <RiArrowRightLine className="w-6 h-6" />
-                Start Free Trial
-              </Button>
-              <Button
-                size="xl"
-                className="gap-3 bg-white text-slate-700 hover:bg-slate-50 shadow-lg hover:shadow-xl transition-all font-semibold text-lg px-12 py-8 rounded-2xl border border-slate-200"
-                onClick={() => window.location.href = '/demo'}
-              >
-                <RiPlayCircleLine className="w-6 h-6" />
-                Watch Demo
-              </Button>
-            </div>
-
-            {/* Social Proof */}
-            <div className={`flex flex-wrap justify-center items-center gap-8 pt-12 text-sm text-slate-600 transition-all duration-700 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <div className="flex items-center gap-2">
-                <RiCheckLine className="w-5 h-5 text-emerald-500" />
-                <span>1,500+ Real Estate Agents</span>
+      {/* Hero Section - Real Estate Dashboard Layout */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-sky-50 to-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-10">
+              {/* Badge */}
+              <div className={`inline-flex items-center gap-2.5 px-4 py-2 bg-sky-100 border-2 border-sky-200 rounded-xl shadow-sm transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="text-sm font-bold text-sky-700 tracking-wide uppercase">Trusted by 1,500+ Agents</span>
               </div>
-              <div className="flex items-center gap-2">
-                <RiCheckLine className="w-5 h-5 text-emerald-500" />
-                <span>10,000+ Property Videos Created</span>
+
+              {/* Main Heading */}
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                  <span className={`block text-slate-900 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{ transitionDelay: '100ms' }}>
+                    Turn Listings Into
+                  </span>
+                  <span className={`block bg-gradient-to-r from-sky-500 via-sky-600 to-emerald-500 bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{ transitionDelay: '200ms' }}>
+                    Cinematic Tours
+                  </span>
+                  <span className={`block text-slate-900 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{ transitionDelay: '300ms' }}>
+                    In 60 Seconds
+                  </span>
+                </h1>
+
+                <p className={`text-xl md:text-2xl text-slate-600 leading-relaxed max-w-xl transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '400ms' }}>
+                  AI-powered video tours that help real estate professionals close deals faster. Upload photos, generate professional videos with voiceovers instantly.
+                </p>
               </div>
-              <div className="flex items-center gap-2">
-                <RiCheckLine className="w-5 h-5 text-emerald-500" />
-                <span>60-Second Generation Time</span>
+
+              {/* Stats Row */}
+              <div className={`flex flex-wrap gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '500ms' }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-500 rounded-xl flex items-center justify-center shadow-lg">
+                    <RiLineChartLine className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-black text-slate-900">87%</div>
+                    <div className="text-sm text-slate-600 font-medium">More Views</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                    <RiVideoLine className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-black text-slate-900">10K+</div>
+                    <div className="text-sm text-slate-600 font-medium">Videos Created</div>
+                  </div>
+                </div>
               </div>
+
+              {/* CTA Buttons */}
+              <div className={`flex flex-wrap gap-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '600ms' }}>
+                <Button
+                  size="xl"
+                  className="gap-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white hover:from-sky-600 hover:to-sky-700 shadow-xl hover:shadow-2xl transition-all duration-300 font-bold text-lg px-10 py-7 rounded-2xl hover:scale-105 border-2 border-sky-400"
+                  onClick={() => window.location.href = '/dashboard'}
+                >
+                  Create Video Tour
+                  <RiArrowRightLine className="w-6 h-6" />
+                </Button>
+                <Button
+                  size="xl"
+                  className="gap-3 bg-white text-slate-700 hover:bg-slate-50 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg px-10 py-7 rounded-2xl border-2 border-slate-200 hover:border-slate-300"
+                  onClick={() => window.location.href = '/demo'}
+                >
+                  <RiPlayCircleLine className="w-6 h-6 text-sky-600" />
+                  Watch Demo
+                </Button>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className={`flex flex-wrap items-center gap-6 pt-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '700ms' }}>
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-400 to-sky-500 border-2 border-white" />
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-500 border-2 border-white" />
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-emerald-500 border-2 border-white" />
+                  </div>
+                  <span className="text-sm text-slate-600 font-medium">Join 1,500+ agents</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <RiStarFill key={i} className="w-4 h-4 text-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-sm text-slate-600 font-medium">4.9/5 rating</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Property Showcase Visual */}
+            <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`} style={{ transitionDelay: '400ms' }}>
+              {/* Main Property Card */}
+              <div className="relative z-10 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                {/* Property Image */}
+                <div className="relative h-72 bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden">
+                  <Image
+                    src={propertyExamples[currentProperty].image}
+                    alt={propertyExamples[currentProperty].title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* Video Play Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer group">
+                      <RiPlayCircleLine className="w-12 h-12 text-sky-600 group-hover:text-sky-700" />
+                    </div>
+                  </div>
+                  {/* Property Type Badge */}
+                  <div className="absolute top-4 left-4 px-4 py-2 bg-sky-500 rounded-xl shadow-lg">
+                    <span className="text-sm font-bold text-white">{propertyExamples[currentProperty].type}</span>
+                  </div>
+                  {/* Status Badge */}
+                  <div className="absolute top-4 right-4 px-4 py-2 bg-emerald-500 rounded-xl shadow-lg flex items-center gap-2">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    <span className="text-sm font-bold text-white">Active Listing</span>
+                  </div>
+                </div>
+
+                {/* Property Details */}
+                <div className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-black text-slate-900">{propertyExamples[currentProperty].title}</h3>
+                    <p className="text-slate-600 font-medium">Modern luxury property with premium finishes</p>
+                  </div>
+
+                  {/* Property Features */}
+                  <div className="grid grid-cols-3 gap-4 pt-2">
+                    <div className="flex items-center gap-2">
+                      <RiBuildingLine className="w-5 h-5 text-sky-600" />
+                      <div>
+                        <div className="text-lg font-bold text-slate-900">4</div>
+                        <div className="text-xs text-slate-600">Bedrooms</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <RiHomeSmileLine className="w-5 h-5 text-sky-600" />
+                      <div>
+                        <div className="text-lg font-bold text-slate-900">3.5</div>
+                        <div className="text-xs text-slate-600">Bathrooms</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <RiMapPinLine className="w-5 h-5 text-sky-600" />
+                      <div>
+                        <div className="text-lg font-bold text-slate-900">2,850</div>
+                        <div className="text-xs text-slate-600">Sq Ft</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Price & Agent Info Bar */}
+                  <div className="pt-4 border-t border-slate-200 flex items-center justify-between">
+                    <div className="text-3xl font-black text-slate-900">$1,249,000</div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-400 to-sky-500 flex items-center justify-center">
+                        <span className="text-sm font-bold text-white">JD</span>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-slate-900">Jane Doe</div>
+                        <div className="text-xs text-slate-600">Premier Realty</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Property Cards */}
+              <div className="absolute -top-6 -right-6 w-32 bg-white rounded-2xl shadow-xl border border-slate-200 p-4 hover:scale-105 transition-transform cursor-pointer animate-float">
+                <div className="aspect-video bg-gradient-to-br from-sky-200 to-sky-300 rounded-lg mb-2 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <RiCameraLine className="w-8 h-8 text-sky-600" />
+                  </div>
+                </div>
+                <div className="text-xs font-bold text-slate-900">Modern Condo</div>
+                <div className="text-xs text-slate-600">$899K</div>
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 w-32 bg-white rounded-2xl shadow-xl border border-slate-200 p-4 hover:scale-105 transition-transform cursor-pointer animate-float" style={{ animationDelay: '2s' }}>
+                <div className="aspect-video bg-gradient-to-br from-emerald-200 to-emerald-300 rounded-lg mb-2 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <RiBuildingLine className="w-8 h-8 text-emerald-600" />
+                  </div>
+                </div>
+                <div className="text-xs font-bold text-slate-900">Family Home</div>
+                <div className="text-xs text-slate-600">$1.5M</div>
+              </div>
+
+              {/* Background Glow */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-sky-200/40 via-sky-100/20 to-emerald-200/40 rounded-3xl blur-3xl -z-10" />
             </div>
           </div>
+        </div>
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-sky-300/30 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-300/30 rounded-full blur-3xl" />
         </div>
       </section>
 

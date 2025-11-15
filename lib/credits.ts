@@ -91,7 +91,7 @@ export async function deductCredits(
         amount: -amount, // Negative for deduction
         type,
         description,
-        metadata: metadata || {},
+        metadata: (metadata || {}) as any,
       },
     });
 
@@ -126,7 +126,7 @@ export async function addCredits(
         amount, // Positive for addition
         type,
         description,
-        metadata: metadata || {},
+        metadata: (metadata || {}) as any,
       },
     });
 
@@ -193,7 +193,7 @@ export async function deductAIEstimationCredits(
         amount: -CREDIT_COSTS.AI_ESTIMATION,
         type: CREDIT_TRANSACTION_TYPES.AI_ESTIMATION,
         description: 'AI video estimation',
-        metadata: metadata || {},
+        metadata: (metadata || {}) as any,
       },
     });
 

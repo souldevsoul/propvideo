@@ -32,7 +32,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Create Stripe Checkout Session
-    // @ts-expect-error - Stripe type compatibility issue with Next.js 16
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
@@ -82,11 +81,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Handle Stripe errors
-    if (error.type) {
+    if ((error as any).type) {
       return NextResponse.json(
         {
           error: 'Payment processing error',
-          details: error.message,
+          details: (error as any).message,
         },
         { status: 400 }
       );
@@ -95,7 +94,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to create checkout session',
-        details: error.message || 'Unknown error',
+        details: (error as Error).message || 'Unknown error',
       },
       { status: 500 }
     );
