@@ -168,8 +168,19 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+            alt="Modern luxury property"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay with sky blue tones */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-sky-900/60 to-slate-900/80" />
+        </div>
+
         {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
           <div className="absolute top-1/4 -left-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 -right-24 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl" />
         </div>
